@@ -1,0 +1,572 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/open/space/basic,
+/area/space)
+"b" = (
+/obj/machinery/door/airlock/hatch,
+/turf/open/floor/plating,
+/area/space)
+"c" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/yellow,
+/turf/open/floor/mineral/titanium/tiled/yellow,
+/area/space)
+"d" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/siding/blue{
+	dir = 1
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"e" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/mob_spawn/corpse/human/skeleton,
+/obj/effect/turf_decal/siding/blue{
+	dir = 8
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"f" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/mob_spawn/corpse/human/skeleton,
+/obj/effect/turf_decal/siding/blue,
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"h" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/yellow{
+	dir = 6
+	},
+/obj/structure/closet/crate/secure/engineering,
+/turf/open/floor/mineral/titanium/tiled/yellow,
+/area/space)
+"i" = (
+/turf/closed/wall,
+/area/space)
+"j" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/yellow{
+	dir = 6
+	},
+/obj/structure/closet/crate/maint,
+/turf/open/floor/mineral/titanium/tiled/yellow,
+/area/space)
+"k" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/blue{
+	dir = 1
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"l" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/mob_spawn/corpse/human/skeleton,
+/turf/open/floor/mineral/titanium/tiled,
+/area/space)
+"m" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/yellow{
+	dir = 5
+	},
+/turf/open/floor/mineral/titanium/tiled/yellow,
+/area/space)
+"n" = (
+/obj/effect/turf_decal/siding/blue/end{
+	dir = 1
+	},
+/turf/closed/wall,
+/area/space)
+"o" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Storage Pod 2"
+	},
+/turf/open/floor/plating,
+/area/space)
+"q" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/siding/blue{
+	dir = 5
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"r" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/blue{
+	dir = 4
+	},
+/obj/effect/turf_decal/caution/stand_clear{
+	dir = 8
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"s" = (
+/obj/effect/spawner/structure/window/hollow/reinforced/end{
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/space)
+"u" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Cryosleep Section 1"
+	},
+/turf/open/floor/plating,
+/area/space)
+"v" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/fluff/empty_sleeper{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/blue,
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"w" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/blue{
+	dir = 10
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"x" = (
+/obj/effect/spawner/structure/window/hollow/reinforced/end{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/space)
+"y" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/closet/syndicate,
+/obj/effect/turf_decal/siding/blue{
+	dir = 6
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"z" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/box,
+/obj/effect/turf_decal/siding/blue{
+	dir = 9
+	},
+/obj/machinery/recharge_station,
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"A" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/blue{
+	dir = 6
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"B" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/closet/syndicate,
+/obj/effect/turf_decal/siding/blue{
+	dir = 7
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"C" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/blue{
+	dir = 8
+	},
+/obj/effect/turf_decal/caution/stand_clear{
+	dir = 4
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"D" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/blue{
+	dir = 5
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"E" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/blue,
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"F" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/caution/stand_clear{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/yellow{
+	dir = 8
+	},
+/turf/open/floor/mineral/titanium/tiled/yellow,
+/area/space)
+"G" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/fluff/empty_sleeper,
+/obj/effect/turf_decal/siding/blue{
+	dir = 1
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"H" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/blue{
+	dir = 4
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"I" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/yellow{
+	dir = 10
+	},
+/turf/open/floor/mineral/titanium/tiled/yellow,
+/area/space)
+"J" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/yellow{
+	dir = 9
+	},
+/turf/open/floor/mineral/titanium/tiled/yellow,
+/area/space)
+"K" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/yellow{
+	dir = 1
+	},
+/turf/open/floor/mineral/titanium/tiled/yellow,
+/area/space)
+"L" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/door/airlock/hatch{
+	name = "Cryosleep Section 1"
+	},
+/turf/open/floor/plating,
+/area/space)
+"M" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/blue{
+	dir = 9
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"N" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/box,
+/obj/effect/turf_decal/siding/blue{
+	dir = 5
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"O" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/closed/wall,
+/area/space)
+"P" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Storage Pod 1"
+	},
+/turf/open/floor/plating,
+/area/space)
+"Q" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/siding/blue{
+	dir = 9
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"R" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/yellow{
+	dir = 1
+	},
+/obj/structure/closet/crate/secure/gear,
+/turf/open/floor/mineral/titanium/tiled/yellow,
+/area/space)
+"T" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/mineral/titanium/tiled,
+/area/space)
+"U" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/yellow{
+	dir = 9
+	},
+/obj/structure/closet/crate/maint,
+/turf/open/floor/mineral/titanium/tiled/yellow,
+/area/space)
+"V" = (
+/obj/effect/spawner/structure/window/hollow/reinforced/middle,
+/turf/open/floor/plating,
+/area/space)
+"W" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/closet/syndicate,
+/obj/effect/turf_decal/siding/blue{
+	dir = 10
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"X" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/yellow{
+	dir = 4
+	},
+/turf/open/floor/mineral/titanium/tiled/yellow,
+/area/space)
+"Y" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/vending/coffee,
+/obj/effect/turf_decal/box,
+/obj/effect/turf_decal/siding/blue{
+	dir = 6
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+"Z" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/blue{
+	dir = 8
+	},
+/turf/open/floor/mineral/titanium/tiled/blue,
+/area/space)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+i
+i
+i
+i
+b
+i
+i
+i
+i
+a
+"}
+(4,1,1) = {"
+i
+Q
+e
+Z
+Z
+Z
+Z
+W
+i
+a
+"}
+(5,1,1) = {"
+i
+d
+T
+T
+T
+T
+T
+B
+i
+a
+"}
+(6,1,1) = {"
+i
+q
+r
+H
+H
+H
+r
+y
+i
+a
+"}
+(7,1,1) = {"
+i
+O
+u
+O
+O
+O
+L
+O
+i
+a
+"}
+(8,1,1) = {"
+i
+M
+C
+w
+O
+z
+C
+w
+i
+a
+"}
+(9,1,1) = {"
+i
+G
+T
+f
+s
+k
+T
+v
+i
+a
+"}
+(10,1,1) = {"
+i
+k
+T
+E
+V
+k
+T
+E
+i
+a
+"}
+(11,1,1) = {"
+i
+G
+T
+E
+V
+k
+T
+v
+i
+a
+"}
+(12,1,1) = {"
+i
+k
+T
+E
+V
+k
+l
+E
+n
+a
+"}
+(13,1,1) = {"
+i
+G
+T
+E
+x
+k
+T
+v
+i
+a
+"}
+(14,1,1) = {"
+i
+D
+r
+Y
+O
+N
+r
+A
+i
+a
+"}
+(15,1,1) = {"
+i
+O
+o
+O
+O
+O
+P
+O
+i
+a
+"}
+(16,1,1) = {"
+i
+J
+F
+I
+O
+U
+F
+I
+i
+a
+"}
+(17,1,1) = {"
+i
+R
+T
+c
+O
+K
+T
+c
+i
+a
+"}
+(18,1,1) = {"
+i
+m
+X
+j
+O
+m
+X
+h
+i
+a
+"}
+(19,1,1) = {"
+i
+i
+i
+i
+i
+i
+i
+i
+i
+a
+"}
+(20,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

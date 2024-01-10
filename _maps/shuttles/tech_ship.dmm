@@ -1,0 +1,410 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/turf/open/floor/iron/dark/smooth_edge,
+/area/shuttle/sbc_corvette)
+"e" = (
+/obj/structure/chair/sofa/corp/right,
+/obj/machinery/light/dim/directional/north,
+/turf/open/floor/wood,
+/area/shuttle/sbc_corvette)
+"f" = (
+/obj/machinery/computer/camera_advanced/shuttle_docker,
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 9
+	},
+/turf/open/floor/iron/dark/small,
+/area/shuttle/sbc_corvette)
+"g" = (
+/obj/machinery/power/shuttle_engine/large,
+/turf/open/floor/plating,
+/area/shuttle/sbc_corvette)
+"h" = (
+/obj/structure/chair/sofa/corp/left{
+	dir = 1
+	},
+/obj/machinery/light/dim/directional/south,
+/turf/open/floor/wood,
+/area/shuttle/sbc_corvette)
+"i" = (
+/turf/open/floor/catwalk_floor/iron_dark,
+/area/shuttle/sbc_corvette)
+"j" = (
+/obj/machinery/computer/camera_advanced{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/herringbone,
+/area/shuttle/sbc_corvette)
+"k" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Engine Room"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
+/turf/open/floor/iron/dark/small,
+/area/shuttle/sbc_corvette)
+"m" = (
+/turf/closed/wall/mineral/plastitanium,
+/area/shuttle/sbc_corvette)
+"n" = (
+/obj/machinery/computer/shuttle/starfury/corvette,
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 5
+	},
+/turf/open/floor/iron/dark/small,
+/area/shuttle/sbc_corvette)
+"o" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Syndicate Corvette Cockpit"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
+/turf/open/floor/iron/dark/small,
+/area/shuttle/sbc_corvette)
+"p" = (
+/obj/structure/chair/comfy/shuttle/tactical{
+	dir = 1
+	},
+/obj/machinery/button/door{
+	id = "SBC_corvette_blast";
+	name = "Corvette Blast Doors";
+	pixel_x = 32;
+	pixel_y = 8;
+	req_access = list("syndicate_leader")
+	},
+/obj/effect/turf_decal/trimline/red/filled/corner{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/small,
+/area/shuttle/sbc_corvette)
+"q" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/iron/dark/herringbone,
+/area/shuttle/sbc_corvette)
+"s" = (
+/obj/structure/table/wood,
+/turf/open/floor/wood,
+/area/shuttle/sbc_corvette)
+"t" = (
+/turf/open/floor/iron/dark/small,
+/area/shuttle/sbc_corvette)
+"u" = (
+/obj/machinery/door/airlock/hatch,
+/obj/effect/mapping_helpers/airlock/access/all/syndicate/general,
+/obj/structure/fans/tiny,
+/turf/open/floor/plating,
+/area/shuttle/sbc_corvette)
+"v" = (
+/obj/structure/grille,
+/obj/effect/spawner/structure/window/reinforced/plasma/plastitanium,
+/obj/machinery/door/poddoor/preopen{
+	id = "Tech_Corvette"
+	},
+/turf/open/floor/plating,
+/area/shuttle/sbc_corvette)
+"x" = (
+/obj/structure/table/wood,
+/obj/item/weaponcrafting/gunkit/nuclear,
+/turf/open/floor/wood,
+/area/shuttle/sbc_corvette)
+"z" = (
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/small,
+/area/shuttle/sbc_corvette)
+"B" = (
+/obj/machinery/computer/records/security/syndie{
+	dir = 8
+	},
+/obj/effect/turf_decal/trimline/red/filled/line{
+	dir = 1
+	},
+/turf/open/floor/iron/dark/herringbone,
+/area/shuttle/sbc_corvette)
+"C" = (
+/obj/machinery/door/poddoor/preopen{
+	id = "Tech_Corvette"
+	},
+/turf/closed/indestructible/grille,
+/area/shuttle/sbc_corvette)
+"D" = (
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/shuttle/sbc_corvette)
+"F" = (
+/obj/machinery/power/shuttle_engine/huge,
+/turf/open/space/basic,
+/area/shuttle/sbc_corvette)
+"H" = (
+/obj/item/storage/toolbox/syndicate,
+/turf/open/floor/plating,
+/area/shuttle/sbc_corvette)
+"I" = (
+/turf/open/floor/wood,
+/area/shuttle/sbc_corvette)
+"J" = (
+/obj/machinery/smartfridge/food{
+	base_pixel_x = 1;
+	pixel_x = 32
+	},
+/turf/open/floor/wood,
+/area/shuttle/sbc_corvette)
+"K" = (
+/obj/structure/lattice,
+/obj/structure/lattice/catwalk,
+/turf/open/space/basic,
+/area/shuttle/sbc_corvette)
+"L" = (
+/obj/structure/chair/comfy/shuttle/tactical{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/red/filled/corner{
+	dir = 4
+	},
+/turf/open/floor/iron/dark/small,
+/area/shuttle/sbc_corvette)
+"O" = (
+/turf/open/space/basic,
+/area/shuttle/sbc_corvette)
+"P" = (
+/obj/structure/chair/sofa/corp/right{
+	dir = 1
+	},
+/turf/open/floor/wood,
+/area/shuttle/sbc_corvette)
+"Q" = (
+/obj/machinery/power/shuttle_engine/heater,
+/turf/closed/wall/mineral/plastitanium,
+/area/shuttle/sbc_corvette)
+"R" = (
+/turf/open/floor/plating,
+/area/shuttle/sbc_corvette)
+"T" = (
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/shuttle/sbc_corvette)
+"V" = (
+/obj/machinery/light/dim/directional/east,
+/turf/open/floor/wood,
+/area/shuttle/sbc_corvette)
+"X" = (
+/obj/structure/lattice/catwalk,
+/turf/open/space/basic,
+/area/shuttle/sbc_corvette)
+"Z" = (
+/obj/structure/chair/sofa/corp/left,
+/turf/open/floor/wood,
+/area/shuttle/sbc_corvette)
+
+(1,1,1) = {"
+T
+T
+T
+T
+T
+v
+v
+v
+m
+m
+a
+"}
+(2,1,1) = {"
+T
+T
+j
+t
+T
+e
+s
+x
+h
+m
+a
+"}
+(3,1,1) = {"
+C
+f
+p
+b
+T
+Z
+s
+s
+P
+v
+a
+"}
+(4,1,1) = {"
+C
+z
+q
+b
+o
+I
+I
+I
+I
+v
+a
+"}
+(5,1,1) = {"
+C
+z
+q
+b
+T
+J
+I
+V
+I
+v
+a
+"}
+(6,1,1) = {"
+C
+n
+L
+b
+T
+T
+k
+T
+T
+T
+a
+"}
+(7,1,1) = {"
+T
+T
+B
+t
+T
+H
+i
+Q
+R
+R
+F
+"}
+(8,1,1) = {"
+T
+T
+T
+u
+T
+R
+i
+Q
+R
+R
+O
+"}
+(9,1,1) = {"
+a
+a
+D
+a
+T
+R
+i
+Q
+R
+R
+O
+"}
+(10,1,1) = {"
+a
+a
+D
+a
+T
+R
+i
+Q
+R
+g
+a
+"}
+(11,1,1) = {"
+a
+a
+D
+a
+T
+T
+i
+Q
+R
+R
+a
+"}
+(12,1,1) = {"
+a
+a
+K
+D
+D
+T
+T
+m
+m
+T
+a
+"}
+(13,1,1) = {"
+a
+a
+D
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(14,1,1) = {"
+a
+a
+D
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(15,1,1) = {"
+a
+a
+D
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(16,1,1) = {"
+a
+a
+X
+a
+a
+a
+a
+a
+a
+a
+a
+"}
