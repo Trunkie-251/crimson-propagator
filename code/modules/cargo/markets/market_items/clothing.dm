@@ -11,16 +11,6 @@
 	stock_max = 3
 	availability_prob = 40
 
-/datum/market_item/clothing/durathread_vest
-	name = "Durathread Vest"
-	desc = "Don't let them tell you this stuff is \"Like asbestos\" or \"Pulled from the market for safety concerns\". It could be the difference between a robusting and a retaliation."
-	item = /obj/item/clothing/suit/armor/vest/durathread
-
-	price_min = CARGO_CRATE_VALUE
-	price_max = CARGO_CRATE_VALUE * 2
-	stock_max = 4
-	availability_prob = 50
-
 /datum/market_item/clothing/durathread_helmet
 	name = "Durathread Helmet"
 	desc = "Customers ask why it's called a helmet when it's just made from armoured fabric and I always say the same thing: No refunds."

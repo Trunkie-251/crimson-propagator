@@ -477,27 +477,6 @@
 	material_flags = MATERIAL_EFFECTS | MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS//Can change color and add prefix
 	armor_type = /datum/armor/knight_greyscale
 
-/obj/item/clothing/suit/armor/vest/durathread
-	name = "durathread vest"
-	desc = "A vest made of durathread with strips of leather acting as trauma plates."
-	icon_state = "durathread"
-	inhand_icon_state = null
-	strip_delay = 60
-	equip_delay_other = 40
-	max_integrity = 200
-	resistance_flags = FLAMMABLE
-	armor_type = /datum/armor/vest_durathread
-	dog_fashion = null
-
-/datum/armor/vest_durathread
-	melee = 20
-	bullet = 10
-	laser = 30
-	energy = 40
-	bomb = 15
-	fire = 40
-	acid = 50
-
 /obj/item/clothing/suit/armor/vest/russian
 	name = "russian vest"
 	desc = "A bulletproof vest with forest camo. Good thing there's plenty of forests to hide in around here, right?"
