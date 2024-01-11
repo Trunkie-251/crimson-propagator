@@ -127,7 +127,7 @@ VOTE_PERIOD 600
 # DEFAULT_NO_VOTE
 
 ## disable abandon mob
-NORESPAWN
+# NORESPAWN
 
 ## Respawn delay (deciseconds), which doesn't allow to return to lobby (default 10 minutes)
 #RESPAWN_DELAY 6000

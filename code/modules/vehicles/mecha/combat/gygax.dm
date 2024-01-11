@@ -3,7 +3,7 @@
 	name = "\improper Gygax"
 	icon_state = "gygax"
 	base_icon_state = "gygax"
-	movedelay = 3
+	movedelay = 2
 	max_integrity = 250
 	accesses = list(ACCESS_MECH_SCIENCE, ACCESS_MECH_SECURITY)
 	armor_type = /datum/armor/mecha_gygax

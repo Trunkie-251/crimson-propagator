@@ -749,10 +749,18 @@
 
 /obj/item/organ/internal/eyes/synthetic
 	name = "Synthetic eye"
-	icon_state = "synth_photoreceptor"
+	icon_state = "bionic_eyeball"
 	desc = "Advanced synthetic visual sensors. These visual processing units are compatible \
 	with nearly every other photoreceptor upgrade. They also happen to feature low-lite enhancement \
 	by default."
 	organ_flags = ORGAN_ROBOTIC
 	organ_traits = list(TRAIT_TRUE_NIGHT_VISION)
 
+/obj/item/organ/internal/eyes/synthetic/rook
+	name = "Rook Photoreceptor"
+	icon_state = "bionic_eyeball"
+	desc = "Advanced synthetic visual sensors. These visual processing units are compatible \
+	with nearly every other photoreceptor upgrade. They also happen to feature low-lite enhancement \
+	by default."
+	visual = null
+	organ_flags = ORGAN_ROBOTIC

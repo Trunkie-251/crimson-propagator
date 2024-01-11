@@ -117,3 +117,42 @@
 	limb_id = SPECIES_ROOK
 	is_dimorphic = FALSE
 
+/obj/item/bodypart/leg/right/synthetic/rook
+	icon = 'icons/mob/human/species/robot/oversized_bodyparts.dmi'
+	icon_state = "rook_r_leg"
+	icon_static = 'icons/mob/human/species/robot/oversized_bodyparts.dmi'
+	limb_id = SPECIES_ROOK
+	is_dimorphic = FALSE
+	bodytype = BODYTYPE_HUMANOID|BODYTYPE_ORGANIC
+	unarmed_damage_low = 20
+	unarmed_damage_high = 28
+
+/obj/item/bodypart/leg/left/synthetic/rook
+	icon = 'icons/mob/human/species/robot/oversized_bodyparts.dmi'
+	icon_state = "rook_l_leg"
+	icon_static = 'icons/mob/human/species/robot/oversized_bodyparts.dmi'
+	limb_id = SPECIES_ROOK
+	is_dimorphic = FALSE
+	bodytype = BODYTYPE_HUMANOID|BODYTYPE_ORGANIC
+	unarmed_damage_low = 20
+	unarmed_damage_high = 28
+
+/obj/item/bodypart/arm/right/synthetic/rook
+	icon = 'icons/mob/human/species/robot/oversized_bodyparts.dmi'
+	icon_state = "rook_r_arm"
+	icon_static = 'icons/mob/human/species/robot/oversized_bodyparts.dmi'
+	limb_id = SPECIES_ROOK
+	is_dimorphic = FALSE
+	bodytype = BODYTYPE_HUMANOID|BODYTYPE_ORGANIC
+	unarmed_damage_low = 20
+	unarmed_damage_high = 28
+
+/obj/item/bodypart/arm/left/synthetic/rook
+	icon = 'icons/mob/human/species/robot/oversized_bodyparts.dmi'
+	icon_state = "rook_l_arm"
+	icon_static = 'icons/mob/human/species/robot/oversized_bodyparts.dmi'
+	limb_id = SPECIES_ROOK
+	is_dimorphic = FALSE
+	bodytype = BODYTYPE_HUMANOID|BODYTYPE_ORGANIC
+	unarmed_damage_low = 20
+	unarmed_damage_high = 28
