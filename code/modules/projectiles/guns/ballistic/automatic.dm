@@ -353,3 +353,85 @@
 	actions_types = list()
 	fire_sound = 'sound/weapons/laser.ogg'
 	casing_ejector = FALSE
+
+// LMG11
+
+/obj/item/gun/ballistic/automatic/lmg11
+	name = "\improper B&W LMG11"
+	desc = "A B&W light machinegun that became a massive hit with private armies. It is extremely accurate and fires caseless 4.73 x 33mm rounds. \
+	The 200-round mag allows for longer operations without having to carry much ammunition."
+	icon_state = "lmg11"
+	inhand_icon_state = "l6closedmag"
+	base_icon_state = "lmg11"
+	w_class = WEIGHT_CLASS_HUGE
+	slot_flags = 0
+	accepted_magazine_type = /obj/item/ammo_box/magazine/m7mm
+	weapon_weight = WEAPON_HEAVY
+	burst_size = 1
+	actions_types = list()
+	can_suppress = FALSE
+	spread = 1.5
+	pin = /obj/item/firing_pin
+	bolt_type = BOLT_TYPE_OPEN
+	show_bolt_icon = FALSE
+	mag_display = TRUE
+	mag_display_ammo = TRUE
+	tac_reloads = FALSE
+	fire_sound = 'sound/weapons/gun/lmg/G11firing_2.mp3'
+	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
+	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
+	var/cover_open = FALSE
+
+/obj/item/gun/ballistic/automatic/lmg11/attack_hand(mob/user, list/modifiers)
+	if (loc != user)
+		..()
+		return
+	if (!cover_open)
+		balloon_alert(user, "open the cover!")
+		return
+	..()
+
+/obj/item/gun/ballistic/automatic/lmg11/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/update_icon_updates_onmob)
+	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+
+/obj/item/gun/ballistic/automatic/lmg11/examine(mob/user)
+	. = ..()
+	. += "<b>alt + click</b> to [cover_open ? "close" : "open"] the dust cover."
+	if(cover_open && magazine)
+		. += span_notice("It seems like you could use an <b>empty hand</b> to remove the magazine.")
+
+
+/obj/item/gun/ballistic/automatic/lmg11/AltClick(mob/user)
+	if(!user.can_perform_action(src))
+		return
+	cover_open = !cover_open
+	balloon_alert(user, "cover [cover_open ? "opened" : "closed"]")
+	playsound(src, 'sound/weapons/gun/l6/l6_door.ogg', 60, TRUE)
+	update_appearance()
+
+/obj/item/gun/ballistic/automatic/lmg11/afterattack(atom/target as mob|obj|turf, mob/living/user as mob|obj, flag, params)
+	. |= AFTERATTACK_PROCESSED_ITEM
+
+	if(cover_open)
+		balloon_alert(user, "close the cover!")
+		return
+	else
+		. |= ..()
+		update_appearance()
+
+
+/obj/item/gun/ballistic/automatic/lmg11/update_icon_state()
+	. = ..()
+	inhand_icon_state = "[base_icon_state][cover_open ? "open" : "closed"][magazine ? "mag":"nomag"]"
+
+/obj/item/gun/ballistic/automatic/lmg11/update_overlays()
+	. = ..()
+	. += "l6_door_[cover_open ? "open" : "closed"]"
+
+/obj/item/gun/ballistic/automatic/lmg11/attackby(obj/item/A, mob/user, params)
+	if(!cover_open && istype(A, accepted_magazine_type))
+		balloon_alert(user, "open the cover!")
+		return
+	..()
