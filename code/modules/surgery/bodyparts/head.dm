@@ -207,9 +207,9 @@
 	// We need to get the eyes if we are dropped (ugh)
 	if(dropped)
 		// This is a bit of copy/paste code from eyes.dm:generate_body_overlay
-		if(eye?.eye_icon_state && (head_flags & HEAD_EYESPRITES))
-			var/image/eye_left = image('icons/mob/human/human_face.dmi', "[eye.eye_icon_state]_l", -BODY_LAYER, SOUTH)
-			var/image/eye_right = image('icons/mob/human/human_face.dmi', "[eye.eye_icon_state]_r", -BODY_LAYER, SOUTH)
+		if(eyes?.eye_icon_state && (head_flags & HEAD_EYESPRITES))
+			var/image/eye_left = image('icons/mob/human/human_face.dmi', "[eyes.eye_icon_state]_l", -BODY_LAYER, SOUTH)
+			var/image/eye_right = image('icons/mob/human/human_face.dmi', "[eyes.eye_icon_state]_r", -BODY_LAYER, SOUTH)
 			if(head_flags & HEAD_EYECOLOR)
 				if(eyes.eye_color_left)
 					eye_left.color = eyes.eye_color_left
