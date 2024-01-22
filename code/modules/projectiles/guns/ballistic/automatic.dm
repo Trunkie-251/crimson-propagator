@@ -94,6 +94,31 @@
 	. = ..()
 	update_appearance()
 
+//Mini-SMG. Schizoid as fuck.
+/obj/item/gun/ballistic/automatic/neill250
+	name = "\improper Neill-250 SMG"
+	desc = "A bizarre five-barreled submachine gun based off of an ancient design. Favored by corporate security, arcology punks, and \
+    the bourgeoisie for it's high rate of fire and tendancy to dump all of it's ammunition in less than two seconds. \
+    Manufactured by Vorf inc."
+	icon_state = "Neill250"
+	inhand_icon_state = "neill250"
+	accepted_magazine_type = /obj/item/ammo_box/magazine/h9mm
+	burst_size = 8
+	fire_delay = 1
+	actions_types = list()
+	can_suppress = FALSE
+	spread = 8
+	bolt_type = BOLT_TYPE_OPEN
+	show_bolt_icon = FALSE
+	mag_display = FALSE
+	mag_display_ammo = TRUE
+	tac_reloads = FALSE
+
+/obj/item/gun/ballistic/automatic/wt550/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
+
+
 /obj/item/gun/ballistic/automatic/wt550
 	name = "\improper WT-550 Autorifle"
 	desc = "Recalled by Nanotrasen due to public backlash around heat distribution resulting in unintended discombobulation. \
@@ -140,7 +165,7 @@
 	desc = "A lightweight, burst-fire submachine gun, for when you really want someone dead. Uses 9mm rounds."
 	icon_state = "miniuzi"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/uzim9mm
-	burst_size = 2
+	burst_size = 3
 	bolt_type = BOLT_TYPE_OPEN
 	show_bolt_icon = FALSE
 	mag_display = TRUE
@@ -246,7 +271,7 @@
 	slot_flags = 0
 	accepted_magazine_type = /obj/item/ammo_box/magazine/m7mm
 	weapon_weight = WEAPON_HEAVY
-	burst_size = 1
+	burst_size = 6
 	actions_types = list()
 	can_suppress = FALSE
 	spread = 7
@@ -267,7 +292,7 @@
 /obj/item/gun/ballistic/automatic/l6_saw/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/update_icon_updates_onmob)
-	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 2 SECONDS)
 
 /obj/item/gun/ballistic/automatic/l6_saw/examine(mob/user)
 	. = ..()
@@ -360,27 +385,33 @@
 	name = "\improper B&W LMG11"
 	desc = "A B&W light machinegun that became a massive hit with private armies. It is extremely accurate and fires caseless 4.73 x 33mm rounds. \
 	The 200-round mag allows for longer operations without having to carry much ammunition."
+	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
 	icon_state = "lmg11"
-	inhand_icon_state = "l6closedmag"
+	inhand_icon_state = "lmg11"
 	base_icon_state = "lmg11"
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = 0
-	accepted_magazine_type = /obj/item/ammo_box/magazine/m7mm
+	accepted_magazine_type = /obj/item/ammo_box/magazine/m4mm
 	weapon_weight = WEAPON_HEAVY
-	burst_size = 1
+	burst_size = 4
+	fire_delay = 1
 	actions_types = list()
 	can_suppress = FALSE
-	spread = 1.5
+	spread = 1.2
 	pin = /obj/item/firing_pin
 	bolt_type = BOLT_TYPE_OPEN
 	show_bolt_icon = FALSE
-	mag_display = TRUE
+	mag_display = FALSE
 	mag_display_ammo = TRUE
 	tac_reloads = FALSE
 	fire_sound = 'sound/weapons/gun/lmg/G11firing_2.mp3'
 	rack_sound = 'sound/weapons/gun/l6/l6_rack.ogg'
 	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
 	var/cover_open = FALSE
+
+/obj/item/gun/ballistic/automatic/lmg11/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/scope, range_modifier = 3) //LMG11 has range.
 
 /obj/item/gun/ballistic/automatic/lmg11/attack_hand(mob/user, list/modifiers)
 	if (loc != user)
@@ -398,7 +429,7 @@
 
 /obj/item/gun/ballistic/automatic/lmg11/examine(mob/user)
 	. = ..()
-	. += "<b>alt + click</b> to [cover_open ? "close" : "open"] the dust cover."
+	. += "<b>alt + click</b> to [cover_open ? "close" : "open"] the breech."
 	if(cover_open && magazine)
 		. += span_notice("It seems like you could use an <b>empty hand</b> to remove the magazine.")
 
@@ -428,10 +459,13 @@
 
 /obj/item/gun/ballistic/automatic/lmg11/update_overlays()
 	. = ..()
-	. += "l6_door_[cover_open ? "open" : "closed"]"
+	. += "lmg11_door_[cover_open ? "open" : "closed"]"
 
 /obj/item/gun/ballistic/automatic/lmg11/attackby(obj/item/A, mob/user, params)
 	if(!cover_open && istype(A, accepted_magazine_type))
 		balloon_alert(user, "open the cover!")
 		return
 	..()
+
+
+

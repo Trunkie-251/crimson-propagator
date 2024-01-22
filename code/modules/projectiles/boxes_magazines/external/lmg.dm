@@ -32,3 +32,14 @@
 /obj/item/ammo_box/magazine/m7mm/update_icon_state()
 	. = ..()
 	icon_state = "a7mm-[min(round(ammo_count(), 10), 50)]" //Min is used to prevent high capacity magazines from attempting to get sprites with larger capacities
+
+//4.73x33mm rounds here
+
+/obj/item/ammo_box/magazine/m4mm
+	name = "ammunition block (4.73x33mm)"
+	desc = "A entire extended family of 4.73x33mm bullets."
+	icon_state = "4.37x33mm"
+	ammo_type = /obj/item/ammo_casing/m4mm
+	caliber = CALIBER_M4MM
+	max_ammo = 200
+

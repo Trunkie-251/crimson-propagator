@@ -31,3 +31,13 @@
 	name = "7mm rubber bullet casing"
 	desc = "A 7mm rubber bullet casing manufactured to unfailingly disastrous standards, you could piss off a lot of people spraying this down a hallway."
 	projectile_type = /obj/projectile/bullet/a7mm/bouncy
+
+//4mm (LMG11)
+
+/obj/item/ammo_casing/m4mm
+	name = "4.73x33mm propellant block"
+	desc = "A block of propellant entrapping a poor 4.73x33mm round."
+	icon_state = "762-casing"
+	caliber = CALIBER_M4MM
+	projectile_type = /obj/projectile/bullet/m4mm
+	is_cased_ammo = FALSE

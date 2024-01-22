@@ -45,6 +45,14 @@
 	projectile_type = /obj/projectile/bullet/incendiary/c9mm
 
 
+/obj/item/ammo_casing/h9mm
+	name = "9mm propellant block"
+	desc = "A teensy round in a teensy propellant block."
+	caliber = CALIBER_9MM
+	projectile_type = /obj/projectile/bullet/c9mm
+	is_cased_ammo = FALSE
+
+
 // .50AE (Desert Eagle)
 
 /obj/item/ammo_casing/a50ae

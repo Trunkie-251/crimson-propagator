@@ -50,6 +50,16 @@
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	multiple_sprite_use_base = TRUE
 
+/obj/item/ammo_box/magazine/h9mm
+	name = "Helical Magazine (9mm)"
+	desc = "A cylindrical magazine with a helical feeding system, generally unfavored due to \
+	it's odd shape. It easily holds up to 100 caseless 9mm rounds."
+	icon_state = "h9mm"
+	base_icon_state = "h9mm"
+	ammo_type = /obj/item/ammo_casing/h9mm
+	caliber = CALIBER_9MM
+	max_ammo = 100
+
 /obj/item/ammo_box/magazine/m9mm/fire
 	name = "pistol magazine (9mm incendiary)"
 	icon_state = "9x19pI"

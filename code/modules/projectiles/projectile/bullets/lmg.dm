@@ -67,3 +67,11 @@
 	ricochet_auto_aim_range = 4
 	ricochet_incidence_leeway = 0
 	ricochet_decay_chance = 0.9
+
+// 4.72x33mm (LMG11)
+/obj/projectile/bullet/m4mm
+	name = "4mm bullet"
+	damage = 15
+	armour_penetration = 3
+	wound_bonus = -50
+	wound_falloff_tile = 0

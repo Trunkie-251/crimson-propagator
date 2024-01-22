@@ -149,6 +149,7 @@
 
 /obj/item/ammo_casing/proc/bounce_away(still_warm = FALSE, bounce_delay = 3)
 	if(!is_cased_ammo)
+		qdel(src)
 		return
 	update_appearance()
 	SpinAnimation(10, 1)
