@@ -39,6 +39,23 @@
 	fire = 90
 	acid = 50
 
+/obj/item/clothing/shoes/combat/carapace
+	name = "\improper carapace boots (Felix-Pattern)"
+	icon_state = "carapaceboots"
+	desc = "Heavily reinforced armored boots with synthrubber soles. Trenches, mud, and blood do not stop these well-armoured boots in any way."
+	clothing_traits = list(TRAIT_NO_SLIP_WATER)
+	armor_type = /datum/armor/boots_carapace
+
+/datum/armor/boots_carapace
+	melee = 40
+	bullet = 30
+	laser = 25
+	energy = 25
+	bomb = 50
+	bio = 100
+	fire = 90
+	acid = 50
+
 /obj/item/clothing/shoes/jackboots
 	name = "jackboots"
 	desc = "Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time."

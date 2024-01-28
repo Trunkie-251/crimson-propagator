@@ -3,7 +3,7 @@
 	description = "Coordinate security personnel, ensure they are not corrupt, \
 		make sure every department is protected."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD|DEADMIN_POSITION_SECURITY
-	department_head = list(JOB_CAPTAIN)
+	department_head = list(JOB_CAPTAIN, JOB_DUKE)
 	head_announce = list(RADIO_CHANNEL_SECURITY)
 	faction = FACTION_STATION
 	total_positions = 1

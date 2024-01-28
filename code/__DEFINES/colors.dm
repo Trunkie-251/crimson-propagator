@@ -179,7 +179,6 @@
 #define COLOR_SAMPLE_GRAY "#5e5856"
 
 ///Main colors for UI themes
-#define COLOR_THEME_MIDNIGHT "#6086A0"
 #define COLOR_THEME_PLASMAFIRE "#FFB200"
 #define COLOR_THEME_RETRO "#24CA00"
 #define COLOR_THEME_SLIMECORE "#4FB259"
@@ -188,6 +187,7 @@
 #define COLOR_THEME_CLOCKWORK "#CFBA47"
 #define COLOR_THEME_TRASENKNOX "#3ce375"
 #define COLOR_THEME_DETECTIVE "#c7b08b"
+#define COLOR_THEME_IMPERIAL "#991029"
 
 ///Colors for eigenstates
 #define COLOR_PERIWINKLEE "#9999FF"
@@ -200,7 +200,7 @@
  * Important note: colors can end up significantly different from the basic html picture, especially when saturated
  */
 /// Bright light used by default in tubes and bulbs
-#define LIGHT_COLOR_DEFAULT "#f3fffa"
+#define LIGHT_COLOR_DEFAULT "#c8eeff"
 /// Bright but quickly dissipating neon green. rgb(100, 200, 100)
 #define LIGHT_COLOR_GREEN "#64C864"
 /// Bright, pale "nuclear" green. rgb(120, 255, 120)

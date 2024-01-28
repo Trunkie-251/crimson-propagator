@@ -31351,6 +31351,9 @@
 	dir = 4
 	},
 /obj/machinery/light/small/directional/west,
+/obj/item/gun/energy/laser/volkite,
+/obj/item/gun/energy/laser/volkite,
+/obj/item/gun/energy/laser/volkite,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/security/armory)
 "lpo" = (

@@ -11,7 +11,7 @@
 	nightshift_enabled = FALSE
 
 /obj/machinery/light/warm
-	bulb_colour = "#fae5c1"
+	bulb_colour = "#fad6c1"
 
 /obj/machinery/light/warm/no_nightlight
 	nightshift_allowed = FALSE
@@ -29,7 +29,7 @@
 
 /obj/machinery/light/cold/dim
 	nightshift_allowed = FALSE
-	bulb_power = 0.6
+	bulb_power = 0.35
 
 /obj/machinery/light/red
 	bulb_colour = "#FF3232"
@@ -38,7 +38,7 @@
 
 /obj/machinery/light/red/dim
 	brightness = 4
-	bulb_power = 0.7
+	bulb_power = 0.35
 	fire_brightness = 2
 
 /obj/machinery/light/blacklight
@@ -47,8 +47,7 @@
 
 /obj/machinery/light/dim
 	nightshift_allowed = FALSE
-	bulb_colour = "#FFDDCC"
-	bulb_power = 0.6
+	bulb_power = 0.35
 
 // the smaller bulb light fixture
 
@@ -59,9 +58,10 @@
 	brightness = 4
 	nightshift_brightness = 4
 	fire_brightness = 3
-	bulb_colour = "#FFD6AA"
+	bulb_colour = "#ebf9ff"
 	fire_colour = "#bd3f46"
-	desc = "A small lighting fixture."
+	desc = "Fear of the dark, fear of the dark\n\
+		I have a constant fear that something's always near"
 	light_type = /obj/item/light/bulb
 
 /obj/machinery/light/small/broken
@@ -84,7 +84,7 @@
 
 /obj/machinery/light/small/red/dim
 	brightness = 2
-	bulb_power = 0.8
+	bulb_power = 0.35
 	fire_brightness = 2
 
 /obj/machinery/light/small/blacklight

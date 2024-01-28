@@ -103,6 +103,7 @@
 	  * Format of this list is (typepath, typepath, typepath)
 	  */
 	var/list/implants = null
+	var/list/organs = null
 
 	///ID of the slot containing a gas tank
 	var/internals_slot = null

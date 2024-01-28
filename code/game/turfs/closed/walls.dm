@@ -3,7 +3,7 @@
 
 /turf/closed/wall
 	name = "wall"
-	desc = "A huge chunk of iron used to separate rooms."
+	desc = "A steel superstructure used to separate rooms. Cold to the touch and stamped with standard manufacturing inscriptions."
 	icon = 'icons/turf/walls/wall.dmi'
 	icon_state = "wall-0"
 	base_icon_state = "wall"

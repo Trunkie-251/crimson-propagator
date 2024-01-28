@@ -59,6 +59,38 @@
 /obj/item/clothing/suit/armor/vest/alt/sec
 	icon_state = "armor_sec"
 
+
+/obj/item/clothing/suit/armor/vest/carapace
+	name = "carapace suit (Felix-Pattern) "
+	desc = "A heavy suit of armour that slows down movement. Large plastisteel plates woven with neo-vein armour fabrics and \
+	coated in rubbery synthmyomers. This imperial army variation is typically seen on heavy weapon crews or assault units."
+	icon_state = "carapace"
+	inhand_icon_state = "armor"
+	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS
+	armor_type = /datum/armor/vest_carapace
+	cold_protection = CHEST | GROIN | LEGS | ARMS
+	heat_protection = CHEST | GROIN | LEGS | ARMS
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+
+/datum/armor/vest_carapace
+	melee = 50
+	bullet = 50
+	laser = 30
+	energy = 30
+	bomb = 50
+	bio = 100
+	fire = 40
+	acid = 50
+	wound = 20
+
+/obj/item/clothing/suit/armor/vest/carapace/armaster
+	name = "armaster's carapace suit (Felix-Pattern) "
+	desc = "A heavy suit of armour that slows down movement. Large plastisteel plates woven with neo-vein armour fabrics and \
+	coated in rubbery synthmyomers. This imperial army variation is typically seen on heavy weapon crews or assault units. \n\
+	This specific suit has the designation of an armaster's suit."
+	icon_state = "carapace_2"
+
 /obj/item/clothing/suit/armor/vest/marine
 	name = "tactical armor vest"
 	desc = "A set of the finest mass produced, stamped plasteel armor plates, containing an environmental protection unit for all-condition door kicking."

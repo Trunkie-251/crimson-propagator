@@ -3,7 +3,7 @@
 	description = "Coordinate engineering, ensure equipment doesn't get stolen, \
 		make sure the Supermatter doesn't blow up, maintain telecommunications."
 	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
-	department_head = list(JOB_CAPTAIN)
+	department_head = list(JOB_CAPTAIN, JOB_DUKE)
 	head_announce = list("Engineering")
 	faction = FACTION_STATION
 	total_positions = 1

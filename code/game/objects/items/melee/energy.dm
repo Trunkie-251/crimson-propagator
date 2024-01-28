@@ -349,3 +349,14 @@
 	icon_state = "lightblade"
 	inhand_icon_state = "lightblade"
 	base_icon_state = "lightblade"
+
+/obj/item/melee/energy/sword/dagger
+	name = "toxblade"
+	desc = "An elegant weapon of the upper-class. It's silvery emitter-hilt is ornately carved with intricate \
+	engravings, of various abstract forms."
+	icon = 'icons/obj/weapons/imperial_esword.dmi'
+	icon_state = "e_dagger"
+	inhand_icon_state = "e_dagger"
+	base_icon_state = "e_dagger"
+	lefthand_file = 'icons/mob/inhands/weapons/imperialswords_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/imperialswords_righthand.dmi'

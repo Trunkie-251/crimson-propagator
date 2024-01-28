@@ -85,7 +85,8 @@ SUBSYSTEM_DEF(ticker)
 	)
 
 	var/list/provisional_title_music = flist("[global.config.directory]/title_music/sounds/")
-	var/list/music = list()
+	var/list/music = list(
+	)
 	var/use_rare_music = prob(1)
 
 	for(var/S in provisional_title_music)

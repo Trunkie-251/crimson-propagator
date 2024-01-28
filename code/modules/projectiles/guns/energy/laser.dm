@@ -36,6 +36,25 @@
 	icon_state = "hellgun"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/hellfire)
 
+
+//volkite
+
+/obj/item/gun/energy/laser/volkite
+	name ="RM-45 volkite rifle"
+	desc = "An infantry-grade thermal laser rifle, adopted for its mechanical reliability and brutal efficiency at disposing  \
+	meatbags. Not so useful against the all-too-common cyborgs and synthetics of the empire.. Fires conflagorator beams with \
+	a tendency to ignite any organic material in comes into contact with."
+	icon = 'icons/obj/weapons/guns/imperial_guns.dmi'
+	icon_state = "volkite_hellgun"
+	inhand_icon_state = "volkite"
+	ammo_type = list(/obj/item/ammo_casing/energy/volkite)
+
+/obj/item/gun/energy/laser/volkite/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/scope, range_modifier = 3)
+
+
+
 /obj/item/gun/energy/laser/captain
 	name = "antique laser gun"
 	icon_state = "caplaser"

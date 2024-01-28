@@ -35,7 +35,7 @@ Possible to do for anyone motivated enough:
 
 /obj/machinery/holopad
 	name = "holopad"
-	desc = "It's a floor-mounted device for projecting holographic images."
+	desc = "It's a floor-mounted device for projecting holographic images. Used to be seen in 9-in-10 imperial homes."
 	icon = 'icons/obj/machines/floor.dmi'
 	icon_state = "holopad0"
 	base_icon_state = "holopad"
@@ -48,7 +48,7 @@ Possible to do for anyone motivated enough:
 	circuit = /obj/item/circuitboard/machine/holopad
 	// Blue, dim light
 	light_power = 0.8
-	light_color = LIGHT_COLOR_BLUE
+	light_color = LIGHT_COLOR_INTENSE_RED
 	/// associative lazylist of the form: list(owner of a hologram = hologram representing that owner).
 	var/list/masters
 	/// Holoray-owner link

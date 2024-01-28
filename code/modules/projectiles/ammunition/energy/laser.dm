@@ -4,7 +4,7 @@
 	select_name = "kill"
 
 /obj/item/ammo_casing/energy/laser/hellfire
-	projectile_type = /obj/projectile/beam/laser/hellfire
+	projectile_type = /obj/projectile/beam/laser
 	e_cost = 100
 	select_name = "maim"
 
@@ -15,6 +15,12 @@
 	projectile_type = /obj/projectile/beam/laser
 	e_cost = 62.5
 	select_name = "kill"
+
+/obj/item/ammo_casing/energy/volkite
+	projectile_type = /obj/projectile/beam/volkite/light
+	e_cost = 40
+	select_name = "kill"
+	fire_sound = 'sound/weapons/Lasgun_sound_rework.mp3'
 
 /obj/item/ammo_casing/energy/lasergun/old
 	projectile_type = /obj/projectile/beam/laser

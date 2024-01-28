@@ -49,7 +49,7 @@
 
 	id_trim = /datum/id_trim/job/warden
 	uniform = /obj/item/clothing/under/rank/security/warden
-	suit = /obj/item/clothing/suit/armor/vest/warden/alt
+	suit = /obj/item/clothing/suit/armor/vest/carapace/armaster
 	suit_store = /obj/item/gun/energy/disabler
 	backpack_contents = list(
 		/obj/item/evidencebag = 1,
@@ -57,9 +57,9 @@
 	belt = /obj/item/modular_computer/pda/warden
 	ears = /obj/item/radio/headset/headset_sec/alt
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	gloves = /obj/item/clothing/gloves/color/black
+	gloves = /obj/item/clothing/gloves/tackler/carapace
 	head = /obj/item/clothing/head/hats/warden/red
-	shoes = /obj/item/clothing/shoes/jackboots/sec
+	shoes = /obj/item/clothing/shoes/combat/carapace
 	l_pocket = /obj/item/restraints/handcuffs
 	r_pocket = /obj/item/assembly/flash/handheld
 
@@ -69,4 +69,4 @@
 	messenger = /obj/item/storage/backpack/messenger/sec
 
 	box = /obj/item/storage/box/survival/security
-	implants = list(/obj/item/implant/mindshield)
+	implants = list(/obj/item/implant/mindshield, )

@@ -42,6 +42,7 @@
 #define JOB_ASSISTANT "Assistant"
 #define JOB_PRISONER "Prisoner"
 //Command
+#define JOB_DUKE "Duke"
 #define JOB_CAPTAIN "Captain"
 #define JOB_HEAD_OF_PERSONNEL "Head of Personnel"
 #define JOB_HEAD_OF_SECURITY "Head of Security"
@@ -148,7 +149,7 @@
 #define JOB_DISPLAY_ORDER_DETECTIVE 34
 #define JOB_DISPLAY_ORDER_SECURITY_OFFICER 35
 #define JOB_DISPLAY_ORDER_PRISONER 36
-
+#define JOB_DISPLAY_ORDER_DUKE 37
 
 #define DEPARTMENT_UNASSIGNED "No Department"
 
@@ -202,6 +203,7 @@
 #define FACTION_STATION "Station"
 
 // Variable macros used to declare who is the supervisor for a given job, announced to the player when they join as any given job.
+#define SUPERVISOR_DUKE "the Duke"
 #define SUPERVISOR_CAPTAIN "the Captain"
 #define SUPERVISOR_CE "the Chief Engineer"
 #define SUPERVISOR_CMO "the Chief Medical Officer"

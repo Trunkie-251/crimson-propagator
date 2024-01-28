@@ -82,6 +82,46 @@
 	. = ..()
 	AddComponent(/datum/component/seclite_attachable, light_icon_state = "flight")
 
+/obj/item/clothing/head/helmet/carapace
+	name = "carapace helmet"
+	desc = "A cheap, mass-produced plastisteel composite helmet printed from a nanofabricator. \
+	Heavy, but rather effective at stopping both bullets and simple las-weapons. This one has the \
+	design typical of the Empire's fighting forces, albeit entirely stripped down."
+	icon_state = "carapace"
+	inhand_icon_state = "carapace"
+	armor_type = /datum/armor/helmet_carapace
+	clothing_flags = STACKABLE_HELMET_EXEMPT
+	resistance_flags = FIRE_PROOF | ACID_PROOF
+	dog_fashion = null
+
+/datum/armor/helmet_carapace
+	melee = 50
+	bullet = 50
+	laser = 30
+	energy = 30
+	bomb = 50
+	bio = 100
+	fire = 40
+	acid = 50
+	wound = 20
+
+/obj/item/clothing/head/helmet/carapace/visor
+	name = "Felix-pattern carapace helmet"
+	desc = "A cheap, mass-produced plastisteel composite helmet printed from a nanofabricator. \
+	Heavy, but rather effective at stopping both bullets and simple las-weapons. This one has the \
+	design typical of the Empire's fighting forces. The Felix pattern sports a full visor, granting \
+	protection in hazardous environments."
+	icon_state = "carapacevisor"
+	flash_protect = FLASH_PROTECTION_WELDER
+
+/obj/item/clothing/head/helmet/carapace/scope
+	name = "Felix-pattern carapace helmet"
+	desc = "A cheap, mass-produced plastisteel composite helmet printed from a nanofabricator. \
+	Heavy, but rather effective at stopping both bullets and simple las-weapons. This one has the \
+	design typical of the Empire's fighting forces. The Felix pattern sports a full visor, granting \
+	protection in hazardous environments."
+	icon_state = "carapacevisor"
+
 /obj/item/clothing/head/helmet/marine
 	name = "tactical combat helmet"
 	desc = "A tactical black helmet, sealed from outside hazards with a plate of glass and not much else."

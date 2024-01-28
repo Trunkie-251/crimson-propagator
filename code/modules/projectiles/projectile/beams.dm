@@ -35,9 +35,17 @@
 	damage = 30
 	speed = 0.6 // higher power = faster, that's how light works right
 
-/obj/projectile/beam/laser/hellfire/Initialize(mapload)
-	. = ..()
-	transform *= 2
+//volkite beamer
+/obj/projectile/beam/volkite/light
+	damage = 35
+	hitscan = TRUE
+	fire_stacks = 6
+	leaves_fire_trail = FALSE
+	wound_bonus = 0.2
+	speed = 0
+	tracer_type = /obj/effect/projectile/tracer/heavy_laser
+	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
+	impact_type = /obj/effect/projectile/impact/heavy_laser
 
 /obj/projectile/beam/laser/heavylaser
 	name = "heavy laser"
@@ -46,6 +54,8 @@
 	tracer_type = /obj/effect/projectile/tracer/heavy_laser
 	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
 	impact_type = /obj/effect/projectile/impact/heavy_laser
+
+
 
 /obj/projectile/beam/laser/on_hit(atom/target, blocked = FALSE)
 	. = ..()

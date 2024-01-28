@@ -6,7 +6,7 @@
 	id = "base"
 	starting_node = TRUE
 	display_name = "Basic Research Technology"
-	description = "NT default research technologies."
+	description = "The preset data-templates containing the most easily-reproduced imperial technologies."
 	// Default research tech, prevents bricking
 	design_ids = list(
 		"basic_capacitor",
@@ -25,6 +25,11 @@
 		"camera_film",
 		"camera",
 		"capbox",
+		"carapace_helmet",
+		"carapace_helmetvisor",
+		"carapace_armour",
+		"carapace_gauntlets",
+		"carapace_boots",
 		"chisel",
 		"circuit_imprinter_offstation",
 		"circuit_imprinter",

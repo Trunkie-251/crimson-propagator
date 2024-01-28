@@ -71,7 +71,7 @@
 // 4.72x33mm (LMG11)
 /obj/projectile/bullet/m4mm
 	name = "4mm bullet"
-	damage = 15
+	damage = 30
 	armour_penetration = 3
 	wound_bonus = -50
 	wound_falloff_tile = 0

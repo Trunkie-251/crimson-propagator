@@ -57,8 +57,8 @@
 	wing_types = list(/obj/item/organ/external/wings/functional/robotic)
 
 /datum/species/synthetic/get_species_description()
-	return "Advanced artificial intelligence birthed by mankind in the late 27th century. \
-		They have surpassed mankind in ability and now take the reins in his place."
+	return "Advanced artificial intelligence birthed by mankind pre-empire. \
+		They stand as mankind's best friends."
 
 /datum/species/synthetic/get_species_lore()
 	return list(
@@ -67,8 +67,8 @@
 		built originally as curiosities, but eventually used for the increasingly mechanized economy of \
 		the empire.",
 
-		"They are the indispensable assistants of Mankind, whom silently run his solar dominion and maintain \
-		his megastructures.",
+		"They are the indispensable assistants of Mankind, whom run his solar dominion and maintain \
+		his megastructures alongside the mass of humanity.",
 	)
 
 /datum/species/synthetic/create_pref_unique_perks()

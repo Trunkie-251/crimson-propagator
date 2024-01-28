@@ -1034,8 +1034,6 @@
 	var/theme = lowertext(usr.client?.prefs?.read_preference(/datum/preference/choiced/ui_style))
 	if(!outline_color) //if we weren't provided with a color, take the theme's color
 		switch(theme) //yeah it kinda has to be this way
-			if("midnight")
-				outline_color = COLOR_THEME_MIDNIGHT
 			if("plasmafire")
 				outline_color = COLOR_THEME_PLASMAFIRE
 			if("retro")
@@ -1048,6 +1046,8 @@
 				outline_color = COLOR_THEME_CLOCKWORK //if you want free gbp go fix the fact that clockwork's tooltip css is glass'
 			if("glass")
 				outline_color = COLOR_THEME_GLASS
+			if("imperial")
+				outline_color = COLOR_THEME_IMPERIAL
 			else //this should never happen, hopefully
 				outline_color = COLOR_WHITE
 	if(color)

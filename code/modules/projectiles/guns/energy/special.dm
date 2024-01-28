@@ -103,7 +103,7 @@
 	flags_1 = CONDUCT_1
 	attack_verb_continuous = list("attacks", "slashes", "cuts", "slices")
 	attack_verb_simple = list("attack", "slash", "cut", "slice")
-	force = 12
+	force = 19
 	sharpness = SHARP_EDGED
 	can_charge = FALSE
 	gun_flags = NOT_A_REAL_GUN
