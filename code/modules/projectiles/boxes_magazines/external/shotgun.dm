@@ -35,3 +35,12 @@
 	name = "shotgun magazine (12g meteor slugs)"
 	base_icon_state = "m12gbc"
 	ammo_type = /obj/item/ammo_casing/shotgun/meteorslug
+
+/obj/item/ammo_box/magazine/d12g
+	name = "shotgun drum (12g buckshot slugs)"
+	desc = "A huge drum magazine for heavy autoshotguns."
+	icon_state = "m12gb"
+	base_icon_state = "m12gb"
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
+	caliber = CALIBER_SHOTGUN
+	max_ammo = 16
