@@ -260,7 +260,7 @@
 
 /obj/item/gun/ballistic/shotgun/punisher
 	name = "\improper TR-32 punisher shotgun"
-	desc = "A semi-auto, mag-fed shotgun for combat in narrow corridors, nicknamed 'Bulldog' by boarding parties. Compatible only with specialized 8-round drum magazines. Can have a secondary magazine attached to quickly swap between ammo types, or just to keep shooting."
+	desc = "A heavy autoshotgun"
 	icon = 'icons/obj/weapons/guns/imperial_guns.dmi'
 	icon_state = "punisher"
 	inhand_icon_state = "bulldog"
@@ -275,11 +275,9 @@
 	can_suppress = FALSE
 	burst_size = 1
 	fire_delay = 0
-	pin = /obj/item/firing_pin/implant/pindicate
 	fire_sound = 'sound/weapons/gun/shotgun/shot_alt.ogg'
 	actions_types = list()
 	mag_display = TRUE
-	empty_indicator = TRUE
 	special_mags = TRUE
 	mag_display_ammo = TRUE
 	semi_auto = TRUE

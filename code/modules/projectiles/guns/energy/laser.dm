@@ -41,9 +41,9 @@
 
 /obj/item/gun/energy/laser/volkite
 	name ="RM-45 volkite rifle"
-	desc = "An infantry-grade thermal laser rifle, adopted for its mechanical reliability and brutal efficiency at disposing  \
-	meatbags. Not so useful against the all-too-common cyborgs and synthetics of the empire.. Fires conflagorator beams with \
-	a tendency to ignite any organic material in comes into contact with."
+	desc = "An infantry-grade thermal laser rifle, adopted for its mechanical reliability and brutal efficiency at dispatching\
+	meatbags. Not so useful against the all-too-common cyborgs and synthetics of the empire. Fires conflagorator beams with \
+	a tendency to ignite any organic material it comes into contact with."
 	icon = 'icons/obj/weapons/guns/imperial_guns.dmi'
 	icon_state = "volkite_hellgun"
 	inhand_icon_state = "volkite"
