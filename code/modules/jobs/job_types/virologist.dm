@@ -7,10 +7,10 @@
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = SUPERVISOR_CMO
-	exp_requirements = 60
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "VIROLOGIST"
+	required_character_age = 25
 
 	outfit = /datum/outfit/job/virologist
 	plasmaman_outfit = /datum/outfit/plasmaman/viro
@@ -59,3 +59,6 @@
 	messenger = /obj/item/storage/backpack/messenger/vir
 
 	box = /obj/item/storage/box/survival/medical
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)

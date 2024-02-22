@@ -3275,9 +3275,9 @@
 	},
 /area/space)
 "QE" = (
-/obj/item/clothing/suit/jacket/straight_jacket,
-/obj/item/clothing/suit/jacket/straight_jacket,
-/obj/item/clothing/suit/jacket/straight_jacket,
+/obj/item/clothing/suit/jacket/strait_jacket,
+/obj/item/clothing/suit/jacket/strait_jacket,
+/obj/item/clothing/suit/jacket/strait_jacket,
 /obj/item/restraints/handcuffs,
 /obj/item/restraints/handcuffs,
 /obj/item/restraints/handcuffs,

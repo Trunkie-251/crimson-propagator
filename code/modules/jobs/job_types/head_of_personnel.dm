@@ -11,11 +11,11 @@
 	supervisors = SUPERVISOR_CAPTAIN
 	req_admin_notify = 1
 	minimal_player_age = 10
-	exp_requirements = 180
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_SERVICE
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "HEAD_OF_PERSONNEL"
+	required_character_age = 35
 
 	outfit = /datum/outfit/job/hop
 	plasmaman_outfit = /datum/outfit/plasmaman/head_of_personnel
@@ -45,7 +45,7 @@
 
 
 /datum/job/head_of_personnel/get_captaincy_announcement(mob/living/captain)
-	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
+	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] has arrived!"
 
 
 /datum/outfit/job/hop
@@ -67,6 +67,9 @@
 	chameleon_extras = list(
 		/obj/item/gun/energy/e_gun,
 		/obj/item/stamp/head/hop,
+		)
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
 		)
 
 /datum/outfit/job/hop/pre_equip(mob/living/carbon/human/H)

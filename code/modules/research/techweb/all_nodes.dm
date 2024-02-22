@@ -1353,6 +1353,7 @@
 	prereq_ids = list("adv_biotech", "datatheory")
 	design_ids = list(
 		"ci-breather",
+		"ci-neuralinterface",
 		"ci-diaghud",
 		"ci-medhud",
 		"ci-nutriment",

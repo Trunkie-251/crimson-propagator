@@ -6,11 +6,11 @@
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = SUPERVISOR_RD
-	exp_requirements = 60
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	bounty_types = CIV_JOB_ROBO
 	config_tag = "ROBOTICIST"
+	required_character_age = 25
 
 	outfit = /datum/outfit/job/roboticist
 	plasmaman_outfit = /datum/outfit/plasmaman/robotics
@@ -56,6 +56,9 @@
 
 	pda_slot = ITEM_SLOT_LPOCKET
 	skillchips = list(/obj/item/skillchip/job/roboticist)
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
 
 /datum/outfit/job/roboticist/mod
 	name = "Roboticist (MODsuit)"

@@ -50,6 +50,10 @@
 	suit = /obj/item/clothing/suit/toggle/cargo_tech
 	ears = /obj/item/radio/headset/headset_cargo
 	l_hand = /obj/item/universal_scanner
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
+
 
 /datum/outfit/job/cargo_tech/mod
 	name = "Cargo Technician (MODsuit)"

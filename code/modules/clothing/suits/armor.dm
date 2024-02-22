@@ -61,34 +61,37 @@
 
 
 /obj/item/clothing/suit/armor/vest/carapace
-	name = "carapace suit (Felix-Pattern) "
+	name = "Felix-pattern carapace suit"
 	desc = "A heavy suit of armour that slows down movement. Large plastisteel plates woven with neo-vein armour fabrics and \
 	coated in rubbery synthmyomers. This imperial army variation is typically seen on heavy weapon crews or assault units."
 	icon_state = "carapace"
 	inhand_icon_state = "armor"
+	slowdown = 0.5
 	clothing_flags = STOPSPRESSUREDAMAGE | THICKMATERIAL
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
 	armor_type = /datum/armor/vest_carapace
 	cold_protection = CHEST | GROIN | LEGS | ARMS
 	heat_protection = CHEST | GROIN | LEGS | ARMS
 	resistance_flags = FIRE_PROOF | ACID_PROOF
+	equip_delay_self = 30
+	strip_delay = 30
 
 /datum/armor/vest_carapace
 	melee = 50
-	bullet = 50
-	laser = 30
-	energy = 30
-	bomb = 50
+	bullet = 60
+	laser = 50
+	energy = 50
+	bomb = 35
 	bio = 100
-	fire = 40
+	fire = 35
 	acid = 50
 	wound = 20
 
 /obj/item/clothing/suit/armor/vest/carapace/armaster
-	name = "armaster's carapace suit (Felix-Pattern) "
+	name = "Felix-pattern carapace suit (Armaster)"
 	desc = "A heavy suit of armour that slows down movement. Large plastisteel plates woven with neo-vein armour fabrics and \
 	coated in rubbery synthmyomers. This imperial army variation is typically seen on heavy weapon crews or assault units. \n\
-	This specific suit has the designation of an armaster's suit."
+	This specific armour has the designation of an armaster's suit."
 	icon_state = "carapace_2"
 
 /obj/item/clothing/suit/armor/vest/marine

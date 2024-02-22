@@ -66,3 +66,7 @@
 	box = /obj/item/storage/box/survival/medical
 	chameleon_extras = /obj/item/gun/syringe
 	pda_slot = ITEM_SLOT_LPOCKET
+
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)

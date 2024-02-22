@@ -206,9 +206,6 @@
 	if(GLOB.current_anonymous_theme) //only robotic renames will allow for anything other than the anonymous one
 		changed_name = GLOB.current_anonymous_theme.anonymous_ai_name(FALSE)
 	else if(custom_name)
-		changed_name = custom_name
-	else if(pref_source && pref_source.prefs.read_preference(/datum/preference/name/cyborg) != DEFAULT_CYBORG_NAME)
-		apply_pref_name(/datum/preference/name/cyborg, pref_source)
 		return //built in camera handled in proc
 	else
 		changed_name = get_standard_name()
@@ -984,13 +981,6 @@
 		connected_ai.connected_robots |= src
 		lamp_doom = connected_ai.doomsday_device ? TRUE : FALSE
 	toggle_headlamp(FALSE, TRUE)
-
-/mob/living/silicon/robot/get_exp_list(minutes)
-	. = ..()
-
-	var/datum/job/cyborg/cyborg_job_ref = SSjob.GetJobType(/datum/job/cyborg)
-
-	.[cyborg_job_ref.title] = minutes
 
 /mob/living/silicon/robot/proc/untip_roleplay()
 	to_chat(src, span_notice("Your frustration has empowered you! You can now right yourself faster!"))

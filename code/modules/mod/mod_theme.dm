@@ -751,19 +751,16 @@
 
 /datum/mod_theme/safeguard
 	name = "safeguard"
-	desc = "An Apadyne Technologies advanced security suit, offering greater speed and fire protection than the standard security model."
-	extended_desc = "An Apadyne Technologies advanced security suit, and their latest model. This variant has \
-		ditched the presence of a reinforced glass visor entirely, replacing it with a 'blast visor' utilizing a \
-		small camera on the left side to display the outside to the user. The plating on the suit has been \
-		dramatically increased, especially in the pauldrons, giving the wearer an imposing silhouette. \
-		Heatsinks line the sides of the suit, and greater technology has been used in insulating it against \
-		both corrosive environments and sudden impacts to the user's joints."
+	desc = "A heavy combat powered armour suit designed to be able to take damage, and dish it back out in close boarding operations."
+	extended_desc = "A heavy warsuit suit designed to be able to take damage, and dish it back out in close-quarters boarding operations. \
+		This powersuit throws away the slim visors of older powered armour models, and instead uses a set of small cameras on the left side of the helmet\
+		to provide vision directly into an operator's neural interface. "
 	default_skin = "safeguard"
 	armor_type = /datum/armor/mod_theme_safeguard
 	resistance_flags = FIRE_PROOF
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
-	slowdown_inactive = 0.75
-	slowdown_active = 0.25
+	slowdown_inactive = 3
+	slowdown_active = -0.25
 	allowed_suit_storage = list(
 		/obj/item/ammo_box,
 		/obj/item/ammo_casing,
@@ -800,15 +797,15 @@
 	)
 
 /datum/armor/mod_theme_safeguard
-	melee = 15
-	bullet = 15
-	laser = 15
-	energy = 15
-	bomb = 40
+	melee = 100
+	bullet = 100
+	laser = 80
+	energy = 65
+	bomb = 50
 	bio = 100
-	fire = 100
+	fire = 140
 	acid = 95
-	wound = 15
+	wound = 40
 
 /datum/mod_theme/magnate
 	name = "magnate"
@@ -830,7 +827,7 @@
 	siemens_coefficient = 0
 	complexity_max = DEFAULT_MAX_COMPLEXITY + 5
 	slowdown_inactive = 0.75
-	slowdown_active = 0.25
+	slowdown_active = -0.25
 	allowed_suit_storage = list(
 		/obj/item/ammo_box,
 		/obj/item/ammo_casing,

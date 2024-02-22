@@ -56,6 +56,10 @@
 	belt = null
 	ears = null
 	shoes = /obj/item/clothing/shoes/sneakers/orange
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
+
 
 /datum/outfit/job/prisoner/pre_equip(mob/living/carbon/human/H)
 	..()

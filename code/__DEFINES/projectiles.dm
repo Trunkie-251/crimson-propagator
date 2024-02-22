@@ -30,6 +30,8 @@
 #define CALIBER_50BMG ".50BMG"
 /// The caliber used by the desert eagle.
 #define CALIBER_50AE ".50AE"
+/// The caliber used by 5mm Flechette guns.
+#define CALIBER_5FLE "5mm flechette"
 /// The caliber used by the gyrojet pistol.
 #define CALIBER_75 ".75"
 /// The caliber used by [one revolver variant][/obj/item/gun/ballistic/revolver/nagant].

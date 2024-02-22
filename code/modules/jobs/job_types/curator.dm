@@ -9,10 +9,10 @@
 	supervisors = SUPERVISOR_HOP
 	config_tag = "CURATOR"
 	exp_granted_type = EXP_TYPE_CREW
+	required_character_age = 25
 
 	outfit = /datum/outfit/job/curator
 	plasmaman_outfit = /datum/outfit/plasmaman/curator
-	synthetic_outfit = /datum/outfit/synthetic
 
 	paycheck = PAYCHECK_CREW
 	paycheck_department = ACCOUNT_SRV
@@ -42,7 +42,6 @@
 	jobtype = /datum/job/curator
 
 	id_trim = /datum/id_trim/job/curator
-	uniform = /obj/item/clothing/under/rank/civilian/curator
 	backpack_contents = list(
 		/obj/item/barcodescanner = 1,
 		/obj/item/choice_beacon/hero = 1,
@@ -53,6 +52,11 @@
 	l_pocket = /obj/item/laser_pointer/green
 	r_pocket = /obj/item/key/displaycase
 	l_hand = /obj/item/storage/bag/books
+
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
+
 
 	accessory = /obj/item/clothing/accessory/pocketprotector/full
 

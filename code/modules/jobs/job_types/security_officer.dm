@@ -9,12 +9,11 @@
 	spawn_positions = 5 //Handled in /datum/controller/occupations/proc/setup_officer_positions()
 	supervisors = "the Head of Security, and the head of your assigned department (if applicable)"
 	minimal_player_age = 7
-	exp_requirements = 300
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "SECURITY_OFFICER"
 
-	outfit = /datum/outfit/job/security
+	outfit = /datum/outfit/job/soldier
 	plasmaman_outfit = /datum/outfit/plasmaman/security
 	synthetic_outfit = /datum/outfit/synthetic
 
@@ -194,21 +193,22 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 		GLOB.security_officer_distribution,
 	)
 
-/datum/outfit/job/security
-	name = "Security Officer"
+/datum/outfit/job/soldier
+	name = "Soldier"
 	jobtype = /datum/job/security_officer
 
 	id_trim = /datum/id_trim/job/security_officer
-	uniform = /obj/item/clothing/under/rank/security/officer
+	uniform = /obj/item/clothing/under/rank/security/officer/soldier
 	suit = /obj/item/clothing/suit/armor/vest/carapace
-	suit_store = /obj/item/gun/energy/disabler
+	suit_store = /obj/item/gun/ballistic/automatic/pistol/lawmaker
 	backpack_contents = list(
 		/obj/item/evidencebag = 1,
 		)
 	belt = /obj/item/modular_computer/pda/security
-	ears = /obj/item/radio/headset/headset_sec/alt
+	ears = /obj/item/radio/headset/headset_sec
+	mask = /obj/item/clothing/mask/gas/sechailer/soldier
 	gloves = /obj/item/clothing/gloves/tackler/carapace
-	head = /obj/item/clothing/head/helmet/carapace/visor
+	head = /obj/item/clothing/head/helmet/carapace
 	shoes = /obj/item/clothing/shoes/combat/carapace
 	l_pocket = /obj/item/restraints/handcuffs
 	r_pocket = /obj/item/assembly/flash/handheld
@@ -220,15 +220,22 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 
 	box = /obj/item/storage/box/survival/security
 	chameleon_extras = list(
-		/obj/item/clothing/glasses/hud/security/sunglasses,
-		/obj/item/clothing/head/helmet,
-		/obj/item/gun/energy/disabler,
+		/obj/item/gun/ballistic/automatic/pistol/lawmaker,
 		)
 		//The helmet is necessary because /obj/item/clothing/head/helmet/sec is overwritten in the chameleon list by the standard helmet, which has the same name and icon state
 	implants = list(/obj/item/implant/mindshield)
+	organs = list(
+		/obj/item/organ/internal/cyberimp/eyes/hud/security,
+		/obj/item/organ/internal/cyberimp/brain/anti_stun,
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		/obj/item/organ/internal/ears/cybernetic/upgraded,
+		/obj/item/organ/internal/eyes/robotic/shield,
+		/obj/item/organ/internal/cyberimp/mouth/breathing_tube
+	)
 
-/datum/outfit/job/security/mod
-	name = "Security Officer (MODsuit)"
+
+/datum/outfit/job/soldier/pa
+	name = "Soldier (Powersuit)"
 
 	suit_store = /obj/item/tank/internals/oxygen
 	back = /obj/item/mod/control/pre_equipped/security

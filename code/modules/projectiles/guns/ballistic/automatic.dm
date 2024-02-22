@@ -383,7 +383,7 @@
 
 /obj/item/gun/ballistic/automatic/lmg11
 	name = "\improper B&W LMG11"
-	desc = "A B&W light machinegun that became a massive hit with private armies. It is extremely accurate and fires caseless 4.73 x 33mm rounds. \
+	desc = "A human-designed light machinegun that became a massive hit with private armies. It is extremely accurate and fires caseless 4.73 x 33mm rounds. \
 	The 200-round mag allows for longer operations without having to carry much ammunition."
 	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
 	icon_state = "lmg11"

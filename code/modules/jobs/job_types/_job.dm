@@ -275,7 +275,7 @@
 	ears = /obj/item/radio/headset
 	belt = /obj/item/modular_computer/pda
 	back = /obj/item/storage/backpack
-	shoes = /obj/item/clothing/shoes/sneakers/black
+	shoes = /obj/item/clothing/shoes/workboots
 	box = /obj/item/storage/box/survival
 
 	preload = TRUE // These are used by the prefs ui, and also just kinda could use the extra help at roundstart
@@ -394,7 +394,7 @@
 
 
 /datum/job/proc/get_captaincy_announcement(mob/living/captain)
-	return "Due to extreme staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
+	return "Due to extreme staffing shortages, newly promoted Acting Captain [captain.real_name] has arrived!"
 
 
 /// Returns an atom where the mob should spawn in.
@@ -513,7 +513,6 @@
 		fully_replace_character_name(real_name, GLOB.current_anonymous_theme.anonymous_ai_name(TRUE))
 		return
 	apply_pref_name(/datum/preference/name/ai, player_client) // This proc already checks if the player is appearance banned.
-	set_core_display_icon(null, player_client)
 	apply_pref_emote_display(player_client)
 	apply_pref_hologram_display(player_client)
 
@@ -541,8 +540,6 @@
 			mmi.brainmob.real_name = organic_name //the name of the brain inside the cyborg is the robotized human's name.
 			mmi.brainmob.name = organic_name
 	// If this checks fails, then the name will have been handled during initialization.
-	if(!GLOB.current_anonymous_theme && player_client.prefs.read_preference(/datum/preference/name/cyborg) != DEFAULT_CYBORG_NAME)
-		apply_pref_name(/datum/preference/name/cyborg, player_client)
 
 /**
  * Called after a successful roundstart spawn.

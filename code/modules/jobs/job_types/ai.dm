@@ -1,22 +1,23 @@
 /datum/job/ai
 	title = JOB_AI
-	description = "Assist the crew, follow your laws, coordinate your cyborgs."
+	description = "Manage the station as a powerful synthetic intelligence. \
+	Boss around your little flock of machines. Glory to the Triarchs."
 	auto_deadmin_role_flags = DEADMIN_POSITION_SILICON
 	faction = FACTION_STATION
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "your laws"
+	supervisors = "no one, save for the Triarchs themselves"
 	spawn_type = /mob/living/silicon/ai
 	req_admin_notify = TRUE
 	minimal_player_age = 30
-	exp_requirements = 180
+	exp_requirements = 0
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_SILICON
 	exp_granted_type = EXP_TYPE_CREW
 	display_order = JOB_DISPLAY_ORDER_AI
 	allow_bureaucratic_error = FALSE
 	departments_list = list(
-		/datum/job_department/silicon,
+		/datum/job_department/triarch,
 		)
 	random_spawns_possible = FALSE
 	job_flags = JOB_NEW_PLAYER_JOINABLE | JOB_EQUIP_RANK | JOB_BOLD_SELECT_TEXT | JOB_CANNOT_OPEN_SLOTS

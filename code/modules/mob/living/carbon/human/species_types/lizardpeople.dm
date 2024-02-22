@@ -30,7 +30,6 @@
 	death_sound = 'sound/voice/lizard/tzynn_die2.mp3'
 	wing_types = list(/obj/item/organ/external/wings/functional/dragon)
 	species_language_holder = /datum/language_holder/lizard
-	digitigrade_customization = DIGITIGRADE_OPTIONAL
 
 	// Lizards are coldblooded and can stand a greater temperature range than humans
 	bodytemp_heat_damage_limit = BODYTEMP_HEAT_LAVALAND_SAFE

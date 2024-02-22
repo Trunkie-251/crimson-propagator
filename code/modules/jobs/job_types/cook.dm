@@ -9,6 +9,7 @@
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "COOK"
 	var/cooks = 0 //Counts cooks amount
+	required_character_age = 25
 
 	outfit = /datum/outfit/job/cook
 	plasmaman_outfit = /datum/outfit/plasmaman/chef
@@ -76,6 +77,10 @@
 	mask = /obj/item/clothing/mask/fakemoustache/italian
 
 	skillchips = list(/obj/item/skillchip/job/chef)
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
+
 
 /datum/outfit/job/cook/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

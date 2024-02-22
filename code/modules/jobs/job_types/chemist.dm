@@ -7,10 +7,11 @@
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = SUPERVISOR_CMO
-	exp_requirements = 60
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "CHEMIST"
+	required_character_age = 25
+
 
 	outfit = /datum/outfit/job/chemist
 	plasmaman_outfit = /datum/outfit/plasmaman/chemist
@@ -60,3 +61,7 @@
 
 	box = /obj/item/storage/box/survival/medical
 	chameleon_extras = /obj/item/gun/syringe
+
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)

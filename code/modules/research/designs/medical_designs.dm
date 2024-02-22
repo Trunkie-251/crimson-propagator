@@ -341,7 +341,8 @@
 
 /datum/design/cyberimp_breather
 	name = "Breathing Tube Implant"
-	desc = "This simple implant adds an internals connector to your back, allowing you to use internals without a mask and protecting you from being choked."
+	desc = "This simple implant adds an internals connector to your back, \
+	allowing you to use internals without a mask and protecting you from being choked."
 	id = "ci-breather"
 	build_type = PROTOLATHE | AWAY_LATHE | MECHFAB
 	construction_time = 35
@@ -351,6 +352,21 @@
 		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_IMPLANTS_HEALTH
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
+
+/datum/design/cyberimp_neuralinterface
+	name = "Neural interface plugs"
+	desc = "An important cybernetic implant seen in all facets of life, no matter rich or poor. \
+	This augmentation allows for one to neurally interace with all sorts of other imperial technologies."
+	id = "ci-neuralinterface"
+	build_type = PROTOLATHE | AWAY_LATHE | MECHFAB
+	construction_time = 35
+	materials = list(/datum/material/iron = SMALL_MATERIAL_AMOUNT*7, /datum/material/glass = SMALL_MATERIAL_AMOUNT*3)
+	build_path = /obj/item/organ/internal/cyberimp/brain/neural_interface
+	category = list(
+		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_IMPLANTS_HEALTH
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL
+
 
 /datum/design/cyberimp_surgical
 	name = "Surgical Arm Implant"

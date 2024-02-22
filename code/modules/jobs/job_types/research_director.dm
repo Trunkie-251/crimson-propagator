@@ -13,10 +13,11 @@
 	req_admin_notify = 1
 	minimal_player_age = 7
 	exp_required_type_department = EXP_TYPE_SCIENCE
-	exp_requirements = 180
+
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "RESEARCH_DIRECTOR"
+	required_character_age = 35
 
 	outfit = /datum/outfit/job/rd
 	plasmaman_outfit = /datum/outfit/plasmaman/research_director
@@ -48,7 +49,7 @@
 
 
 /datum/job/research_director/get_captaincy_announcement(mob/living/captain)
-	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
+	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] has arrived!"
 
 
 /datum/outfit/job/rd
@@ -77,6 +78,9 @@
 
 	chameleon_extras = /obj/item/stamp/head/rd
 	skillchips = list(/obj/item/skillchip/job/research_director)
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
 
 /datum/outfit/job/rd/mod
 	name = "Research Director (MODsuit)"

@@ -1985,6 +1985,14 @@
 		active_hud.screentip_text.maptext = ""
 		return
 
+	active_hud.screentip_text.maptext_y = 16
+	var/screentip_font_family = ""
+	if(active_hud.screentip_font)
+		screentip_font_family = " font-family: \"[active_hud.screentip_font]\";"
+
+	active_hud.screentip_text.maptext = "<span class='maptext' style='text-align: center;[screentip_font_family] font-size: [active_hud.screentip_font_size]; color: [active_hud.screentip_color];'>[uppertext(name)]</span>"
+
+
 	active_hud.screentip_text.maptext_y = 10 // 10px lines us up with the action buttons top left corner
 	var/lmb_rmb_line = ""
 	var/ctrl_lmb_ctrl_rmb_line = ""

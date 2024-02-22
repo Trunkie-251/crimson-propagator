@@ -73,6 +73,10 @@
 	box = /obj/item/storage/box/survival/hug
 	chameleon_extras = /obj/item/stamp/clown
 	implants = list(/obj/item/implant/sad_trombone)
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
+
 
 /datum/outfit/job/clown/mod
 	name = "Clown (MODsuit)"

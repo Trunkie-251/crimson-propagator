@@ -40,15 +40,7 @@
 	mutantheart = /obj/item/organ/internal/heart/synthetic
 	mutantliver = /obj/item/organ/internal/liver/synthetic
 	mutantlungs = null
-	mutant_organs = list(
-		/obj/item/organ/internal/exoskeleton/screen/visor,
-		/obj/item/organ/internal/exoskeleton/head/plating,
-		/obj/item/organ/internal/exoskeleton/leg/left/plating,
-		/obj/item/organ/internal/exoskeleton/leg/right/plating,
-		/obj/item/organ/internal/exoskeleton/arm/left/plating,
-		/obj/item/organ/internal/exoskeleton/arm/right/plating,
-		/obj/item/organ/internal/exoskeleton/chest/plating
-	)
+	mutant_organs = list()
 	mutantbrain = /obj/item/organ/internal/brain/positronic
 	mutanteyes = /obj/item/organ/internal/eyes/synthetic
 	mutantears = /obj/item/organ/internal/ears

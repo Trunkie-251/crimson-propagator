@@ -990,7 +990,7 @@
 	pixel_y = -11;
 	pixel_x = -5
 	},
-/obj/item/clothing/suit/jacket/straight_jacket{
+/obj/item/clothing/suit/jacket/strait_jacket{
 	pixel_y = 3
 	},
 /obj/structure/rack,

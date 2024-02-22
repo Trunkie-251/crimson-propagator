@@ -341,7 +341,7 @@
 	haircolor = COLOR_BLACK
 	facial_hairstyle = "Shaved"
 	skin_tone = "caucasian1"
-	outfit = /datum/outfit/job/assistant/consistent
+	outfit = /datum/outfit/job/assistant
 
 /obj/effect/mob_spawn/corpse/human/prey_pod
 	husk = TRUE

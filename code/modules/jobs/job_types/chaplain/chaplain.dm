@@ -128,3 +128,6 @@
 
 	chameleon_extras = /obj/item/stamp/chap
 	skillchips = list(/obj/item/skillchip/entrails_reader)
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)

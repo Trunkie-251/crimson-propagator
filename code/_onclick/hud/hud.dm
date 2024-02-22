@@ -82,6 +82,18 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	/// game (MouseEntered).
 	var/screentip_color
 
+	/// The font to use for the screentips.
+	/// This is updated by the preference for cheaper reads than would be
+	/// had with a proc call, especially on one of the hottest procs in the
+	/// game (MouseEntered).
+	var/screentip_font = "DpQuake"
+
+	/// The font size to use for the screentips.
+	/// This is updated by the preference for cheaper reads than would be
+	/// had with a proc call, especially on one of the hottest procs in the
+	/// game (MouseEntered).
+	var/screentip_font_size = "10px"
+
 	var/atom/movable/screen/button_palette/toggle_palette
 	var/atom/movable/screen/palette_scroll/down/palette_down
 	var/atom/movable/screen/palette_scroll/up/palette_up

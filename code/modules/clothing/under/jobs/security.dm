@@ -29,6 +29,25 @@
 	icon_state = "rsecurity"
 	inhand_icon_state = "r_suit"
 
+//Imperial soldier coveralls.
+
+/obj/item/clothing/under/rank/security/officer/soldier
+	icon = 'icons/obj/clothing/under/synth.dmi'
+	worn_icon = 'icons/mob/clothing/under/synth.dmi'
+	icon_state = "watch"
+	name = "tactical coveralls"
+	desc = "A bone-grey set of heavy coveralls with thickened synthread that provide decent protection. \
+	Exactly the same as every other uniform in the godforsaken arcology."
+	armor_type = /datum/armor/clothing_under/soldier
+
+/datum/armor/clothing_under/soldier
+	melee = 15
+	bullet = 7
+	fire = 30
+	acid = 30
+	wound = 10
+
+
 /obj/item/clothing/under/rank/security/officer/grey
 	name = "grey security jumpsuit"
 	desc = "A tactical relic of years past before Nanotrasen decided it was cheaper to dye the suits red instead of washing out the blood."

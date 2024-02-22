@@ -50,7 +50,7 @@
 #define JOB_CHIEF_ENGINEER "Chief Engineer"
 #define JOB_CHIEF_MEDICAL_OFFICER "Chief Medical Officer"
 //Silicon
-#define JOB_AI "AI"
+#define JOB_AI "Overlord"
 #define JOB_CYBORG "Cyborg"
 #define JOB_PERSONAL_AI "Personal AI"
 //Security
@@ -127,7 +127,6 @@
 #define JOB_DISPLAY_ORDER_CHAPLAIN 12
 #define JOB_DISPLAY_ORDER_PSYCHOLOGIST 13
 #define JOB_DISPLAY_ORDER_AI 14
-#define JOB_DISPLAY_ORDER_CYBORG 15
 #define JOB_DISPLAY_ORDER_CHIEF_ENGINEER 16
 #define JOB_DISPLAY_ORDER_STATION_ENGINEER 17
 #define JOB_DISPLAY_ORDER_ATMOSPHERIC_TECHNICIAN 18
@@ -173,7 +172,8 @@
 #define DEPARTMENT_ASSISTANT "Assistant"
 #define DEPARTMENT_BITFLAG_CAPTAIN (1<<9)
 #define DEPARTMENT_CAPTAIN "Captain"
-
+#define DEPARTMENT_BITFLAG_TRIARCH (1<<10)
+#define DEPARTMENT_TRIARCH ""
 /* Job datum job_flags */
 /// Whether the mob is announced on arrival.
 #define JOB_ANNOUNCE_ARRIVAL (1<<0)

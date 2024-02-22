@@ -12073,8 +12073,8 @@
 	network = list("isolation");
 	pixel_y = -32
 	},
-/obj/item/clothing/suit/jacket/straight_jacket,
-/obj/item/clothing/suit/jacket/straight_jacket{
+/obj/item/clothing/suit/jacket/strait_jacket,
+/obj/item/clothing/suit/jacket/strait_jacket{
 	pixel_x = 6
 	},
 /obj/machinery/camera/directional/east{
@@ -32503,7 +32503,7 @@
 /area/station/medical/treatment_center)
 "kpX" = (
 /obj/structure/bed,
-/obj/item/clothing/suit/jacket/straight_jacket,
+/obj/item/clothing/suit/jacket/strait_jacket,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
 /turf/open/floor/iron/white/textured,

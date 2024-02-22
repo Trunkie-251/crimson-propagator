@@ -135,12 +135,6 @@
 	show_in_report = TRUE
 	report_message = "Due to a shortage in standard issue jumpsuits, we have provided your assistants with one of our backup supplies."
 
-/datum/station_trait/colored_assistants/New()
-	. = ..()
-
-	var/new_colored_assistant_type = pick(subtypesof(/datum/colored_assistant) - get_configured_colored_assistant_type())
-	GLOB.colored_assistant = new new_colored_assistant_type
-
 /datum/station_trait/cargorilla
 	name = "Cargo Gorilla"
 	trait_type = STATION_TRAIT_NEUTRAL

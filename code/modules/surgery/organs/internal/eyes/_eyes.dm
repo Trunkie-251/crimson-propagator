@@ -291,15 +291,13 @@
 	icon_state = "cybernetic_eyeballs"
 	desc = "Your vision is augmented."
 	organ_flags = ORGAN_ROBOTIC
+	eye_icon_state = "bioniceye"
+	overlay = /datum/bodypart_overlay/simple/overlay/bioniceyes
 
-/obj/item/organ/internal/eyes/robotic/emp_act(severity)
-	. = ..()
-	if((. & EMP_PROTECT_SELF) || !owner)
-		return
-	if(prob(10 * severity))
-		return
-	to_chat(owner, span_warning("Static obfuscates your vision!"))
-	owner.flash_act(visual = 1)
+/datum/bodypart_overlay/simple/overlay/bioniceyes
+    icon = 'icons/mob/human/species/robot/exoskeletons.dmi'
+    icon_state = "bioniceyes"
+    layers = EXTERNAL_ADJACENT
 
 /obj/item/organ/internal/eyes/robotic/basic
 	name = "basic robotic eyes"
@@ -318,6 +316,8 @@
 		do_sparks(2, TRUE, owner)
 		owner.emote("scream")
 
+//X-ray cybernetic eyes
+
 /obj/item/organ/internal/eyes/robotic/xray
 	name = "\improper X-ray eyes"
 	desc = "These cybernetic eyes will give you X-ray vision. Blinking is futile."
@@ -333,6 +333,8 @@
 	. = ..()
 	REMOVE_TRAIT(eye_owner, TRAIT_XRAY_VISION, ORGAN_TRAIT)
 
+//Thermal cybernetic eyes
+
 /obj/item/organ/internal/eyes/robotic/thermals
 	name = "thermal eyes"
 	desc = "These cybernetic eye implants will give you thermal vision. Vertical slit pupil included."
@@ -342,6 +344,8 @@
 	color_cutoffs = list(25, 8, 5)
 	sight_flags = SEE_MOBS
 	flash_protect = FLASH_PROTECTION_SENSITIVE
+
+//flashlight cybernetic eyes
 
 /obj/item/organ/internal/eyes/robotic/flashlight
 	name = "flashlight eyes"
@@ -373,14 +377,13 @@
 	eye.forceMove(src)
 	victim.cure_blind(FLASHLIGHT_EYES)
 
+
+
 // Welding shield implant
 /obj/item/organ/internal/eyes/robotic/shield
 	name = "shielded robotic eyes"
 	desc = "These reactive micro-shields will protect you from welders and flashes without obscuring your vision."
 	flash_protect = FLASH_PROTECTION_WELDER
-
-/obj/item/organ/internal/eyes/robotic/shield/emp_act(severity)
-	return
 
 #define MATCH_LIGHT_COLOR 1
 #define USE_CUSTOM_COLOR 0

@@ -62,12 +62,16 @@
 	head = /obj/item/clothing/head/frenchberet
 	mask = /obj/item/clothing/mask/gas/mime
 	shoes = /obj/item/clothing/shoes/laceup
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
 
 	backpack = /obj/item/storage/backpack/mime
 	satchel = /obj/item/storage/backpack/mime
 
 	box = /obj/item/storage/box/survival/hug/black
 	chameleon_extras = /obj/item/stamp/mime
+
 
 /datum/outfit/job/mime/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()

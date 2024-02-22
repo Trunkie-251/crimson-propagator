@@ -56,6 +56,9 @@
 
 	box = /obj/item/storage/box/survival/mining
 	chameleon_extras = /obj/item/gun/energy/recharge/kinetic_accelerator
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
 
 /datum/outfit/job/miner/equipped
 	name = "Shaft Miner (Equipment)"

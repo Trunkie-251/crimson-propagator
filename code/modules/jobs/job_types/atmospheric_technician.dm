@@ -6,10 +6,10 @@
 	total_positions = 3
 	spawn_positions = 2
 	supervisors = SUPERVISOR_CE
-	exp_requirements = 60
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "ATMOSPHERIC_TECHNICIAN"
+	required_character_age = 25
 
 	outfit = /datum/outfit/job/atmos
 	plasmaman_outfit = /datum/outfit/plasmaman/atmospherics
@@ -57,6 +57,11 @@
 
 	box = /obj/item/storage/box/survival/engineer
 	pda_slot = ITEM_SLOT_LPOCKET
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		/obj/item/organ/internal/cyberimp/eyes/hud/diagnostic,
+		)
+
 
 /datum/outfit/job/atmos/mod
 	name = "Atmospheric Technician (MODsuit)"

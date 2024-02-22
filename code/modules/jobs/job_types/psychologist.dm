@@ -9,6 +9,7 @@
 	supervisors = "the Head of Personnel and the Chief Medical Officer"
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "PSYCHOLOGIST"
+	required_character_age = 25
 
 	outfit = /datum/outfit/job/psychologist
 	plasmaman_outfit = /datum/outfit/plasmaman/psychologist
@@ -61,3 +62,6 @@
 
 	pda_slot = ITEM_SLOT_BELT
 	skillchips = list(/obj/item/skillchip/job/psychology)
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)

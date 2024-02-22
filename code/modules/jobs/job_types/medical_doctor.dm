@@ -9,6 +9,7 @@
 	supervisors = SUPERVISOR_CMO
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "MEDICAL_DOCTOR"
+	required_character_age = 25
 
 	outfit = /datum/outfit/job/doctor
 	plasmaman_outfit = /datum/outfit/plasmaman/medical
@@ -62,6 +63,9 @@
 	box = /obj/item/storage/box/survival/medical
 	chameleon_extras = /obj/item/gun/syringe
 	skillchips = list(/obj/item/skillchip/entrails_reader)
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
 
 /datum/outfit/job/doctor/mod
 	name = "Medical Doctor (MODsuit)"

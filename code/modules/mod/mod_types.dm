@@ -175,8 +175,6 @@
 		/obj/item/mod/module/flashlight,
 		/obj/item/mod/module/jetpack,
 		/obj/item/mod/module/megaphone,
-		/obj/item/mod/module/projectile_dampener,
-		/obj/item/mod/module/pepper_shoulders,
 	)
 	default_pins = list(
 		/obj/item/mod/module/jetpack,

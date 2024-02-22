@@ -7,10 +7,10 @@
 	total_positions = 5
 	spawn_positions = 5
 	supervisors = SUPERVISOR_CE
-	exp_requirements = 60
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "STATION_ENGINEER"
+	required_character_age = 25
 
 	outfit = /datum/outfit/job/engineer
 	plasmaman_outfit = /datum/outfit/plasmaman/engineering
@@ -46,7 +46,6 @@
 
 	id_trim = /datum/id_trim/job/station_engineer
 	uniform = /obj/item/clothing/under/rank/engineering/synthhazard
-	suit = /obj/item/clothing/suit/armor/vest/PUGvest
 	belt = /obj/item/storage/belt/utility/full/engi
 	ears = /obj/item/radio/headset/headset_eng
 	head = /obj/item/clothing/head/utility/hardhat
@@ -67,11 +66,10 @@
 	box = /obj/item/storage/box/survival/engineer
 	pda_slot = ITEM_SLOT_LPOCKET
 	skillchips = list(/obj/item/skillchip/job/engineer)
-
-/datum/outfit/job/engineer/gloved
-	name = "Station Engineer (Gloves)"
-
-	gloves = /obj/item/clothing/gloves/color/yellow
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		/obj/item/organ/internal/cyberimp/eyes/hud/diagnostic,
+		)
 
 /datum/outfit/job/engineer/mod
 	name = "Station Engineer (MODsuit)"

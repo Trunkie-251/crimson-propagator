@@ -97,19 +97,6 @@
 /datum/preference/name/mime/create_default_value()
 	return pick(GLOB.mime_names)
 
-/datum/preference/name/cyborg
-	savefile_key = "cyborg_name"
-
-	allow_numbers = TRUE
-	can_randomize = FALSE
-
-	explanation = "Cyborg name"
-	group = "silicons"
-	relevant_job = /datum/job/cyborg
-
-/datum/preference/name/cyborg/create_default_value()
-	return DEFAULT_CYBORG_NAME
-
 /datum/preference/name/ai
 	savefile_key = "ai_name"
 

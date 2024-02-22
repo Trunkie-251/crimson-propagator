@@ -9,6 +9,7 @@
 	supervisors = "the Head of Personnel and the Chief Medical Officer"
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "CORONER"
+	required_character_age = 25
 
 	outfit = /datum/outfit/job/coroner
 	plasmaman_outfit = /datum/outfit/plasmaman/coroner
@@ -73,3 +74,6 @@
 	messenger = /obj/item/storage/backpack/messenger/coroner
 
 	skillchips = list(/obj/item/skillchip/entrails_reader)
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)

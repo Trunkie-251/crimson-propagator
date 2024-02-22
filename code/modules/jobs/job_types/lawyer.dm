@@ -9,6 +9,7 @@
 	supervisors = SUPERVISOR_HOP
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "LAWYER"
+	required_character_age = 25
 
 	outfit = /datum/outfit/job/lawyer
 	plasmaman_outfit = /datum/outfit/plasmaman/bar
@@ -36,7 +37,6 @@
 	jobtype = /datum/job/lawyer
 
 	id_trim = /datum/id_trim/job/lawyer
-	uniform = /obj/item/clothing/under/rank/civilian/lawyer/bluesuit
 	suit = /obj/item/clothing/suit/toggle/lawyer
 	belt = /obj/item/modular_computer/pda/lawyer
 	ears = /obj/item/radio/headset/headset_srvsec
@@ -45,6 +45,11 @@
 	l_pocket = /obj/item/laser_pointer/red
 	r_pocket = /obj/item/clothing/accessory/lawyers_badge
 	l_hand = /obj/item/storage/briefcase/lawyer
+
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
+
 
 	chameleon_extras = /obj/item/stamp/law
 

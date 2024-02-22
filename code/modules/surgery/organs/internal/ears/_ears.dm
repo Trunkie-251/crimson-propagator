@@ -110,7 +110,7 @@
 	name = "cybernetic ears"
 	icon_state = "ears-c-u"
 	desc =  "An advanced cybernetic ear, surpassing the performance of organic ears."
-	damage_multiplier = 0.5
+	damage_multiplier = 0
 
 /obj/item/organ/internal/ears/cybernetic/whisper
 	name = "whisper-sensitive cybernetic ears"

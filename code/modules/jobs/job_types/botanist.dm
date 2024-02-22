@@ -8,6 +8,8 @@
 	supervisors = SUPERVISOR_HOP
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "BOTANIST"
+	required_character_age = 25
+
 
 	outfit = /datum/outfit/job/botanist
 	plasmaman_outfit = /datum/outfit/plasmaman/botany
@@ -45,7 +47,7 @@
 	jobtype = /datum/job/botanist
 
 	id_trim = /datum/id_trim/job/botanist
-	uniform = /obj/item/clothing/under/fuckyou
+	uniform = /obj/item/clothing/under/syntech/coveralls
 	suit = /obj/item/clothing/suit/apron
 	suit_store = /obj/item/plant_analyzer
 	belt = /obj/item/modular_computer/pda/botanist
@@ -56,3 +58,7 @@
 	satchel = /obj/item/storage/backpack/satchel/hyd
 	duffelbag = /obj/item/storage/backpack/duffelbag/hydroponics
 	messenger = /obj/item/storage/backpack/messenger/hyd
+
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)

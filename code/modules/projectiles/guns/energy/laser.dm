@@ -41,7 +41,7 @@
 
 /obj/item/gun/energy/laser/volkite
 	name ="RM-45 volkite rifle"
-	desc = "An infantry-grade thermal laser rifle, adopted for its mechanical reliability and brutal efficiency at dispatching\
+	desc = "An infantry-grade thermal laser rifle, adopted for its mechanical reliability and brutal efficiency at dispatching \
 	meatbags. Not so useful against the all-too-common cyborgs and synthetics of the empire. Fires conflagorator beams with \
 	a tendency to ignite any organic material it comes into contact with."
 	icon = 'icons/obj/weapons/guns/imperial_guns.dmi'
@@ -54,13 +54,14 @@
 	AddComponent(/datum/component/scope, range_modifier = 3)
 
 
-
 /obj/item/gun/energy/laser/captain
 	name = "antique laser gun"
-	icon_state = "caplaser"
+	icon = 'icons/obj/weapons/guns/imperial_guns_small.dmi'
+	icon_state = "laspistol"
 	w_class = WEIGHT_CLASS_NORMAL
 	inhand_icon_state = null
-	desc = "This is an antique laser gun. All craftsmanship is of the highest quality. It is decorated with assistant leather and chrome. The object menaces with spikes of energy. On the item is an image of Space Station 13. The station is exploding."
+	desc = "An antique human lasergun. It has been lovingly cared for, for centuries, perfectly preserved and well-maintained. The ancient signature of the \
+	Megacorporate states sits on one side of the weapon."
 	force = 10
 	ammo_x_offset = 3
 	selfcharge = 1
