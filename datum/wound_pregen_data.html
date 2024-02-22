@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <base href="../" />
+    <link rel="stylesheet" href="dmdoc.css" />
+    <title>&#x2F;datum&#x2F;wound_pregen_data - &#x2F;tg&#x2F; Station 13</title>
+</head>
+<body>
+<header>
+    <a href="index.html">&#x2F;tg&#x2F; Station 13</a> -
+    <a href="index.html#modules">Modules</a> -
+    <a href="index.html#types">Types</a>
+ &mdash; <a href="datum/wound_pregen_data.html#var">Var Details</a> - <a href="datum/wound_pregen_data.html#proc">Proc Details</a></header>
+<main>
+<h1>wound_pregen_data <aside>/<a href="datum.html">datum</a>/<a href="datum/wound_pregen_data.html">wound_pregen_data</a></aside>
+        
+    
+            <a href="https://github.com/Trunkie-251/crimson-propagator/blob/d33b57162b66578895b58910c9386d98d7796412/code/datums/wounds/_wound_static_data.dm#L28">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound_static_data.dm 28"/></a></h1>
+
+<p>A singleton datum that holds pre-gen and static data about a wound. Each wound datum should have a corresponding wound_pregen_data.</p><table class="summary" cellspacing="0"><tr><td colspan="2"><h2>Vars</h2></td></tr>
+            <tr><th><a href="datum/wound_pregen_data.html#var/abstract">abstract</a></th><td>Will this be instantiated?</td></tr>
+            <tr><th><a href="datum/wound_pregen_data.html#var/can_be_randomly_generated">can_be_randomly_generated</a></th><td>If true, our wound can be selected in ordinary wound rolling. If this is set to false, our wound can only be directly instantiated by use of specific typepath.</td></tr>
+            <tr><th><a href="datum/wound_pregen_data.html#var/check_for_any">check_for_any</a></th><td>If false, we will check if the limb has all of our required biostates instead of just any.</td></tr>
+            <tr><th><a href="datum/wound_pregen_data.html#var/duplicates_allowed">duplicates_allowed</a></th><td>If false, we will iterate through wounds on a given limb, and if any match our type, we wont add our wound.</td></tr>
+            <tr><th><a href="datum/wound_pregen_data.html#var/ignore_cannot_bleed">ignore_cannot_bleed</a></th><td>If we require BIO_BLOODED, we will not add our wound if this is true and the limb cannot bleed.</td></tr>
+            <tr><th><a href="datum/wound_pregen_data.html#var/required_limb_biostate">required_limb_biostate</a></th><td>A list of biostates a limb must have to receive our wound, in wounds.dm.</td></tr>
+            <tr><th><a href="datum/wound_pregen_data.html#var/viable_zones">viable_zones</a></th><td>A list of bodyzones we are applicable to.</td></tr>
+            <tr><th><a href="datum/wound_pregen_data.html#var/wound_path_to_generate">wound_path_to_generate</a></th><td>The typepath of the wound we will be handling and storing data of. NECESSARY IF THIS IS A NON-ABSTRACT TYPE!</td></tr><tr><td colspan="2"><h2>Procs</h2></td></tr>
+            <tr><th><a href="datum/wound_pregen_data.html#proc/biostate_valid">biostate_valid</a></th><td>Returns true if we have the given biostates, or any biostate in it if check_for_any is true. False otherwise.</td></tr>
+            <tr><th><a href="datum/wound_pregen_data.html#proc/can_be_applied_to">can_be_applied_to</a></th><td>Args:</td></tr>
+            <tr><th><a href="datum/wound_pregen_data.html#proc/generate_instance">generate_instance</a></th><td>Returns a new instance of our wound datum.</td></tr></table>
+    <h2 id="var">Var Details</h2><h3 id="var/abstract"><aside class="declaration">var </aside>abstract
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Trunkie-251/crimson-propagator/blob/d33b57162b66578895b58910c9386d98d7796412/code/datums/wounds/_wound_static_data.dm#L33">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound_static_data.dm 33"/></a></h3>
+        <p>Will this be instantiated?</p><h3 id="var/can_be_randomly_generated"><aside class="declaration">var </aside>can_be_randomly_generated
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Trunkie-251/crimson-propagator/blob/d33b57162b66578895b58910c9386d98d7796412/code/datums/wounds/_wound_static_data.dm#L36">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound_static_data.dm 36"/></a></h3>
+        <p>If true, our wound can be selected in ordinary wound rolling. If this is set to false, our wound can only be directly instantiated by use of specific typepath.</p><h3 id="var/check_for_any"><aside class="declaration">var </aside>check_for_any
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Trunkie-251/crimson-propagator/blob/d33b57162b66578895b58910c9386d98d7796412/code/datums/wounds/_wound_static_data.dm#L41">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound_static_data.dm 41"/></a></h3>
+        <p>If false, we will check if the limb has all of our required biostates instead of just any.</p><h3 id="var/duplicates_allowed"><aside class="declaration">var </aside>duplicates_allowed
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Trunkie-251/crimson-propagator/blob/d33b57162b66578895b58910c9386d98d7796412/code/datums/wounds/_wound_static_data.dm#L44">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound_static_data.dm 44"/></a></h3>
+        <p>If false, we will iterate through wounds on a given limb, and if any match our type, we wont add our wound.</p><h3 id="var/ignore_cannot_bleed"><aside class="declaration">var </aside>ignore_cannot_bleed
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Trunkie-251/crimson-propagator/blob/d33b57162b66578895b58910c9386d98d7796412/code/datums/wounds/_wound_static_data.dm#L47">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound_static_data.dm 47"/></a></h3>
+        <p>If we require BIO_BLOODED, we will not add our wound if this is true and the limb cannot bleed.</p><h3 id="var/required_limb_biostate"><aside class="declaration">var </aside>required_limb_biostate
+            <aside>&ndash; </aside>
+        
+    
+            <a href="https://github.com/Trunkie-251/crimson-propagator/blob/d33b57162b66578895b58910c9386d98d7796412/code/datums/wounds/_wound_static_data.dm#L39">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound_static_data.dm 39"/></a></h3>
+        <p>A list of biostates a limb must have to receive our wound, in wounds.dm.</p><h3 id="var/viable_zones"><aside class="declaration">var </aside>viable_zones
+            <aside>&ndash; /list</aside>
+        
+    
+            <a href="https://github.com/Trunkie-251/crimson-propagator/blob/d33b57162b66578895b58910c9386d98d7796412/code/datums/wounds/_wound_static_data.dm#L50">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound_static_data.dm 50"/></a></h3>
+        <p>A list of bodyzones we are applicable to.</p><h3 id="var/wound_path_to_generate"><aside class="declaration">var </aside>wound_path_to_generate
+            <aside>&ndash; /<a href="datum.html">datum</a>/<a href="datum/wound.html">wound</a></aside>
+        
+    
+            <a href="https://github.com/Trunkie-251/crimson-propagator/blob/d33b57162b66578895b58910c9386d98d7796412/code/datums/wounds/_wound_static_data.dm#L30">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound_static_data.dm 30"/></a></h3>
+        <p>The typepath of the wound we will be handling and storing data of. NECESSARY IF THIS IS A NON-ABSTRACT TYPE!</p><h2 id="proc">Proc Details</h2><h3 id="proc/biostate_valid"><aside class="declaration">proc </aside>biostate_valid<aside>(biostate) 
+        
+    
+            <a href="https://github.com/Trunkie-251/crimson-propagator/blob/d33b57162b66578895b58910c9386d98d7796412/code/datums/wounds/_wound_static_data.dm#L113">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound_static_data.dm 113"/></a></aside>
+        </h3>
+        <p>Returns true if we have the given biostates, or any biostate in it if check_for_any is true. False otherwise.</p><h3 id="proc/can_be_applied_to"><aside class="declaration">proc </aside>can_be_applied_to<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/bodypart.html">bodypart</a>/limb, wound_type, /<a href="datum.html">datum</a>/<a href="datum/wound.html">wound</a>/old_wound, random_roll) 
+        
+    
+            <a href="https://github.com/Trunkie-251/crimson-propagator/blob/d33b57162b66578895b58910c9386d98d7796412/code/datums/wounds/_wound_static_data.dm#L75">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound_static_data.dm 75"/></a></aside>
+        </h3>
+        <p>Args:</p>
+<ul>
+<li>obj/item/bodypart/limb: The limb we are considering.</li>
+<li>wound_type: The type of the &quot;wound acquisition attempt&quot;. Example: A slashing attack cannot proc a blunt wound, so wound_type = WOUND_SLASH would
+fail if we expect WOUND_BLUNT. Defaults to the wound type we expect.</li>
+<li>datum/wound/old_wound: If we would replace a wound, this would be said wound. Nullable.</li>
+<li>random_roll = FALSE: If this is in the context of a random wound generation, and this wound wasn't specifically checked.</li>
+</ul>
+<p>Returns:
+FALSE if the limb cannot be wounded, if wound_type is not ours, if we have a higher severity wound already in our series,
+if we have a biotype mismatch, if the limb isnt in a viable zone, or if theres any duplicate wound types.
+TRUE otherwise.</p><h3 id="proc/generate_instance"><aside class="declaration">proc </aside>generate_instance<aside>(/<a href="obj.html">obj</a>/<a href="obj/item.html">item</a>/<a href="obj/item/bodypart.html">bodypart</a>/limb, ...) 
+        
+    
+            <a href="https://github.com/Trunkie-251/crimson-propagator/blob/d33b57162b66578895b58910c9386d98d7796412/code/datums/wounds/_wound_static_data.dm#L123">
+        <img src="git.png" width="16" height="16" title="code&#x2F;datums&#x2F;wounds&#x2F;_wound_static_data.dm 123"/></a></aside>
+        </h3>
+        <p>Returns a new instance of our wound datum.</p></main>
+<footer>
+    tgstation.dme
+    <a href="https://github.com/Trunkie-251/crimson-propagator/tree/d33b57162b66578895b58910c9386d98d7796412">d33b571</a>
+        (main) &mdash; <a href="https://github.com/SpaceManiac/SpacemanDMM/blob/master/crates/dmdoc/README.md">dmdoc 1.7.3</a></footer>
+</body>
+</html>
