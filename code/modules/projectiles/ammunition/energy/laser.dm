@@ -19,8 +19,15 @@
 /obj/item/ammo_casing/energy/volkite
 	projectile_type = /obj/projectile/beam/volkite/light
 	e_cost = 40
-	select_name = "kill"
+	select_name = "conflagrate"
 	fire_sound = 'sound/weapons/Lasgun_sound_rework.mp3'
+
+/obj/item/ammo_casing/energy/volkite/heavy
+	projectile_type = /obj/projectile/beam/volkite/heavy
+	e_cost = 40
+	select_name = "conflagrate"
+	fire_sound = 'sound/weapons/Lasgun_sound_rework.mp3'
+
 
 /obj/item/ammo_casing/energy/lasergun/old
 	projectile_type = /obj/projectile/beam/laser

@@ -147,8 +147,8 @@
 
 ///Megaphone - Lets you speak loud.
 /obj/item/mod/module/megaphone
-	name = "MOD megaphone module"
-	desc = "A microchip megaphone linked to a MODsuit, for very important purposes, like: loudness."
+	name = "Powersuit Vox module"
+	desc = "A vox-amplifier unit used to make one's voice both louder, and far more intimidating."
 	icon_state = "megaphone"
 	module_type = MODULE_TOGGLE
 	complexity = 1

@@ -13,6 +13,7 @@
 	exp_required_type_department = EXP_TYPE_SUPPLY
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "QUARTERMASTER"
+	required_character_age = 35
 
 	outfit = /datum/outfit/job/quartermaster
 	plasmaman_outfit = /datum/outfit/plasmaman/cargo
@@ -55,3 +56,6 @@
 	l_hand = /obj/item/clipboard
 
 	chameleon_extras = /obj/item/stamp/head/qm
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)

@@ -40,6 +40,7 @@
 	multiple_sprites = AMMO_BOX_PER_BULLET
 	multiple_sprite_use_base = TRUE
 
+// 9mm ammo
 /obj/item/ammo_box/magazine/m9mm
 	name = "pistol magazine (9mm)"
 	icon_state = "9x19p"
@@ -49,16 +50,6 @@
 	max_ammo = 8
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	multiple_sprite_use_base = TRUE
-
-/obj/item/ammo_box/magazine/h9mm
-	name = "Helical Magazine (9mm)"
-	desc = "A cylindrical magazine with a helical feeding system, generally unfavored due to \
-	it's odd shape. It easily holds up to 100 caseless 9mm rounds."
-	icon_state = "h9mm"
-	base_icon_state = "h9mm"
-	ammo_type = /obj/item/ammo_casing/h9mm
-	caliber = CALIBER_9MM
-	max_ammo = 100
 
 /obj/item/ammo_box/magazine/m9mm/fire
 	name = "pistol magazine (9mm incendiary)"
@@ -129,3 +120,25 @@
 /obj/item/ammo_box/magazine/r10mm/empty
 	icon_state = "r10mm-0"
 	start_empty = TRUE
+
+//helical
+/obj/item/ammo_box/magazine/h9mm
+	name = "Helical Magazine (9mm)"
+	desc = "A cylindrical magazine with a helical feeding system, generally unfavored due to \
+	it's odd shape. It easily holds up to 100 caseless 9mm rounds."
+	icon_state = "h9mm"
+	base_icon_state = "h9mm"
+	ammo_type = /obj/item/ammo_casing/h9mm
+	caliber = CALIBER_9MM
+	max_ammo = 100
+
+
+//Lawbringer rounds
+/obj/item/ammo_box/magazine/law5mm
+	name = "5mm Flechette magazine"
+	desc = "A terrifying case full of flechettes. They look sharp."
+	icon_state = "50ae"
+	ammo_type = /obj/item/ammo_casing/flechette
+	caliber = CALIBER_5FLE
+	max_ammo = 21
+	multiple_sprites = AMMO_BOX_PER_BULLET

@@ -11,11 +11,11 @@
 	supervisors = "Nanotrasen officials and Space Law"
 	req_admin_notify = 1
 	minimal_player_age = 14
-	exp_requirements = 180
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_COMMAND
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "CAPTAIN"
+	required_character_age = 40
 
 	outfit = /datum/outfit/job/captain
 	plasmaman_outfit = /datum/outfit/plasmaman/captain
@@ -32,7 +32,7 @@
 		/datum/job_department/command,
 	)
 
-	family_heirlooms = list(/obj/item/reagent_containers/cup/glass/flask/gold, /obj/item/toy/captainsaid/collector)
+	family_heirlooms = list(/obj/item/reagent_containers/cup/glass/flask/gold, /obj/item/melee/energy/sword/dagger)
 
 	mail_goodies = list(
 		/obj/item/clothing/mask/cigarette/cigar/havana = 20,
@@ -50,7 +50,7 @@
 
 
 /datum/job/captain/get_captaincy_announcement(mob/living/captain)
-	return "Captain [captain.real_name] on deck!"
+	return "Captain [captain.real_name] has arrived!"
 
 
 /datum/outfit/job/captain
@@ -59,7 +59,7 @@
 
 	id = /obj/item/card/id/advanced/gold
 	id_trim = /datum/id_trim/job/captain
-	uniform = /obj/item/clothing/under/rank/captain
+	uniform = /obj/item/clothing/under/rank/duke
 	suit = /obj/item/clothing/suit/armor/vest/capcarapace
 	backpack_contents = list(
 		/obj/item/melee/baton/telescopic = 1,
@@ -85,6 +85,10 @@
 		)
 	implants = list(/obj/item/implant/mindshield)
 	skillchips = list(/obj/item/skillchip/disk_verifier)
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
+
 
 	var/special_charter
 

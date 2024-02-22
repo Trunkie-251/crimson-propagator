@@ -6,10 +6,10 @@
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = SUPERVISOR_RD
-	exp_requirements = 60
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "GENETICIST"
+	required_character_age = 25
 
 	outfit = /datum/outfit/job/geneticist
 	plasmaman_outfit = /datum/outfit/plasmaman/genetics
@@ -50,3 +50,7 @@
 	satchel = /obj/item/storage/backpack/satchel/gen
 	duffelbag = /obj/item/storage/backpack/duffelbag/genetics
 	messenger = /obj/item/storage/backpack/messenger/gen
+
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)

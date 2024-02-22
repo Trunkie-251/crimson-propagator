@@ -378,6 +378,29 @@
 					message += pick(", eh?", ", EH?")
 		speech_args[SPEECH_MESSAGE] = message
 
+
+//officer's cap
+
+/obj/item/clothing/head/hats/officer
+	name = "Imperial officer's cap"
+	desc = "Durasynthread fibers are woven into a red officer's cap, emblazoned with the Triarchs's, and by extension, the \
+	empire's insignia. This peaked cap is sure to teach those would-be barbarians to respect you."
+	icon_state = "military"
+	armor_type = /datum/armor/officer
+	strip_delay = 60
+	dog_fashion = /datum/dog_fashion/head/warden
+
+/datum/armor/officer
+	melee = 40
+	bullet = 30
+	laser = 30
+	energy = 40
+	bomb = 25
+	fire = 30
+	acid = 60
+	wound = 6
+
+
 /obj/item/clothing/head/beret/sec
 	name = "security beret"
 	desc = "A robust beret with the security insignia emblazoned on it. Uses reinforced fabric to offer sufficient protection."

@@ -84,6 +84,18 @@ GLOBAL_LIST_INIT(hailer_phrases, list(
 	flags_cover = MASKCOVERSMOUTH | MASKCOVERSEYES | PEPPERPROOF
 	visor_flags_cover = MASKCOVERSMOUTH | MASKCOVERSEYES | PEPPERPROOF
 
+/obj/item/clothing/mask/gas/sechailer/soldier
+	name = "Soldier Gasmask"
+	desc = "A terrifying skull-like mask used by augmented grunts."
+	actions_types = list(/datum/action/item_action/halt)
+	icon_state = "soldier"
+	aggressiveness = AGGR_SHIT_COP
+	flags_inv = HIDEFACIALHAIR | HIDEFACE | HIDEEYES | HIDEEARS | HIDEHAIR | HIDESNOUT
+	visor_flags_inv = 0
+	flags_cover = MASKCOVERSMOUTH | MASKCOVERSEYES | PEPPERPROOF
+	visor_flags_cover = MASKCOVERSMOUTH | MASKCOVERSEYES | PEPPERPROOF
+
+
 /obj/item/clothing/mask/gas/sechailer/swat/spacepol
 	name = "spacepol mask"
 	desc = "A close-fitting tactical mask created in cooperation with a certain megacorporation, comes with an especially aggressive Compli-o-nator 3000."

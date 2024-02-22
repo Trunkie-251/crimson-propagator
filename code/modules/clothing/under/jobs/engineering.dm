@@ -72,8 +72,7 @@
 
 /obj/item/clothing/under/rank/engineering/synthhazard
 	name = "PUG suit"
-	desc = "The 'Protective Utility Gear' typically used by cyborg workers in the Technocracy. \
-	Current models of the suit are issued only to cyborgs."
+	desc = "The 'Protective Utility Gear' typically used by cyborg workers in the Empire."
 	icon = 'icons/mob/clothing/under/synth.dmi'
 	worn_icon = 'icons/mob/clothing/under/synth.dmi'
 	icon_state = "engiborg"

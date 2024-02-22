@@ -8,6 +8,9 @@
 	supervisors = SUPERVISOR_HOP
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "BARTENDER"
+	required_character_age = 25
+
+
 
 	outfit = /datum/outfit/job/bartender
 	plasmaman_outfit = /datum/outfit/plasmaman/bar
@@ -50,7 +53,7 @@
 
 	id_trim = /datum/id_trim/job/bartender
 	neck = /obj/item/clothing/neck/bowtie
-	uniform = /obj/item/clothing/under/costume/buttondown/slacks/service
+	uniform = /obj/item/clothing/under/syntech/coveralls
 	suit = /obj/item/clothing/suit/armor/vest
 	backpack_contents = list(
 		/obj/item/storage/box/beanbag = 1,
@@ -60,10 +63,6 @@
 	glasses = /obj/item/clothing/glasses/sunglasses/reagent
 	shoes = /obj/item/clothing/shoes/laceup
 
-/datum/outfit/job/bartender/post_equip(mob/living/carbon/human/H, visualsOnly)
-	. = ..()
-
-	var/obj/item/card/id/W = H.wear_id
-	if(H.age < AGE_MINOR)
-		W.registered_age = AGE_MINOR
-		to_chat(H, span_notice("You're not technically old enough to access or serve alcohol, but your ID has been discreetly modified to display your age as [AGE_MINOR]. Try to keep that a secret!"))
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)

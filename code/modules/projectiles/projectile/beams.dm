@@ -3,6 +3,7 @@
 	icon_state = "laser"
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
 	damage = 20
+	hitscan = TRUE
 	damage_type = BURN
 	hitsound = 'sound/weapons/sear.ogg'
 	hitsound_wall = 'sound/weapons/effects/searwall.ogg'
@@ -18,7 +19,6 @@
 	reflectable = REFLECT_NORMAL
 	wound_bonus = -20
 	bare_wound_bonus = 10
-
 
 /obj/projectile/beam/laser
 	tracer_type = /obj/effect/projectile/tracer/laser
@@ -38,10 +38,19 @@
 //volkite beamer
 /obj/projectile/beam/volkite/light
 	damage = 35
-	hitscan = TRUE
 	fire_stacks = 6
 	leaves_fire_trail = FALSE
 	wound_bonus = 0.2
+	speed = 0
+	tracer_type = /obj/effect/projectile/tracer/heavy_laser
+	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
+	impact_type = /obj/effect/projectile/impact/heavy_laser
+
+/obj/projectile/beam/volkite/heavy
+	damage = 60
+	fire_stacks = 8
+	leaves_fire_trail = FALSE
+	wound_bonus = 0.4
 	speed = 0
 	tracer_type = /obj/effect/projectile/tracer/heavy_laser
 	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser

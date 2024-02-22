@@ -6,10 +6,10 @@
 	total_positions = 5
 	spawn_positions = 3
 	supervisors = SUPERVISOR_RD
-	exp_requirements = 60
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "SCIENTIST"
+	required_character_age = 25
 
 	outfit = /datum/outfit/job/scientist
 	plasmaman_outfit = /datum/outfit/plasmaman/science
@@ -53,6 +53,10 @@
 	satchel = /obj/item/storage/backpack/satchel/science
 	duffelbag = /obj/item/storage/backpack/duffelbag/science
 	messenger = /obj/item/storage/backpack/messenger/science
+
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
 
 /datum/outfit/job/scientist/pre_equip(mob/living/carbon/human/H)
 	..()

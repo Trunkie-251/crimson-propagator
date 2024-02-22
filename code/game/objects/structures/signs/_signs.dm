@@ -123,10 +123,10 @@
 	sign_change_name = "Blank Sign"
 
 /obj/structure/sign/nanotrasen
-	name = "\improper Nanotrasen logo sign"
-	sign_change_name = "Corporate Logo - Nanotrasen"
-	desc = "A sign with the Nanotrasen logo on it. Glory to Nanotrasen!"
-	icon_state = "nanotrasen"
+	name = "\improper Imperial Army symbol"
+	sign_change_name = "Imperial symbol - Army"
+	desc = "A sign with the imperial army's symbol. Glory to the empire!"
+	icon_state = "empire"
 	is_editable = TRUE
 
 /obj/structure/sign/logo

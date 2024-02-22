@@ -3,7 +3,7 @@
 	savefile_key = "fov_darkness"
 	savefile_identifier = PREFERENCE_PLAYER
 
-	minimum = 0
+	minimum = 96
 	maximum = 255
 
 /datum/preference/numeric/fov_darkness/create_default_value()

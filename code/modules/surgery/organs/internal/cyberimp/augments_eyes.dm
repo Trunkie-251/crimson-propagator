@@ -6,6 +6,25 @@
 	slot = ORGAN_SLOT_EYES
 	zone = BODY_ZONE_PRECISE_EYES
 	w_class = WEIGHT_CLASS_TINY
+	var/no_glasses = FALSE
+
+//Eye coverings augs
+
+/obj/item/organ/internal/cyberimp/eyes/sunglasses
+	icon = 'icons/obj/medical/organs/nanotech_organs.dmi'
+	icon_state = "eyevisor"
+	name = "Sunglass aug"
+	desc = "He doesn't need that."
+	slot = ORGAN_SLOT_VISOR
+	no_glasses = TRUE
+	overlay = /datum/bodypart_overlay/simple/overlay/sunglasses
+
+
+/datum/bodypart_overlay/simple/overlay/sunglasses
+    icon = 'icons/mob/human/species/robot/exoskeletons.dmi'
+    icon_state = "eyevisor"
+    layers = EXTERNAL_FRONT|GLASSES_LAYER
+
 
 // HUD implants
 /obj/item/organ/internal/cyberimp/eyes/hud

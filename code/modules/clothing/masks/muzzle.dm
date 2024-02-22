@@ -111,3 +111,12 @@
 	greyscale_colors = "#8C0A00#300008"
 	strip_delay = 60
 	stripping_damage = 20
+
+/obj/item/clothing/mask/muzzle/ballgag
+	name = "ballgag"
+	desc = "A bright red ballgag to stuff your mouth with. Some find it quite sexually appealing \
+	when controlled is ripped away from them."
+	icon = 'icons/obj/clothing/bdsm.dmi'
+	icon_state = "ballgag"
+	worn_icon = 'icons/mob/clothing/bdsm.dmi'
+	worn_icon_state = "ballgag"

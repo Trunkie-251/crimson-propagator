@@ -1,4 +1,4 @@
-#define CALL_BOT_COOLDOWN 900
+#define CALL_BOT_COOLDOWN 600
 
 //Not sure why this is necessary...
 /proc/AutoUpdateAI(obj/subject)
@@ -15,8 +15,8 @@
 /mob/living/silicon/ai
 	name = "AI"
 	real_name = "AI"
-	icon = 'icons/mob/silicon/ai.dmi'
-	icon_state = "ai"
+	icon = 'icons/mob/silicon/overlord.dmi'
+	icon_state = "overlord"
 	move_resist = MOVE_FORCE_OVERPOWERING
 	density = TRUE
 	status_flags = CANSTUN|CANPUSH
@@ -29,8 +29,10 @@
 	mob_size = MOB_SIZE_LARGE
 	radio = /obj/item/radio/headset/silicon/ai
 	can_buckle_to = FALSE
-	var/battery = 200 //emergency power if the AI's APC is off
-	var/list/network = list("ss13")
+	pixel_x = -9
+	base_pixel_x = -9
+	var/battery = 650 //emergency power if the AI's APC is off
+	var/list/network = list("A-451")
 	var/obj/machinery/camera/current
 	var/list/connected_robots = list()
 	var/aiRestorePowerRoutine = POWER_RESTORATION_OFF
@@ -162,8 +164,6 @@
 		INVOKE_ASYNC(src, PROC_REF(apply_pref_name), /datum/preference/name/ai, client)
 		INVOKE_ASYNC(src, PROC_REF(apply_pref_hologram_display), client)
 
-	INVOKE_ASYNC(src, PROC_REF(set_core_display_icon))
-
 	spark_system = new /datum/effect_system/spark_spread()
 	spark_system.set_up(5, 0, src)
 	spark_system.attach(src)
@@ -268,15 +268,6 @@
 /mob/living/silicon/ai/ignite_mob(silent)
 	return FALSE
 
-/mob/living/silicon/ai/proc/set_core_display_icon(input, client/C)
-	if(client && !C)
-		C = client
-	if(!input && !C?.prefs?.read_preference(/datum/preference/choiced/ai_core_display))
-		icon_state = initial(icon_state)
-	else
-		var/preferred_icon = input ? input : C.prefs.read_preference(/datum/preference/choiced/ai_core_display)
-		icon_state = resolve_ai_icon(preferred_icon)
-
 /// Apply an AI's hologram preference
 /mob/living/silicon/ai/proc/apply_pref_hologram_display(client/player_client)
 	if(player_client.prefs?.read_preference(/datum/preference/choiced/ai_hologram_display))
@@ -303,33 +294,6 @@
 	for(var/obj/machinery/status_display/ai/ai_display as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/status_display/ai))
 		ai_display.emotion = emote
 		ai_display.update()
-
-/mob/living/silicon/ai/verb/pick_icon()
-	set category = "AI Commands"
-	set name = "Set AI Core Display"
-	if(incapacitated())
-		return
-	icon = initial(icon)
-	icon_state = "ai"
-	cut_overlays()
-	var/list/iconstates = GLOB.ai_core_display_screens
-	for(var/option in iconstates)
-		if(option == "Random")
-			iconstates[option] = image(icon = src.icon, icon_state = "ai-random")
-			continue
-		if(option == "Portrait")
-			iconstates[option] = image(icon = src.icon, icon_state = "ai-portrait")
-			continue
-		iconstates[option] = image(icon = src.icon, icon_state = resolve_ai_icon(option))
-
-	view_core()
-	var/ai_core_icon = show_radial_menu(src, src , iconstates, radius = 42)
-
-	if(!ai_core_icon || incapacitated())
-		return
-
-	display_icon_override = ai_core_icon
-	set_core_display_icon(ai_core_icon)
 
 /mob/living/silicon/ai/get_status_tab_items()
 	. = ..()
@@ -1009,9 +973,6 @@
 	. = ..()
 	if(!.) //successfully ressuscitated from death
 		return
-
-	set_core_display_icon(display_icon_override)
-	set_eyeobj_visible(TRUE)
 
 /mob/living/silicon/ai/proc/malfhacked(obj/machinery/power/apc/apc)
 	malfhack = null

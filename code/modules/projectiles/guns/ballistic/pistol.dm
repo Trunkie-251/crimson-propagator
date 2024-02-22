@@ -111,6 +111,22 @@
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	suppressor_x_offset = 6
 
+//Lawmaker
+/obj/item/gun/ballistic/automatic/pistol/lawmaker
+	name = "\improper Lawmaker heavy pistol"
+	desc = "A heavy handgun that fires heavy rounds."
+	icon = 'icons/obj/weapons/guns/imperial_guns_small.dmi'
+	icon_state = "lawmaker"
+	w_class = WEIGHT_CLASS_NORMAL
+	accepted_magazine_type = /obj/item/ammo_box/magazine/law5mm
+	can_suppress = FALSE
+	mag_display = TRUE
+	fire_sound = 'sound/weapons/gun/rifle/shot.ogg'
+	rack_sound = 'sound/weapons/gun/pistol/rack.ogg'
+	lock_back_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
+	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
+
+
 /obj/item/gun/ballistic/automatic/pistol/stickman
 	name = "flat gun"
 	desc = "A 2 dimensional gun.. what?"

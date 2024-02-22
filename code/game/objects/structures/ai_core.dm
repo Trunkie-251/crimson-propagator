@@ -4,8 +4,10 @@
 	density = TRUE
 	anchored = FALSE
 	name = "\improper AI core"
-	icon = 'icons/mob/silicon/ai.dmi'
+	icon = 'icons/mob/silicon/overlord.dmi'
 	icon_state = "0"
+	pixel_x = -9
+	base_pixel_x = -9
 	desc = "The framework for an artificial intelligence core."
 	max_integrity = 500
 	var/state = EMPTY_CORE
@@ -64,7 +66,7 @@
 	return ..()
 
 /obj/structure/ai_core/deactivated
-	icon_state = "ai-empty"
+	icon_state = "overlord-empty"
 	anchored = TRUE
 	state = AI_READY_CORE
 
@@ -82,8 +84,8 @@
 
 /obj/structure/ai_core/latejoin_inactive
 	name = "networked AI core"
-	desc = "This AI core is connected by bluespace transmitters to NTNet, allowing for an AI personality to be downloaded to it on the fly mid-shift."
-	icon_state = "ai-empty"
+	desc = "This throne for the Overlord seems empty, though perfectly capable of seating one in the future, if need-be."
+	icon_state = "overlord-empty"
 	anchored = TRUE
 	state = AI_READY_CORE
 	var/available = TRUE
@@ -376,18 +378,18 @@
 		if(GLASS_CORE)
 			icon_state = "4"
 		if(AI_READY_CORE)
-			icon_state = "ai-empty"
+			icon_state = "overlord-empty"
 	return ..()
 
 /obj/structure/ai_core/deconstruct(disassembled = TRUE)
 	if(state >= GLASS_CORE)
-		new /obj/item/stack/sheet/rglass(loc, 2)
+		new /obj/item/stack/sheet/rglass(loc, 5)
 	if(state >= CABLED_CORE)
-		new /obj/item/stack/cable_coil(loc, 5)
+		new /obj/item/stack/cable_coil(loc, 15)
 	if(circuit)
 		circuit.forceMove(loc)
 		circuit = null
-	new /obj/item/stack/sheet/plasteel(loc, 4)
+	new /obj/item/stack/sheet/plasteel(loc, 25)
 	qdel(src)
 
 /// Quick proc to call to see if the brainmob inside of us has suicided. Returns TRUE if we have, FALSE in any other scenario.

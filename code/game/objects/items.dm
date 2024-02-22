@@ -142,6 +142,8 @@
 	var/equip_delay_other = 20
 	///In deciseconds, how long an item takes to remove from another person
 	var/strip_delay = 40
+	//In deciseconds, how long an item takes to take off.
+	var/strip_delay_self = 0
 	///How long it takes to resist out of the item (cuffs and such)
 	var/breakouttime = 0
 

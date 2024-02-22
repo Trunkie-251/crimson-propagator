@@ -11,11 +11,11 @@
 	supervisors = SUPERVISOR_CAPTAIN
 	req_admin_notify = 1
 	minimal_player_age = 7
-	exp_requirements = 180
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_MEDICAL
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "CHIEF_MEDICAL_OFFICER"
+	required_character_age = 35
 
 	outfit = /datum/outfit/job/cmo
 	plasmaman_outfit = /datum/outfit/plasmaman/chief_medical_officer
@@ -47,7 +47,7 @@
 
 
 /datum/job/chief_medical_officer/get_captaincy_announcement(mob/living/captain)
-	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] on deck!"
+	return "Due to staffing shortages, newly promoted Acting Captain [captain.real_name] has arrived!"
 
 
 /datum/outfit/job/cmo
@@ -81,6 +81,11 @@
 		/obj/item/stamp/head/cmo,
 		)
 	skillchips = list(/obj/item/skillchip/entrails_reader)
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		/obj/item/organ/internal/cyberimp/eyes/hud/medical,
+		)
+
 
 /datum/outfit/job/cmo/mod
 	name = "Chief Medical Officer (MODsuit)"

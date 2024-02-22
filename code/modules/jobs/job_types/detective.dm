@@ -9,10 +9,10 @@
 	spawn_positions = 1
 	supervisors = SUPERVISOR_HOS
 	minimal_player_age = 7
-	exp_requirements = 300
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "DETECTIVE"
+	required_character_age = 25
 
 	outfit = /datum/outfit/job/detective
 	plasmaman_outfit = /datum/outfit/plasmaman/detective
@@ -67,6 +67,10 @@
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	l_pocket = /obj/item/toy/crayon/white
 	r_pocket = /obj/item/lighter
+
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
 
 	chameleon_extras = list(
 		/obj/item/clothing/glasses/sunglasses,

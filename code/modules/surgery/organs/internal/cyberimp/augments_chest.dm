@@ -1,9 +1,20 @@
+//Bionic augments.
+
+//overlays for bionics, using synth cyberimp code.
+
 /obj/item/organ/internal/cyberimp/chest
 	name = "cybernetic torso implant"
 	desc = "Implants for the organs in your torso."
 	icon_state = "chest_implant"
 	implant_overlay = "chest_implant_overlay"
-	zone = BODY_ZONE_CHEST
+
+
+/datum/bodypart_overlay/simple/cyberimp/get_image(image_layer, obj/item/bodypart/limb)
+    return image(
+        icon = icon,
+        icon_state = "[icon_state]_[mutant_bodyparts_layertext(image_layer)]",
+        layer = image_layer,
+    )
 
 /obj/item/organ/internal/cyberimp/chest/nutriment
 	name = "Nutriment pump implant"
@@ -125,6 +136,8 @@
 	base_icon_state = "imp_jetpack"
 	implant_overlay = null
 	implant_color = null
+	overlay_zone = BODY_ZONE_CHEST
+	overlay = /datum/bodypart_overlay/simple/overlay/thrusters
 	actions_types = list(/datum/action/item_action/organ_action/toggle)
 	w_class = WEIGHT_CLASS_NORMAL
 	var/on = FALSE
@@ -219,3 +232,8 @@
 
 	deactivate(silent = TRUE)
 	return FALSE
+
+/datum/bodypart_overlay/simple/overlay/thrusters
+    icon = 'icons/mob/human/species/robot/exoskeletons.dmi'
+    icon_state = "thrusters"
+    layers = EXTERNAL_FRONT|BACK_LAYER

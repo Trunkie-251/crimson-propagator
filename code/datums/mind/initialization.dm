@@ -22,13 +22,6 @@
 	. = ..()
 	mind.set_assigned_role(SSjob.GetJobType(/datum/job/ai))
 
-
-//BORG
-/mob/living/silicon/robot/mind_initialize()
-	. = ..()
-	mind.set_assigned_role(SSjob.GetJobType(/datum/job/cyborg))
-
-
 //PAI
 /mob/living/silicon/pai/mind_initialize()
 	. = ..()

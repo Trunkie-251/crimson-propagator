@@ -50,6 +50,11 @@
 	duffelbag = /obj/item/storage/backpack/duffelbag/captain
 	messenger = /obj/item/storage/backpack/messenger/cap
 
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
+
+
 	accessory = /obj/item/clothing/accessory/medal/gold/captain
 	chameleon_extras = list(
 		/obj/item/gun/energy/e_gun,

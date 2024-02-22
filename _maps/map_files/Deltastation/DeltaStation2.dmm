@@ -47735,7 +47735,7 @@
 /obj/structure/bed{
 	dir = 4
 	},
-/obj/item/clothing/suit/jacket/straight_jacket,
+/obj/item/clothing/suit/jacket/strait_jacket,
 /obj/item/clothing/mask/muzzle,
 /obj/item/clothing/glasses/blindfold,
 /obj/machinery/airalarm/directional/west,
@@ -77817,7 +77817,7 @@
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced/spawner/directional/east,
 /obj/structure/sign/poster/official/random/directional/south,
-/obj/item/clothing/suit/jacket/straight_jacket,
+/obj/item/clothing/suit/jacket/strait_jacket,
 /obj/item/clothing/mask/muzzle,
 /obj/item/clothing/mask/muzzle,
 /obj/item/clothing/ears/earmuffs,
@@ -93155,7 +93155,7 @@
 /area/station/engineering/atmos)
 "xqc" = (
 /obj/structure/bed,
-/obj/item/clothing/suit/jacket/straight_jacket,
+/obj/item/clothing/suit/jacket/strait_jacket,
 /obj/item/clothing/mask/muzzle,
 /obj/item/clothing/glasses/blindfold,
 /obj/effect/turf_decal/tile/red/anticorner/contrasted{

@@ -1,9 +1,11 @@
+//general cybernetic implants.
 
 /obj/item/organ/internal/cyberimp
 	name = "cybernetic implant"
 	desc = "A state-of-the-art implant that improves a baseline's functionality."
 	visual = FALSE
 	organ_flags = ORGAN_ROBOTIC
+	zone = BODY_ZONE_CHEST
 	var/implant_color = "#FFFFFF"
 	var/implant_overlay
 
@@ -26,13 +28,68 @@
 	zone = BODY_ZONE_HEAD
 	w_class = WEIGHT_CLASS_TINY
 
-/obj/item/organ/internal/cyberimp/brain/emp_act(severity)
+//Neural Interface, the server's PDA-equivilent
+
+/obj/item/organ/internal/cyberimp/brain/neural_interface
+	name = "Neural Interface"
+	desc = "An important cybernetic implant seen in all facets of life, no matter rich or poor. \
+	This augmentation allows for one to neurally interace with all sorts of other imperial technologies."
+	icon_state = "brain_implant"
+	implant_overlay = "brain_implant_overlay"
+	overlay = /datum/bodypart_overlay/simple/overlay/interface
+	zone = BODY_ZONE_HEAD
+	slot = ORGAN_SLOT_BRAIN_NEURALINTERFACE
+	w_class = WEIGHT_CLASS_TINY
+	actions_types = list(/datum/action/item_action/organ_action/toggle)
+
+	var/obj/item/modular_computer/pda/pda = /obj/item/modular_computer/pda
+
+/obj/item/organ/internal/cyberimp/brain/neural_interface/Initialize(mapload)
 	. = ..()
-	if(!owner || . & EMP_PROTECT_SELF)
-		return
-	var/stun_amount = 200/severity
-	owner.Stun(stun_amount)
-	to_chat(owner, span_warning("Your body seizes up!"))
+	pda = new pda(src)
+
+/obj/item/organ/internal/cyberimp/brain/neural_interface/Destroy()
+	. = ..()
+	QDEL_NULL(pda)
+
+/obj/item/organ/internal/cyberimp/brain/neural_interface/examine(mob/user)
+    . = ..()
+    if(pda)
+        . += span_notice("[pda] is attached to [src].")
+    else
+        . += span_warning("There is no PDA attached to [src].")
+
+/obj/item/organ/internal/cyberimp/brain/neural_interface/attackby(obj/item/attacking_item, mob/user, params)
+    . = ..()
+    if(. || !istype(attacking_item, /obj/item/modular_computer/pda))
+        return
+    if(pda)
+        to_chat(user, span_warning("There is already a PDA attached to [src]."))
+        return
+    user.transferItemToLoc(attacking_item, src)
+    pda = attacking_item
+    to_chat(user, span_notice("You attach \the [pda] to [src]."))
+    return TRUE
+
+/obj/item/organ/internal/cyberimp/brain/neural_interface/screwdriver_act(mob/living/user, obj/item/tool)
+    . = ..()
+    if(.)
+        return TRUE
+
+    if(!pda)
+        to_chat(user, span_warning("There is no PDA to be removed from [src]."))
+        return TRUE
+
+    user.transferItemToLoc(pda, user.loc)
+    user.put_in_hands(pda)
+    to_chat(user, span_notice("You remove \the [pda] from [src]."))
+    pda = null
+    return TRUE
+
+/datum/bodypart_overlay/simple/overlay/interface
+    icon = 'icons/mob/human/species/robot/exoskeletons.dmi'
+    icon_state = "interface"
+    layers = EXTERNAL_ADJACENT|BACK_LAYER
 
 
 /obj/item/organ/internal/cyberimp/brain/anti_drop
@@ -62,21 +119,6 @@
 	else
 		release_items()
 		to_chat(owner, span_notice("Your hands relax..."))
-
-
-/obj/item/organ/internal/cyberimp/brain/anti_drop/emp_act(severity)
-	. = ..()
-	if(!owner || . & EMP_PROTECT_SELF)
-		return
-	var/range = severity ? 10 : 5
-	var/atom/throw_target
-	if(active)
-		release_items()
-	for(var/obj/item/stored_item as anything in stored_items)
-		throw_target = pick(oview(range))
-		stored_item.throw_at(throw_target, range, 2)
-		to_chat(owner, span_warning("Your [owner.get_held_index_name(owner.get_held_index_of_item(stored_item))] spasms and throws the [stored_item.name]!"))
-	stored_items = list()
 
 
 /obj/item/organ/internal/cyberimp/brain/anti_drop/proc/release_items()
@@ -132,13 +174,6 @@
 		owner.SetImmobilized(0)
 		owner.SetParalyzed(0)
 
-/obj/item/organ/internal/cyberimp/brain/anti_stun/emp_act(severity)
-	. = ..()
-	if((organ_flags & ORGAN_FAILING) || . & EMP_PROTECT_SELF)
-		return
-	organ_flags |= ORGAN_FAILING
-	addtimer(CALLBACK(src, PROC_REF(reboot)), 90 / severity)
-
 /obj/item/organ/internal/cyberimp/brain/anti_stun/proc/reboot()
 	organ_flags &= ~ORGAN_FAILING
 
@@ -152,14 +187,12 @@
 	icon_state = "implant_mask"
 	slot = ORGAN_SLOT_BREATHING_TUBE
 	w_class = WEIGHT_CLASS_TINY
+	overlay = /datum/bodypart_overlay/simple/overlay/breathing_tube
 
-/obj/item/organ/internal/cyberimp/mouth/breathing_tube/emp_act(severity)
-	. = ..()
-	if(!owner || . & EMP_PROTECT_SELF)
-		return
-	if(prob(60/severity))
-		to_chat(owner, span_warning("Your breathing tube suddenly closes!"))
-		owner.losebreath += 2
+/datum/bodypart_overlay/simple/overlay/breathing_tube
+    icon = 'icons/mob/human/species/robot/exoskeletons.dmi'
+    icon_state = "breathing"
+    layers = EXTERNAL_ADJACENT|BACK_LAYER
 
 //BOX O' IMPLANTS
 

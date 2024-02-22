@@ -1,6 +1,55 @@
 /obj/item/organ/internal
 	name = "organ"
 
+/////This code allows for overlays on ALL internal organs, whether they be bionic or organic. Useful for everyone.
+
+	var/overlay_zone = BODY_ZONE_CHEST
+    /// Bodypart overlay applied to the chest the overlay is in
+	var/datum/bodypart_overlay/simple/overlay/overlay = /datum/bodypart_overlay/simple/overlay
+
+	// burn and brute modifiers, NEVER set this to zero, or it will create divide by zero errors.
+	var/brute_modifier = 1
+	var/burn_modifier = 1
+
+/obj/item/organ/internal/Initialize(mapload)
+    . = ..()
+    overlay = new overlay()
+
+/obj/item/organ/internal/on_insert(mob/living/carbon/overlay_owner, special)
+    . = ..()
+    if(!overlay_zone || !overlay || !ishuman(overlay_owner))
+        return
+
+    var/obj/item/bodypart/overlay_part = overlay_owner.get_bodypart(overlay_zone)
+    overlay_part.add_bodypart_overlay(overlay)
+    overlay_owner.update_body_parts()
+    overlay_part.brute_modifier *= brute_modifier
+    overlay_part.burn_modifier *= burn_modifier
+
+/obj/item/organ/internal/on_remove(mob/living/carbon/overlay_owner, special)
+    . = ..()
+    if(!overlay_zone || !overlay || QDELETED(overlay_owner) || !ishuman(overlay_owner))
+        return
+
+    var/obj/item/bodypart/overlay_part = overlay_owner.get_bodypart(overlay_zone)
+    overlay_part.remove_bodypart_overlay(overlay)
+    overlay_owner.update_body_parts()
+    overlay_part.brute_modifier /= brute_modifier
+    overlay_part.burn_modifier /= burn_modifier
+
+/datum/bodypart_overlay/simple/overlay
+    icon = 'icons/mob/human/species/robot/exoskeletons.dmi'
+    icon_state = null
+    layers = EXTERNAL_ADJACENT
+
+/datum/bodypart_overlay/simple/overlay/get_image(image_layer, obj/item/bodypart/limb)
+    return image(
+        icon = icon,
+        icon_state = "[icon_state]_[mutant_bodyparts_layertext(image_layer)]",
+        layer = image_layer,
+    )
+
+
 /obj/item/organ/internal/Initialize(mapload)
 	. = ..()
 	START_PROCESSING(SSobj, src)
@@ -88,3 +137,5 @@
 
 	failure_time += seconds_per_tick
 	organ_failure(seconds_per_tick)
+
+//mmmmm, kiggers

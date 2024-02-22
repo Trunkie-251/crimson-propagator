@@ -10,12 +10,12 @@
 	spawn_positions = 1
 	supervisors = SUPERVISOR_HOS
 	minimal_player_age = 7
-	exp_requirements = 300
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "WARDEN"
+	required_character_age = 30
 
-	outfit = /datum/outfit/job/warden
+	outfit = /datum/outfit/job/officer
 	plasmaman_outfit = /datum/outfit/plasmaman/warden
 	synthetic_outfit = /datum/outfit/synthetic
 
@@ -43,12 +43,12 @@
 	rpg_title = "Jailor"
 	job_flags = STATION_JOB_FLAGS | JOB_BOLD_SELECT_TEXT
 
-/datum/outfit/job/warden
-	name = "Warden"
+/datum/outfit/job/officer
+	name = "Commanding Officer"
 	jobtype = /datum/job/warden
 
 	id_trim = /datum/id_trim/job/warden
-	uniform = /obj/item/clothing/under/rank/security/warden
+	uniform = /obj/item/clothing/under/rank/security/officer/soldier
 	suit = /obj/item/clothing/suit/armor/vest/carapace/armaster
 	suit_store = /obj/item/gun/energy/disabler
 	backpack_contents = list(
@@ -58,7 +58,7 @@
 	ears = /obj/item/radio/headset/headset_sec/alt
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 	gloves = /obj/item/clothing/gloves/tackler/carapace
-	head = /obj/item/clothing/head/hats/warden/red
+	head = /obj/item/clothing/head/hats/officer
 	shoes = /obj/item/clothing/shoes/combat/carapace
 	l_pocket = /obj/item/restraints/handcuffs
 	r_pocket = /obj/item/assembly/flash/handheld
@@ -69,4 +69,13 @@
 	messenger = /obj/item/storage/backpack/messenger/sec
 
 	box = /obj/item/storage/box/survival/security
-	implants = list(/obj/item/implant/mindshield, )
+	implants = list(
+		/obj/item/implant/mindshield,
+		/obj/item/implant/krav_maga,
+	)
+	organs = list(
+		/obj/item/organ/internal/cyberimp/eyes/hud/security,
+		/obj/item/organ/internal/cyberimp/brain/anti_drop,
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		/obj/item/organ/internal/cyberimp/arm/muscle,
+	)

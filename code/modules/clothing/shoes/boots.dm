@@ -40,7 +40,7 @@
 	acid = 50
 
 /obj/item/clothing/shoes/combat/carapace
-	name = "\improper carapace boots (Felix-Pattern)"
+	name = "\improper Felix-pattern carapace boots"
 	icon_state = "carapaceboots"
 	desc = "Heavily reinforced armored boots with synthrubber soles. Trenches, mud, and blood do not stop these well-armoured boots in any way."
 	clothing_traits = list(TRAIT_NO_SLIP_WATER)
@@ -58,7 +58,7 @@
 
 /obj/item/clothing/shoes/jackboots
 	name = "jackboots"
-	desc = "Nanotrasen-issue Security combat boots for combat scenarios or combat situations. All combat, all the time."
+	desc = "Common black jackboots seen nearly everywhere in military-related uniforms."
 	icon_state = "jackboots"
 	inhand_icon_state = "jackboots"
 	strip_delay = 30
@@ -131,7 +131,7 @@
 
 /obj/item/clothing/shoes/workboots
 	name = "work boots"
-	desc = "Nanotrasen-issue Engineering lace-up work boots for the especially blue-collar."
+	desc = "Cheaply-produced workboots fabricated for the masses from vast nanofactories. Typically seen on all sorts of workers."
 	icon_state = "workboots"
 	inhand_icon_state = "jackboots"
 	armor_type = /datum/armor/shoes_workboots

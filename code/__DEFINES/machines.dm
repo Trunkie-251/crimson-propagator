@@ -146,3 +146,8 @@
 #define SD_MESSAGE 2
 /// Shows an alert picture (e.g. red alert, radiation, etc.)
 #define SD_PICTURE 3
+
+//Cloning defines, unsure how they entirely work.
+#define CLONEPOD_GET_MIND		1
+#define CLONEPOD_POLL_MIND		2
+#define CLONEPOD_NO_MIND		3

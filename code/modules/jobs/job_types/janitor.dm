@@ -42,6 +42,10 @@
 	belt = /obj/item/modular_computer/pda/janitor
 	ears = /obj/item/radio/headset/headset_srv
 
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		)
+
 /datum/outfit/job/janitor/pre_equip(mob/living/carbon/human/human_equipper, visuals_only)
 	. = ..()
 	if(check_holidays(GARBAGEDAY))

@@ -49,6 +49,13 @@
 		/obj/effect/spawner/random/decoration/material = 25,
 	)
 
+/obj/effect/spawner/random/decoration/imperial_statue
+	name = "Imperial statue spawner"
+	icon_state = "statue"
+	loot = list(
+
+	)
+
 /obj/effect/spawner/random/decoration/statue
 	name = "statue spawner"
 	icon_state = "statue"

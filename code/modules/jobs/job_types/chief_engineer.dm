@@ -11,11 +11,12 @@
 	supervisors = SUPERVISOR_CAPTAIN
 	req_admin_notify = 1
 	minimal_player_age = 7
-	exp_requirements = 180
 	exp_required_type = EXP_TYPE_CREW
 	exp_required_type_department = EXP_TYPE_ENGINEERING
 	exp_granted_type = EXP_TYPE_CREW
 	config_tag = "CHIEF_ENGINEER"
+	required_character_age = 35
+
 
 	outfit = /datum/outfit/job/ce
 	plasmaman_outfit = /datum/outfit/plasmaman/chief_engineer
@@ -59,7 +60,7 @@
 
 	id = /obj/item/card/id/advanced/silver
 	id_trim = /datum/id_trim/job/chief_engineer
-	uniform = /obj/item/clothing/under/rank/engineering/chief_engineer
+	uniform = /obj/item/clothing/under/rank/engineering/synthhazard
 	backpack_contents = list(
 		/obj/item/melee/baton/telescopic = 1,
 		/obj/item/construction/rcd/ce = 1,
@@ -80,6 +81,10 @@
 	chameleon_extras = /obj/item/stamp/head/ce
 	skillchips = list(/obj/item/skillchip/job/engineer)
 	pda_slot = ITEM_SLOT_LPOCKET
+	organs = list(
+		/obj/item/organ/internal/cyberimp/brain/neural_interface,
+		/obj/item/organ/internal/cyberimp/eyes/hud/diagnostic,
+		)
 
 /datum/outfit/job/ce/mod
 	name = "Chief Engineer (MODsuit)"

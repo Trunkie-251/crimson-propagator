@@ -280,6 +280,8 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_NOCLONELOSS "no_cloneloss"
 /// Mob is immune to toxin damage
 #define TRAIT_TOXIMMUNE "toxin_immune"
+//Prevents processed genetics mutations from processing.
+#define TRAIT_MUTATION_STASIS "mutation_stasis"
 /// Mob is immune to oxygen damage, does not need to breathe
 #define TRAIT_NOBREATH "no_breath"
 /// Mob is currently disguised as something else (like a morph being another mob or an object). Holds a reference to the thing that applied the trait.
@@ -1020,6 +1022,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define EMP_TRAIT "emp_trait"
 #define STATUE_MUTE "statue"
 #define CHANGELING_DRAIN "drain"
+#define CLONING_POD_TRAIT "cloning-pod"
 /// changelings with this trait can no longer talk over the hivemind
 #define CHANGELING_HIVEMIND_MUTE "ling_mute"
 #define TRAIT_HULK "hulk"

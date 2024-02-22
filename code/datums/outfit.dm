@@ -266,8 +266,12 @@
 				user.open_internals(user.get_item_by_slot(internals_slot))
 		if(implants)
 			for(var/implant_type in implants)
-				var/obj/item/implant/implanter = SSwardrobe.provide_type(implant_type, user)
+				var/obj/item/implant/implanter = SSwardrobe.provide_type(implant_type)
 				implanter.implant(user, null, TRUE)
+		if(organs)
+			for(var/organ_type in organs)
+				var/obj/item/organ/organ = SSwardrobe.provide_type(organ_type)
+				organ.Insert(user, TRUE, FALSE)
 
 		// Insert the skillchips associated with this outfit into the target.
 		if(skillchips)

@@ -86,7 +86,7 @@
 #define BODYTYPE_ALIEN (1<<7)
 ///The limb is from a golem
 #define BODYTYPE_GOLEM (1<<8)
-//This limb is from a synthetic; An advanced nanotechnological robot robot.
+//This limb is from a synthetic; An advanced nanotechnological robot.
 #define BODYTYPE_SYNTHETIC (1<<9)
 
 #define BODYTYPE_BIOSCRAMBLE_COMPATIBLE (BODYTYPE_HUMANOID | BODYTYPE_MONKEY | BODYTYPE_ALIEN)
@@ -146,7 +146,7 @@
 #define DIGITIGRADE_LEGS "Digitigrade Legs"
 
 // Health/damage defines
-#define MAX_LIVING_HEALTH 100
+#define MAX_LIVING_HEALTH 90
 
 //for determining which type of heartbeat sound is playing
 ///Heartbeat is beating fast for hard crit
@@ -431,8 +431,8 @@
 #define OFFSET_HELD "held"
 
 //MINOR TWEAKS/MISC
-#define AGE_MIN 17 //youngest a character can be
-#define AGE_MAX 85 //oldest a character can be
+#define AGE_MIN 18 //youngest a character can be
+#define AGE_MAX 300 //oldest a character can be
 #define AGE_MINOR 20 //legal age of space drinking and smoking
 #define WIZARD_AGE_MIN 30 //youngest a wizard can be
 #define APPRENTICE_AGE_MIN 29 //youngest an apprentice can be

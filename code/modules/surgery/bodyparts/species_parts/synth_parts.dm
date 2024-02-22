@@ -20,7 +20,7 @@
 
 /obj/item/bodypart/chest/synthetic
 	name = "Synthetic torso"
-	desc = "Arguably the most durable part of a Gen-4 Technocracy Exoframe. The torso holds a synth's \
+	desc = "Arguably the most durable part of a Gen-4 TRI-ch Exoframe. The torso holds a synth's \
 	atomic power core beneath layers of artificial muscle and interlocking ribs."
 	icon = 'icons/mob/human/species/robot/bodyparts.dmi'
 	icon_state = "synthetic_chest"
@@ -101,6 +101,8 @@
 	unarmed_damage_low = 9
 	unarmed_damage_high = 14
 
+//Rook bodyparts
+
 /obj/item/bodypart/head/synthetic/rook
 	desc = "A reptillian-inspired head with a soft non-toxic skin. The underlying myomer muscle is quite strong."
 	icon = 'icons/mob/human/species/robot/oversized_bodyparts.dmi'
@@ -109,7 +111,7 @@
 	limb_id = SPECIES_ROOK
 
 /obj/item/bodypart/chest/synthetic/rook
-	desc = "Arguably the most durable part of a Gen-4 Technocracy Exoframe. The torso holds a synth's \
+	desc = "Arguably the most durable part of a Gen-4 TRI-ch Exoframe. The torso holds a synth's \
 	atomic power core beneath layers of artificial muscle and interlocking ribs."
 	icon = 'icons/mob/human/species/robot/oversized_bodyparts.dmi'
 	icon_state = "rook_chest"
@@ -156,3 +158,10 @@
 	bodytype = BODYTYPE_HUMANOID|BODYTYPE_ORGANIC
 	unarmed_damage_low = 20
 	unarmed_damage_high = 28
+
+//slave unit
+
+/obj/item/bodypart/head/synthetic/slave
+	name = "SLAVE-unit"
+	desc = "This heavy, metallic, head is the simple container for a |horrifying| device."
+	icon_state = "slave_head"

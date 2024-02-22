@@ -555,7 +555,7 @@
 /obj/structure/table/reinforced/rglass,
 /obj/item/clothing/glasses/blindfold,
 /obj/item/clothing/mask/muzzle/breath,
-/obj/item/clothing/suit/jacket/straight_jacket,
+/obj/item/clothing/suit/jacket/strait_jacket,
 /turf/open/floor/iron/freezer,
 /area/ruin/space/has_grav/the_outlet/researchrooms)
 "oI" = (

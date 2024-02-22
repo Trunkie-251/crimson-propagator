@@ -63,10 +63,16 @@
 #define DNA_MUTATION_BLOCKS 8
 #define DNA_UNIQUE_ENZYMES_LEN 32
 
+//Cloning shit
+#define CLONER_FRESH_CLONE "fresh"
+#define CLONER_MATURE_CLONE "mature"
+
+
 //organ slots
 #define ORGAN_SLOT_ADAMANTINE_RESONATOR "adamantine_resonator"
 #define ORGAN_SLOT_APPENDIX "appendix"
 #define ORGAN_SLOT_BRAIN "brain"
+#define ORGAN_SLOT_BRAIN_NEURALINTERFACE "neural_interface"
 #define ORGAN_SLOT_BRAIN_ANTIDROP "brain_antidrop"
 #define ORGAN_SLOT_BRAIN_ANTISTUN "brain_antistun"
 #define ORGAN_SLOT_BREATHING_TUBE "breathing_tube"
@@ -75,6 +81,7 @@
 #define ORGAN_SLOT_HEART "heart"
 #define ORGAN_SLOT_HEART_AID "heartdrive"
 #define ORGAN_SLOT_HUD "eye_hud"
+#define ORGAN_SLOT_VISOR "visor"
 #define ORGAN_SLOT_LIVER "liver"
 #define ORGAN_SLOT_LUNGS "lungs"
 #define ORGAN_SLOT_PARASITE_EGG "parasite_egg"
@@ -149,11 +156,13 @@ GLOBAL_LIST_INIT(organ_process_order, list(
 	ORGAN_SLOT_ZOMBIE,
 	ORGAN_SLOT_THRUSTERS,
 	ORGAN_SLOT_HUD,
+	ORGAN_SLOT_VISOR,
 	ORGAN_SLOT_LIVER,
 	ORGAN_SLOT_TONGUE,
 	ORGAN_SLOT_VOICE,
 	ORGAN_SLOT_ADAMANTINE_RESONATOR,
 	ORGAN_SLOT_HEART_AID,
+	ORGAN_SLOT_BRAIN_NEURALINTERFACE,
 	ORGAN_SLOT_BRAIN_ANTIDROP,
 	ORGAN_SLOT_BRAIN_ANTISTUN,
 	ORGAN_SLOT_PARASITE_EGG,
