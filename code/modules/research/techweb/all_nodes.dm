@@ -80,7 +80,6 @@
 		"packagewrap",
 		"pet_carrier",
 		"plasmaglass",
-		"plasmaman_gas_filter",
 		"plasmareinforcedglass",
 		"plasteel",
 		"plastic_fork",
@@ -106,7 +105,6 @@
 		"shaker",
 		"shot_glass",
 		"signaler",
-		"slime_scanner",
 		"solar_panel",
 		"solar_tracker",
 		"space_heater",
@@ -441,18 +439,16 @@
 /datum/techweb_node/xenoorgan_biotech
 	id = "xenoorgan_bio"
 	display_name = "Xeno-organ Biology"
-	description = "Plasmaman, Ethereals, Lizardpeople... What makes our non-human crewmembers tick?"
+	description = "Ethereals, Lizardpeople... What makes our non-human crewmembers tick?"
 	prereq_ids = list("adv_biotech")
 	design_ids = list(
 		"limbdesign_ethereal",
 		"limbdesign_felinid",
 		"limbdesign_lizard",
-		"limbdesign_plasmaman",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 6500)
 	discount_experiments = list(
 		/datum/experiment/scanning/random/cytology/easy = 1000,
-		/datum/experiment/scanning/points/slime/hard = 5000,
 		/datum/experiment/autopsy/xenomorph = 5000,
 	)
 
@@ -601,7 +597,6 @@
 		"oxygen_tank",
 		"pacman",
 		"plasma_tank",
-		"plasmaman_tank_belt",
 		"pneumatic_seal",
 		"power_control",
 		"powermonitor",
@@ -707,7 +702,6 @@
 		"beacon",
 		"bluespace_crystal",
 		"telesci_gps",
-		"xenobioconsole",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
@@ -2161,7 +2155,6 @@
 	)
 
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 12500)
-	discount_experiments = list(/datum/experiment/scanning/points/slime/hard = 10000)
 	hidden = TRUE
 
 /datum/techweb_node/alien_engi

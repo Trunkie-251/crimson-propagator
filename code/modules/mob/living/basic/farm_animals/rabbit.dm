@@ -20,7 +20,6 @@
 	mob_size = MOB_SIZE_SMALL
 	can_be_held = TRUE
 	density = FALSE
-	gold_core_spawnable = FRIENDLY_SPAWN
 	speak_emote = list("sniffles", "twitches")
 	response_help_continuous = "pets"
 	response_help_simple = "pet"

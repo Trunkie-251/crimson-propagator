@@ -156,7 +156,6 @@
 	},
 /obj/structure/table/wood,
 /obj/item/spear/bonespear,
-/obj/item/slime_extract/silver,
 /turf/open/indestructible/necropolis,
 /area/ruin/powered/gluttony)
 "ls" = (

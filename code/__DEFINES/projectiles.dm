@@ -30,6 +30,8 @@
 #define CALIBER_50BMG ".50BMG"
 /// The caliber used by the desert eagle.
 #define CALIBER_50AE ".50AE"
+/// The caliber used by autocannons or superheavy man-portables.
+#define CALIBER_20MM "20mm"
 /// The caliber used by 5mm Flechette guns.
 #define CALIBER_5FLE "5mm flechette"
 /// The caliber used by the gyrojet pistol.

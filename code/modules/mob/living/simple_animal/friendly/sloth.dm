@@ -21,7 +21,6 @@ GLOBAL_DATUM(cargo_sloth, /mob/living/simple_animal/sloth)
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
-	gold_core_spawnable = FRIENDLY_SPAWN
 	melee_damage_lower = 18
 	melee_damage_upper = 18
 	health = 50
@@ -53,7 +52,6 @@ GLOBAL_DATUM(cargo_sloth, /mob/living/simple_animal/sloth)
 /mob/living/simple_animal/sloth/paperwork
 	name = "Paperwork"
 	desc = "Cargo's pet sloth. About as useful as the rest of the techs."
-	gold_core_spawnable = NO_SPAWN
 
 //Cargo Sloth 2
 
@@ -65,4 +63,3 @@ GLOBAL_DATUM(cargo_sloth, /mob/living/simple_animal/sloth)
 	icon_dead = "cool_sloth_dead"
 	gender = FEMALE
 	butcher_results = list(/obj/item/toy/spinningtoy = 1)
-	gold_core_spawnable = NO_SPAWN

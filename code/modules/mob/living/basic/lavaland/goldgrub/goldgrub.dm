@@ -24,7 +24,6 @@
 	speak_emote = list("screeches")
 	death_message = "stops moving as green liquid oozes from the carcass!"
 	status_flags = CANPUSH
-	gold_core_spawnable = HOSTILE_SPAWN
 	ai_controller = /datum/ai_controller/basic_controller/goldgrub
 	///can this mob lay eggs
 	var/can_lay_eggs = TRUE
@@ -151,7 +150,6 @@
 	speed = 3
 	maxHealth = 25
 	health = 25
-	gold_core_spawnable = NO_SPAWN
 	can_tame = FALSE
 	can_lay_eggs = FALSE
 	ai_controller = /datum/ai_controller/basic_controller/babygrub

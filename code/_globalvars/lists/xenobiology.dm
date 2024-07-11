@@ -9,7 +9,6 @@ GLOBAL_LIST_INIT_TYPED(cell_line_tables, /list, list(
 		/datum/micro_organism/cell_line/cow = 1,
 		/datum/micro_organism/cell_line/mouse = 1,
 		/datum/micro_organism/cell_line/sholean_grapes = 2,
-		/datum/micro_organism/cell_line/slime = 2,
 	),
 
 	CELL_LINE_TABLE_MOIST = list(
@@ -17,7 +16,6 @@ GLOBAL_LIST_INIT_TYPED(cell_line_tables, /list, list(
 		/datum/micro_organism/cell_line/cockroach = 1,
 		/datum/micro_organism/cell_line/gelatinous_cube = 2,
 		/datum/micro_organism/cell_line/megacarp = 1,
-		/datum/micro_organism/cell_line/slime = 2,
 		/datum/micro_organism/cell_line/snake = 1,
 		/datum/micro_organism/cell_line/glockroach = 1,
 		/datum/micro_organism/cell_line/hauberoach = 1,
@@ -35,7 +33,6 @@ GLOBAL_LIST_INIT_TYPED(cell_line_tables, /list, list(
 		/datum/micro_organism/cell_line/cockroach = 1,
 		/datum/micro_organism/cell_line/corgi = 1,
 		/datum/micro_organism/cell_line/mouse = 2,
-		/datum/micro_organism/cell_line/slime = 1,
 		/datum/micro_organism/cell_line/vat_beast = 2,
 	),
 
@@ -57,7 +54,6 @@ GLOBAL_LIST_INIT_TYPED(cell_line_tables, /list, list(
 	CELL_LINE_TABLE_MOUSE = list(/datum/micro_organism/cell_line/mouse = 1),
 	CELL_LINE_TABLE_PINE = list(/datum/micro_organism/cell_line/pine = 1),
 	CELL_LINE_TABLE_PUG = list(/datum/micro_organism/cell_line/pug = 1),
-	CELL_LINE_TABLE_SLIME = list(/datum/micro_organism/cell_line/slime = 1),
 	CELL_LINE_TABLE_SNAKE = list(/datum/micro_organism/cell_line/snake = 1),
 	CELL_LINE_TABLE_VATBEAST = list(/datum/micro_organism/cell_line/vat_beast = 1),
 	CELL_LINE_TABLE_NETHER = list(/datum/micro_organism/cell_line/netherworld = 1),

@@ -18,7 +18,6 @@
 	icon_living = "base"
 	icon_dead = "base_dead"
 	icon_gib = "carp_gib"
-	gold_core_spawnable = HOSTILE_SPAWN
 	mob_biotypes = MOB_ORGANIC | MOB_BEAST
 	movement_type = FLYING
 	health = 25
@@ -162,7 +161,6 @@
 /mob/living/basic/carp/holographic
 	icon_state = "holocarp"
 	icon_living = "holocarp"
-	gold_core_spawnable = NO_SPAWN
 	greyscale_config = NONE
 	basic_mob_flags = DEL_ON_DEATH
 	cell_line = NONE
@@ -177,7 +175,6 @@
  */
 /mob/living/basic/carp/pet
 	speak_emote = list("squeaks")
-	gold_core_spawnable = NO_SPAWN
 	gender = FEMALE // Both current existing pet carp are female but you can remove this if someone else gets a male one?
 	ai_controller = /datum/ai_controller/basic_controller/carp/pet
 
@@ -260,7 +257,6 @@
 	name = "Ella"
 	real_name = "Ella"
 	desc = "It came out of someone."
-	gold_core_spawnable = NO_SPAWN
 
 /mob/living/basic/carp/ella/Initialize(mapload)
 	. = ..()

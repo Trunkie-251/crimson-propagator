@@ -31,7 +31,7 @@ GLOBAL_VAR_INIT(chicken_count, 0)
 	maxHealth = 15
 	pass_flags = PASSTABLE | PASSMOB
 	mob_size = MOB_SIZE_SMALL
-	gold_core_spawnable = FRIENDLY_SPAWN
+
 
 	ai_controller = /datum/ai_controller/basic_controller/chicken
 

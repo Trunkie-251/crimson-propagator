@@ -24,7 +24,7 @@
 	inhand_icon_state = "bl_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/head_of_personnel
@@ -40,7 +40,7 @@
 	inhand_icon_state = "b_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/head_of_personnel/suit
@@ -57,7 +57,7 @@
 	inhand_icon_state = "g_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/hydroponics
@@ -77,7 +77,7 @@
 	inhand_icon_state = "g_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/janitor
@@ -96,7 +96,7 @@
 	icon_state = "janitor_skirt"
 	body_parts_covered = CHEST|GROIN|ARMS
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/janitor/maid
@@ -105,7 +105,7 @@
 	icon_state = "janimaid"
 	inhand_icon_state = "janimaid"
 	body_parts_covered = CHEST|GROIN
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/civilian/lawyer
@@ -134,7 +134,7 @@
 	icon_state = "lawyer_black_skirt"
 	inhand_icon_state = "lawyer_black"
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/lawyer/beige
@@ -149,7 +149,7 @@
 	icon_state = "good_suit_skirt"
 	inhand_icon_state = "good_suit"
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/lawyer/red
@@ -162,7 +162,7 @@
 	icon_state = "lawyer_red_skirt"
 	inhand_icon_state = "lawyer_red"
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/lawyer/blue
@@ -175,7 +175,7 @@
 	icon_state = "lawyer_blue_skirt"
 	inhand_icon_state = "lawyer_blue"
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/lawyer/bluesuit
@@ -196,7 +196,7 @@
 	greyscale_config_worn = /datum/greyscale_config/buttondown_skirt/worn
 	body_parts_covered = CHEST|GROIN|ARMS
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/lawyer/purpsuit
@@ -213,7 +213,7 @@
 	inhand_icon_state = "p_suit"
 	body_parts_covered = CHEST|GROIN|ARMS
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/lawyer/galaxy
@@ -228,7 +228,7 @@
 	name = "blue galaxy suitskirt"
 	icon_state = "lawyer_galaxy_blue_skirt"
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/lawyer/galaxy/red
@@ -240,7 +240,7 @@
 	name = "red galaxy suitskirt"
 	icon_state = "lawyer_galaxy_red_skirt"
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/cookjorts
@@ -249,4 +249,4 @@
 	icon_state = "cookjorts"
 	inhand_icon_state = "cookjorts"
 	can_adjust = FALSE
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM

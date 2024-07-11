@@ -19,7 +19,6 @@
 
 
 	outfit = /datum/outfit/job/ce
-	plasmaman_outfit = /datum/outfit/plasmaman/chief_engineer
 	synthetic_outfit = /datum/outfit/synthetic
 	departments_list = list(
 		/datum/job_department/engineering,

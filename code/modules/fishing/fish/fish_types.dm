@@ -344,35 +344,6 @@
 	random_case_rarity = FISH_RARITY_VERY_RARE
 	fish_traits = list(/datum/fish_trait/parthenogenesis)
 
-/obj/item/fish/slimefish
-	name = "acquatic slime"
-	desc = "Kids, this is what happens when a slime overcomes its hydrophobic nature. It goes glug glug."
-	icon_state = "slimefish"
-	icon_state_dead = "slimefish_dead"
-	dedicated_in_aquarium_icon_state = "slimefish_small"
-	sprite_width = 7
-	sprite_height = 7
-	do_flop_animation = FALSE //it already has a cute bouncy wiggle. :3
-	random_case_rarity = FISH_RARITY_VERY_RARE
-	required_fluid_type = AQUARIUM_FLUID_ANADROMOUS
-	stable_population = 4
-	health = 150
-	fillet_type = /obj/item/slime_extract/grey
-	grind_results = list(/datum/reagent/toxin/slimejelly = 10)
-	fish_traits = list(/datum/fish_trait/toxin_immunity, /datum/fish_trait/crossbreeder)
-	favorite_bait = list(
-		list(
-			"Type" = "Foodtype",
-			"Value" = TOXIC,
-		),
-		list(
-			"Type" = "Reagent",
-			"Value" = /datum/reagent/toxin,
-			"Amount" = 5,
-		),
-	)
-	required_temperature_min = MIN_AQUARIUM_TEMP+20
-
 /obj/item/fish/boned
 	name = "unmarine bonemass"
 	desc = "What one could mistake for fish remains, is in reality a species that chose to discard its weak flesh a long time ago. A living fossil, in its most literal sense."

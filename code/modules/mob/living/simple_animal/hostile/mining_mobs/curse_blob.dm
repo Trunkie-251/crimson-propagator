@@ -21,7 +21,6 @@
 	throw_message = "passes through the smokey body of"
 	obj_damage = 0
 	environment_smash = ENVIRONMENT_SMASH_NONE
-	sentience_type = SENTIENCE_BOSS
 	layer = LARGE_MOB_LAYER
 	plane = GAME_PLANE_UPPER_FOV_HIDDEN
 	var/mob/living/set_target
@@ -119,8 +118,6 @@ IGNORE_PROC_IF_NOT_TARGET(attack_alien)
 IGNORE_PROC_IF_NOT_TARGET(attack_larva)
 
 IGNORE_PROC_IF_NOT_TARGET(attack_animal)
-
-IGNORE_PROC_IF_NOT_TARGET(attack_slime)
 
 /mob/living/simple_animal/hostile/asteroid/curseblob/bullet_act(obj/projectile/Proj)
 	if(Proj.firer != set_target)

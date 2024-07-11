@@ -3,58 +3,6 @@
 #define TEST_ALERT_INHIBIT_MESSAGE(lungs_organ, alert_name) TEST_CHECK_BREATH_MESSAGE(lungs_organ, "threw alert [alert_name] when it wasn't expected.")
 #define GET_MOLES(gas_mixture, gas_type) (gas_mixture.gases[gas_type] ? gas_mixture.gases[gas_type][MOLES] : 0)
 
-/// Tests the standard, plasmaman, and lavaland lungs organ to ensure breathing and suffocation behave as expected.
-/// Performs a check on each main (can be life-sustaining) gas, and ensures gas alerts are only thrown when expected.
-/datum/unit_test/lungs
-	abstract_type = /datum/unit_test/lungs
-
-/datum/unit_test/lungs/lungs_sanity/Run()
-	// "Standard" form of breathing.
-	// 2500 Litres of O2/N2 gas mix, ideal for life.
-	var/datum/gas_mixture/test_mix = create_standard_mix()
-	var/mob/living/carbon/human/lab_rat = allocate(/mob/living/carbon/human/consistent)
-	var/obj/item/organ/internal/lungs/test_lungs = allocate(/obj/item/organ/internal/lungs)
-	// Test one breath of O2/N2 mix.
-	lungs_test_check_breath("standard gas mixture", lab_rat, test_lungs, test_mix)
-
-	// Suffocation with an empty gas mix.
-	var/datum/gas_mixture/empty_test_mix = allocate(/datum/gas_mixture)
-	lab_rat = allocate(/mob/living/carbon/human/consistent)
-	test_lungs = allocate(/obj/item/organ/internal/lungs)
-	// Test one breath of nothing. Suffocate due to the breath being empty.
-	lungs_test_check_breath("empty gas mixture", lab_rat, test_lungs, empty_test_mix, expect_failure = TRUE)
-
-	// Suffocation with null. This does indeed happen normally.
-	lab_rat = allocate(/mob/living/carbon/human/consistent)
-	test_lungs = allocate(/obj/item/organ/internal/lungs)
-	// Test one breath of nothing. Suffocate due to the breath being null.
-	lungs_test_check_breath("null", lab_rat, test_lungs, null, expect_failure = TRUE)
-
-	// Suffocation with Nitrogen.
-	var/datum/gas_mixture/nitro_test_mix = create_nitrogen_mix()
-	lab_rat = allocate(/mob/living/carbon/human/consistent)
-	test_lungs = allocate(/obj/item/organ/internal/lungs)
-	// Test one breath of Nitrogen. Suffocate due to the breath being 100% N2.
-	lungs_test_check_breath("pure Nitrogen", lab_rat, test_lungs, nitro_test_mix, expect_failure = TRUE)
-
-/// Tests the Plasmaman lungs organ to ensure Plasma breathing and suffocation behave as expected.
-/datum/unit_test/lungs/lungs_sanity_plasmaman
-
-/datum/unit_test/lungs/lungs_sanity_plasmaman/Run()
-	// 2500 Litres of pure Plasma.
-	var/datum/gas_mixture/plasma_test_mix = create_plasma_mix()
-	var/mob/living/carbon/human/lab_rat = allocate(/mob/living/carbon/human/consistent)
-	var/obj/item/organ/internal/lungs/plasmaman/test_lungs = allocate(/obj/item/organ/internal/lungs/plasmaman)
-	// Test one breath of Plasma on Plasmaman lungs.
-	lungs_test_check_breath("pure Plasma", lab_rat, test_lungs, plasma_test_mix)
-
-	// Tests suffocation with Nitrogen.
-	var/datum/gas_mixture/nitro_test_mix = create_nitrogen_mix()
-	lab_rat = allocate(/mob/living/carbon/human/consistent)
-	test_lungs = allocate(/obj/item/organ/internal/lungs/plasmaman)
-	// Test one breath of Nitrogen on Plasmaman lungs.
-	lungs_test_check_breath("pure Nitrogen", lab_rat, test_lungs, nitro_test_mix, expect_failure = TRUE)
-
 /// Tests the lavaland/Ashwalker lungs organ.
 /// Ensures they can breathe from the lavaland air mixture properly, and suffocate on inadequate mixture.
 /datum/unit_test/lungs/lungs_sanity_ashwalker

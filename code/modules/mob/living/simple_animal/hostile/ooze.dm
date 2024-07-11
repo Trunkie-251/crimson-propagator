@@ -14,7 +14,7 @@
 	hud_type = /datum/hud/ooze
 	minbodytemp = 250
 	maxbodytemp = INFINITY
-	faction = list(FACTION_SLIME)
+	faction = list(FACTION_HOSTILE)
 	melee_damage_lower = 10
 	melee_damage_upper = 10
 	health = 200

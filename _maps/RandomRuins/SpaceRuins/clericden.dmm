@@ -33,7 +33,6 @@
 /turf/open/floor/plating/airless,
 /area/ruin/space)
 "i" = (
-/obj/structure/light_prism,
 /turf/open/floor/iron/dark/airless,
 /area/ruin/space)
 "j" = (
@@ -144,7 +143,6 @@
 /turf/open/floor/carpet/airless,
 /area/ruin/space)
 "H" = (
-/obj/structure/light_prism,
 /turf/open/floor/plating/airless,
 /area/ruin/space)
 "I" = (

@@ -34,9 +34,6 @@
 	if(issilicon(target))
 		return FALSE
 
-	if(isslime(target))
-		return TRUE
-
 	if(!isanimal_or_basicmob(target))
 		return TRUE
 

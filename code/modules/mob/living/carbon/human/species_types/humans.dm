@@ -1,5 +1,5 @@
 /datum/species/human
-	name = "\improper Human"
+	name = "\improper Humanikatari"
 	id = SPECIES_HUMAN
 	inherent_traits = list(
 		TRAIT_CAN_USE_FLIGHT_POTION,
@@ -7,11 +7,10 @@
 	)
 	mutant_bodyparts = list("wings" = "None")
 	skinned_type = /obj/item/stack/sheet/animalhide/human
-	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
-	payday_modifier = 1.1
-
+	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP
+	payday_modifier = 0.5
 /datum/species/human/prepare_human_for_preview(mob/living/carbon/human/human)
-	human.set_haircolor("#bb9966", update = FALSE) // brown
+	human.set_haircolor("#597281", update = FALSE)
 	human.set_hairstyle("Business Hair", update = TRUE)
 	death_sound = 'sound/voice/human/human_deathsound.mp3'
 /datum/species/human/randomize_features(mob/living/carbon/human/human_mob)
@@ -39,9 +38,11 @@
 	)
 
 /datum/species/human/get_species_description()
-	return "Incredibly violent sexual mammals from earth. The only known \
-		sapient race, their kind is the basis of all other species, whether being creations or as \
-		various subspecies of human."
+	return list(
+		" \"...Despite their weakness, Humanikatari clings to the universe, even if just barely. \
+		In twisted way, they are akin to the neanderthals clinging to their territories upon an \
+		ancient earth, even as their own species replaced the same niche...\"")
+
 
 /datum/species/human/get_species_lore()
 	return list(
@@ -51,20 +52,25 @@
 /datum/species/human/create_pref_unique_perks()
 	var/list/to_add = list()
 
-	to_add += list(list(
-		SPECIES_PERK_TYPE = SPECIES_NEUTRAL_PERK,
-		SPECIES_PERK_ICON = "robot",
-		SPECIES_PERK_NAME = "Asimov Superiority",
-		SPECIES_PERK_DESC = "AAAAAAAAAAAAA"
-	))
+	to_add += list(
+	list(
+		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
+		SPECIES_PERK_ICON = "fist-raised",
+		SPECIES_PERK_NAME = "Second-class",
+		SPECIES_PERK_DESC = "Humans are considered second-class citizens to the transhuman and quasihuman inhabitants of the empire. \
+		Expect limitations and great trouble with certain pursuits."
+	),
+		list(
+		SPECIES_PERK_TYPE = SPECIES_NEGATIVE_PERK,
+		SPECIES_PERK_ICON = "dna",
+		SPECIES_PERK_NAME = "Weak Genes",
+		SPECIES_PERK_DESC = "While still not perfectly baseline \"Humans\", \
+		Humanikatari still struggles against other advanced transhuman descendants. Thus, they are weaker \
+		and must rely on marrying flesh with metal to survive."
+	)
+)
 
-	if(CONFIG_GET(flag/enforce_human_authority))
-		to_add += list(list(
-			SPECIES_PERK_TYPE = SPECIES_POSITIVE_PERK,
-			SPECIES_PERK_ICON = "bullhorn",
-			SPECIES_PERK_NAME = "Chain of Command",
-			SPECIES_PERK_DESC = "Nanotrasen only recognizes humans for command roles, such as Captain.",
-		))
 
 	return to_add
+
 

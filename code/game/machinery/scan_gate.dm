@@ -10,12 +10,12 @@
 #define SCANGATE_LIZARD "lizard"
 #define SCANGATE_FELINID "felinid"
 #define SCANGATE_FLY "fly"
-#define SCANGATE_PLASMAMAN "plasma"
 #define SCANGATE_MOTH "moth"
 #define SCANGATE_JELLY "jelly"
 #define SCANGATE_POD "pod"
 #define SCANGATE_GOLEM "golem"
 #define SCANGATE_ZOMBIE "zombie"
+#define SCANGATE_SZZARA "szzara"
 
 /obj/machinery/scanner_gate
 	name = "scanner gate"
@@ -146,8 +146,6 @@
 						scan_species = /datum/species/fly
 					if(SCANGATE_FELINID)
 						scan_species = /datum/species/human/felinid
-					if(SCANGATE_PLASMAMAN)
-						scan_species = /datum/species/plasmaman
 					if(SCANGATE_JELLY)
 						scan_species = /datum/species/jelly
 					if(SCANGATE_POD)
@@ -156,6 +154,8 @@
 						scan_species = /datum/species/golem
 					if(SCANGATE_ZOMBIE)
 						scan_species = /datum/species/zombie
+					if(SCANGATE_SZZARA)
+						scan_species = /datum/species/szzara
 				if(is_species(H, scan_species))
 					beep = TRUE
 				if(detect_species == SCANGATE_ZOMBIE) //Can detect dormant zombies
@@ -274,9 +274,9 @@
 #undef SCANGATE_LIZARD
 #undef SCANGATE_FELINID
 #undef SCANGATE_FLY
-#undef SCANGATE_PLASMAMAN
 #undef SCANGATE_MOTH
 #undef SCANGATE_JELLY
 #undef SCANGATE_POD
 #undef SCANGATE_GOLEM
 #undef SCANGATE_ZOMBIE
+#undef SCANGATE_SZZARA

@@ -162,7 +162,6 @@
 		/datum/reagent/consumable/sugar = 5,
 		/obj/item/food/pie/plain = 1,
 		/obj/item/food/chocolatebar = 3,
-		/obj/item/slime_extract = 1 //The reason you dont know how to make it!
 	)
 	result = /obj/item/food/pie/cocolavatart
 	category = CAT_PIE

@@ -95,6 +95,7 @@
 	update_appearance()
 
 //Mini-SMG. Schizoid as fuck.
+
 /obj/item/gun/ballistic/automatic/neill250
 	name = "\improper Neill-250 SMG"
 	desc = "A bizarre five-barreled submachine gun based off of an ancient design. Favored by corporate security, arcology punks, and \
@@ -103,8 +104,8 @@
 	icon_state = "Neill250"
 	inhand_icon_state = "neill250"
 	accepted_magazine_type = /obj/item/ammo_box/magazine/h9mm
-	burst_size = 8
-	fire_delay = 1
+	burst_size = 1
+	fire_delay = 0.00000001
 	actions_types = list()
 	can_suppress = FALSE
 	spread = 8
@@ -112,11 +113,11 @@
 	show_bolt_icon = FALSE
 	mag_display = FALSE
 	mag_display_ammo = TRUE
-	tac_reloads = FALSE
+	tac_reloads = TRUE
 
-/obj/item/gun/ballistic/automatic/wt550/Initialize(mapload)
+/obj/item/gun/ballistic/automatic/neill250/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
+	AddComponent(/datum/component/automatic_fire, 0.0000001 SECONDS)
 
 
 /obj/item/gun/ballistic/automatic/wt550
@@ -383,9 +384,9 @@
 
 /obj/item/gun/ballistic/automatic/lmg11
 	name = "\improper B&W LMG11"
-	desc = "A human-designed light machinegun that became a massive hit with private armies. It is extremely accurate and fires caseless 4.73 x 33mm rounds. \
-	The 200-round mag allows for longer operations without having to carry much ammunition."
-	icon = 'icons/obj/weapons/guns/wide_guns.dmi'
+	desc = "An ancient light machinegun that became a massive hit with private armies. It is extremely accurate and fires caseless 4.73 x 33mm rounds. \
+	It may not be a volkite or a shardrifle, but nothing beats a stream of warm zrbite enamel."
+	icon = 'icons/obj/weapons/guns/imperial_guns.dmi'
 	icon_state = "lmg11"
 	inhand_icon_state = "lmg11"
 	base_icon_state = "lmg11"
@@ -467,5 +468,42 @@
 		return
 	..()
 
+// Martyr
 
+/obj/item/gun/ballistic/automatic/martyr
+	name = "Martyr Rifle"
+	desc = "When Dagon told man to go forth and multiply, he did not will them to create instruments of death."
+	icon = 'icons/obj/weapons/guns/imperial_guns.dmi'
+	icon_state = "martyr"
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	actions_types = list()
+	burst_size = 1
+	spread = 0.3
+	inhand_x_dimension = 32
+	inhand_y_dimension = 32
+	weapon_weight = WEAPON_HEAVY
+	inhand_icon_state = "sniper"
+	worn_icon_state = null
+	fire_sound = 'sound/weapons/gun/rifle/Martyr_firing_sound.ogg'
+	fire_sound_volume = 90
+	load_sound = 'sound/weapons/gun/sniper/mag_insert.ogg'
+	rack_sound = 'sound/weapons/gun/sniper/rack.ogg'
+	suppressed_sound = 'sound/weapons/gun/general/heavy_shot_suppressed.ogg'
+	recoil = 2
+	can_bayonet = TRUE
+	knife_x_offset = 32
+	knife_y_offset = 10
+	accepted_magazine_type = /obj/item/ammo_box/magazine/superheavy
+	internal_magazine = FALSE
+	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = ITEM_SLOT_BACK
+	mag_display = TRUE
+	tac_reloads = TRUE
+	rack_delay = 1 SECONDS
+	can_suppress = FALSE
+
+/obj/item/gun/ballistic/automatic/martyr/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/scope, range_modifier = 3) //Martyr
 

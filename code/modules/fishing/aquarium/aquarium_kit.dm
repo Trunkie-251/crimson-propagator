@@ -77,7 +77,6 @@
 		/obj/item/fish/emulsijack = 1,
 		/obj/item/fish/sludgefish/purple = 1,
 		/obj/item/fish/pufferfish = 3,
-		/obj/item/fish/slimefish = 2,
 		/obj/item/fish/ratfish = 2,
 		/obj/item/fish/chasm_crab/ice = 2,
 		/obj/item/fish/chasm_crab = 2,

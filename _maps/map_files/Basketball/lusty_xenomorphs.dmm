@@ -33,7 +33,6 @@
 /area/centcom/basketball)
 "dg" = (
 /obj/structure/alien/weeds,
-/obj/machinery/smartfridge/extract/preloaded,
 /turf/open/floor/iron/white,
 /area/centcom/basketball)
 "dr" = (
@@ -218,7 +217,6 @@
 /turf/open/floor/engine,
 /area/centcom/basketball)
 "pu" = (
-/mob/living/simple_animal/slime/random,
 /turf/open/floor/engine,
 /area/centcom/basketball)
 "qU" = (
@@ -530,7 +528,6 @@
 /turf/open/floor/iron/white,
 /area/centcom/basketball)
 "Se" = (
-/obj/machinery/computer/camera_advanced/xenobio,
 /turf/open/floor/iron/white,
 /area/centcom/basketball)
 "Tc" = (
@@ -538,7 +535,6 @@
 /turf/open/floor/iron/white,
 /area/centcom/basketball)
 "Uq" = (
-/obj/machinery/processor/slime,
 /turf/open/floor/iron/white,
 /area/centcom/basketball)
 "Uv" = (

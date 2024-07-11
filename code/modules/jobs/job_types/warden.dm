@@ -16,7 +16,6 @@
 	required_character_age = 30
 
 	outfit = /datum/outfit/job/officer
-	plasmaman_outfit = /datum/outfit/plasmaman/warden
 	synthetic_outfit = /datum/outfit/synthetic
 
 	paycheck = PAYCHECK_CREW
@@ -57,7 +56,7 @@
 	belt = /obj/item/modular_computer/pda/warden
 	ears = /obj/item/radio/headset/headset_sec/alt
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
-	gloves = /obj/item/clothing/gloves/tackler/carapace
+	gloves = /obj/item/clothing/gloves/carapace
 	head = /obj/item/clothing/head/hats/officer
 	shoes = /obj/item/clothing/shoes/combat/carapace
 	l_pocket = /obj/item/restraints/handcuffs

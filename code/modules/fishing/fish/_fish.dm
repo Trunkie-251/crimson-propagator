@@ -140,7 +140,6 @@
 	. = ..()
 	AddComponent(/datum/component/aquarium_content, PROC_REF(get_aquarium_animation), list(COMSIG_FISH_STATUS_CHANGED,COMSIG_FISH_STIRRED))
 
-	RegisterSignal(src, COMSIG_ATOM_ON_LAZARUS_INJECTOR, PROC_REF(use_lazarus))
 	if(do_flop_animation)
 		RegisterSignal(src, COMSIG_ATOM_TEMPORARY_ANIMATION_START, PROC_REF(on_temp_animation))
 	check_environment()
@@ -369,18 +368,6 @@
 				visible_message(message)
 	update_appearance()
 	SEND_SIGNAL(src, COMSIG_FISH_STATUS_CHANGED)
-
-/obj/item/fish/proc/use_lazarus(datum/source, obj/item/lazarus_injector/injector, mob/user)
-	SIGNAL_HANDLER
-	if(injector.revive_type != SENTIENCE_ORGANIC)
-		balloon_alert(user, "invalid creature!")
-		return
-	if(status != FISH_DEAD)
-		balloon_alert(user, "it's not dead!")
-		return
-	set_status(FISH_ALIVE)
-	injector.expend(src, user)
-	return LAZARUS_INJECTOR_USED
 
 /obj/item/fish/proc/get_aquarium_animation()
 	var/obj/structure/aquarium/aquarium = loc

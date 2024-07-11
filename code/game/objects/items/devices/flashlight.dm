@@ -635,19 +635,6 @@
 	color = LIGHT_COLOR_GREEN
 	light_color = LIGHT_COLOR_GREEN
 
-/obj/item/flashlight/slime
-	gender = PLURAL
-	name = "glowing slime extract"
-	desc = "Extract from a yellow slime. It emits a strong light when squeezed."
-	icon = 'icons/obj/lighting.dmi'
-	icon_state = "slime"
-	inhand_icon_state = null
-	w_class = WEIGHT_CLASS_SMALL
-	slot_flags = ITEM_SLOT_BELT
-	custom_materials = null
-	light_range = 7 //luminosity when on
-	light_system = MOVABLE_LIGHT
-
 /obj/item/flashlight/emp
 	var/emp_max_charges = 4
 	var/emp_cur_charges = 4

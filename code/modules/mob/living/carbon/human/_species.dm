@@ -38,6 +38,14 @@ GLOBAL_LIST_EMPTY(features_by_species)
 	var/hair_alpha = 255
 	///The alpha used by the facial hair. 255 is completely solid, 0 is invisible.
 	var/facial_hair_alpha = 255
+	/// The eye icon a species uses
+	var/icon/eye_icon = 'icons/mob/human/human_face.dmi'
+	/// If set and matches the target bodytype, then it will use the clothing_file_override icon.
+	var/bodytype_override
+	/// We check if the clothing supports the bodytype during an override check.
+	var/clothing_variation_override
+	/// Icon used by the clothing override
+	var/clothing_file_suffix
 
 	///Never, Optional, or Forced digi legs?
 	var/digitigrade_customization = DIGITIGRADE_NEVER

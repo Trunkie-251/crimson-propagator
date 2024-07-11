@@ -63,11 +63,6 @@
 	taste_description = "searingly cold"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED|REAGENT_NO_RANDOM_RECIPE
 
-/datum/reagent/hypernoblium/on_mob_life(mob/living/carbon/breather, seconds_per_tick, times_fired)
-	if(isplasmaman(breather))
-		breather.set_timed_status_effect(10 SECONDS * REM * seconds_per_tick, /datum/status_effect/hypernob_protection)
-	..()
-
 /datum/reagent/nitrium_high_metabolization
 	name = "Nitrosyl plasmide"
 	description = "A highly reactive byproduct that stops you from sleeping, while dealing increasing toxin damage over time."

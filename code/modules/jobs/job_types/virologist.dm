@@ -13,7 +13,6 @@
 	required_character_age = 25
 
 	outfit = /datum/outfit/job/virologist
-	plasmaman_outfit = /datum/outfit/plasmaman/viro
 	synthetic_outfit = /datum/outfit/synthetic
 
 	paycheck = PAYCHECK_CREW

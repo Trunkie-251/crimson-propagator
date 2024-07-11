@@ -88,7 +88,6 @@
 	fish_table = list(
 		FISHING_DUD = 20,
 		/obj/item/fish/ratfish = 10,
-		/obj/item/fish/slimefish = 4
 	)
 	fishing_difficulty = FISHING_DEFAULT_DIFFICULTY + 10
 
@@ -98,7 +97,6 @@
 	fish_table = list(
 		FISHING_DUD = 18,
 		/obj/item/fish/sludgefish = 18,
-		/obj/item/fish/slimefish = 2,
 		/obj/item/storage/wallet/money = 2,
 	)
 	fish_counts = list(

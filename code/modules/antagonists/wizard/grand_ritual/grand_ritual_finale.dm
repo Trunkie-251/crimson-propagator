@@ -132,8 +132,7 @@
 	exit_poof.lifetime = 2 SECONDS
 
 	former_captain.unequip_everything()
-	if(isplasmaman(former_captain))
-		former_captain.equipOutfit(/datum/outfit/plasmaman)
+	if((former_captain))
 		former_captain.internal = former_captain.get_item_for_held_index(2)
 	else
 		former_captain.equipOutfit(/datum/outfit/job/assistant)
@@ -251,10 +250,7 @@
 	var/obj/mask = victim.get_item_by_slot(ITEM_SLOT_MASK)
 	QDEL_NULL(pants)
 	QDEL_NULL(mask)
-	if(isplasmaman(victim))
-		victim.equip_to_slot_if_possible(new /obj/item/clothing/under/plasmaman/clown/magic(), ITEM_SLOT_ICLOTHING, disable_warning = TRUE)
-		victim.equip_to_slot_if_possible(new /obj/item/clothing/mask/gas/clown_hat/plasmaman(), ITEM_SLOT_MASK, disable_warning = TRUE)
-	else
+	if((victim))
 		victim.equip_to_slot_if_possible(new /obj/item/clothing/under/rank/civilian/clown/magic(), ITEM_SLOT_ICLOTHING, disable_warning = TRUE)
 		victim.equip_to_slot_if_possible(new /obj/item/clothing/mask/gas/clown_hat(), ITEM_SLOT_MASK, disable_warning = TRUE)
 

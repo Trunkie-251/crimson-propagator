@@ -81,47 +81,23 @@ There are several things that need to be remembered:
 		inv.update_icon()
 
 	if(istype(w_uniform, /obj/item/clothing/under))
-		var/obj/item/clothing/under/uniform = w_uniform
-		update_hud_uniform(uniform)
+		var/obj/item/clothing/under/worn_item = w_uniform
+		update_hud_uniform(worn_item)
 
 		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_ICLOTHING)
 			return
 
-		var/target_overlay = uniform.icon_state
-		if(uniform.adjusted == ALT_STYLE)
+		var/target_overlay = worn_item.icon_state
+		if(worn_item.adjusted == ALT_STYLE)
 			target_overlay = "[target_overlay]_d"
 
-		var/mutable_appearance/uniform_overlay
-		//This is how non-humanoid clothing works. You check if the mob has the right bodyflag, and the clothing has the corresponding clothing flag.
-		//handled_by_bodytype is used to track whether or not we successfully used an alternate sprite. It's set to TRUE to ease up on copy-paste.
-		//icon_file MUST be set to null by default, or it causes issues.
-		//handled_by_bodytype MUST be set to FALSE under the if(!icon_exists()) statement, or everything breaks.
-		//"override_file = handled_by_bodytype ? icon_file : null" MUST be added to the arguments of build_worn_icon()
-		//Friendly reminder that icon_exists(file, state, scream = TRUE) is your friend when debugging this code.
-		var/handled_by_bodytype = TRUE
-		var/icon_file
-		var/woman
-		//BEGIN SPECIES HANDLING
-		if((bodytype & BODYTYPE_MONKEY) && (uniform.supports_variations_flags & CLOTHING_MONKEY_VARIATION))
-			icon_file = MONKEY_UNIFORM_FILE
-		else if((bodytype & BODYTYPE_DIGITIGRADE) && (uniform.supports_variations_flags & CLOTHING_DIGITIGRADE_VARIATION))
-			icon_file = DIGITIGRADE_UNIFORM_FILE
-		//Female sprites have lower priority than digitigrade sprites
-		else if(dna.species.sexes && (bodytype & BODYTYPE_HUMANOID) && physique == FEMALE && !(uniform.female_sprite_flags & NO_FEMALE_UNIFORM)) //Agggggggghhhhh
-			woman = TRUE
-
-		if(!icon_exists(icon_file, RESOLVE_ICON_STATE(uniform)))
-			icon_file = DEFAULT_UNIFORM_FILE
-			handled_by_bodytype = FALSE
-
-		//END SPECIES HANDLING
-		uniform_overlay = uniform.build_worn_icon(
+		var/mutable_appearance/uniform_overlay = worn_item.build_worn_icon(
 			default_layer = UNIFORM_LAYER,
-			default_icon_file = icon_file,
+			default_icon_file = DEFAULT_UNIFORM_FILE,
 			isinhands = FALSE,
-			female_uniform = woman ? uniform.female_sprite_flags : null,
-			override_state = target_overlay,
-			override_file = handled_by_bodytype ? icon_file : null,
+			female_uniform = should_use_female_icons(worn_item, ITEM_SLOT_ICLOTHING),
+			override_state = (worn_item.adjusted == ALT_STYLE ? "[RESOLVE_ICON_STATE(worn_item)]_d" : null),
+			override_file = get_worn_icon(worn_item, ITEM_SLOT_ICLOTHING),
 		)
 
 		var/obj/item/bodypart/chest/my_chest = get_bodypart(BODY_ZONE_CHEST)
@@ -138,24 +114,26 @@ There are several things that need to be remembered:
 		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_ID) + 1]
 		inv.update_icon()
 
-	var/mutable_appearance/id_overlay = overlays_standing[ID_LAYER]
-
 	if(wear_id)
 		var/obj/item/worn_item = wear_id
 		update_hud_id(worn_item)
-		var/icon_file = 'icons/mob/clothing/id.dmi'
 
-		id_overlay = wear_id.build_worn_icon(default_layer = ID_LAYER, default_icon_file = icon_file)
-
-		if(!id_overlay)
+		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_ID)
 			return
+
+		var/mutable_appearance/id_overlay = worn_item.build_worn_icon(
+			default_layer = ID_LAYER,
+			default_icon_file = DEFAULT_ID_FILE,
+			isinhands = FALSE,
+			female_uniform = should_use_female_icons(worn_item, ITEM_SLOT_ID),
+			override_file = get_worn_icon(worn_item, ITEM_SLOT_ID),
+		)
 
 		var/obj/item/bodypart/chest/my_chest = get_bodypart(BODY_ZONE_CHEST)
 		my_chest?.worn_id_offset?.apply_offset(id_overlay)
 		overlays_standing[ID_LAYER] = id_overlay
 
 	apply_overlay(ID_LAYER)
-
 
 /mob/living/carbon/human/update_worn_gloves()
 	remove_overlay(GLOVES_LAYER)
@@ -178,6 +156,7 @@ There are several things that need to be remembered:
 		add_overlay(bloody_overlay)
 	//Bloody hands end
 
+
 	if(gloves)
 		var/obj/item/worn_item = gloves
 		update_hud_gloves(worn_item)
@@ -185,9 +164,13 @@ There are several things that need to be remembered:
 		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_GLOVES)
 			return
 
-		var/icon_file = 'icons/mob/clothing/hands.dmi'
-
-		var/mutable_appearance/gloves_overlay = gloves.build_worn_icon(default_layer = GLOVES_LAYER, default_icon_file = icon_file)
+		var/mutable_appearance/gloves_overlay = worn_item.build_worn_icon(
+			default_layer = GLOVES_LAYER,
+			default_icon_file = DEFAULT_GLOVES_FILE,
+			isinhands = FALSE,
+			female_uniform = should_use_female_icons(worn_item, ITEM_SLOT_GLOVES),
+			override_file = get_worn_icon(worn_item, ITEM_SLOT_GLOVES),
+		)
 
 		var/feature_y_offset = 0
 		//needs to be typed, hand_bodyparts can have nulls
@@ -219,13 +202,17 @@ There are several things that need to be remembered:
 		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_EYES)
 			return
 
-		var/icon_file = 'icons/mob/clothing/eyes.dmi'
+		var/mutable_appearance/glasses_overlay = worn_item.build_worn_icon(
+			default_layer = GLASSES_LAYER,
+			default_icon_file = DEFAULT_GLASSES_FILE,
+			isinhands = FALSE,
+			female_uniform = should_use_female_icons(worn_item, ITEM_SLOT_EYES),
+			override_file = get_worn_icon(worn_item, ITEM_SLOT_EYES),
+		)
 
-		var/mutable_appearance/glasses_overlay = glasses.build_worn_icon(default_layer = GLASSES_LAYER, default_icon_file = icon_file)
 		my_head.worn_glasses_offset?.apply_offset(glasses_overlay)
 		overlays_standing[GLASSES_LAYER] = glasses_overlay
 	apply_overlay(GLASSES_LAYER)
-
 
 /mob/living/carbon/human/update_inv_ears()
 	remove_overlay(EARS_LAYER)
@@ -245,9 +232,14 @@ There are several things that need to be remembered:
 		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_EARS)
 			return
 
-		var/icon_file = 'icons/mob/clothing/ears.dmi'
+		var/mutable_appearance/ears_overlay = worn_item.build_worn_icon(
+			default_layer = EARS_LAYER,
+			default_icon_file = DEFAULT_EARS_FILE,
+			isinhands = FALSE,
+			female_uniform = should_use_female_icons(worn_item, ITEM_SLOT_EARS),
+			override_file = get_worn_icon(worn_item, ITEM_SLOT_EARS),
+		)
 
-		var/mutable_appearance/ears_overlay = ears.build_worn_icon(default_layer = EARS_LAYER, default_icon_file = icon_file)
 		my_head.worn_ears_offset?.apply_offset(ears_overlay)
 		overlays_standing[EARS_LAYER] = ears_overlay
 	apply_overlay(EARS_LAYER)
@@ -266,13 +258,17 @@ There are several things that need to be remembered:
 		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_NECK)
 			return
 
-		var/icon_file = 'icons/mob/clothing/neck.dmi'
+		var/mutable_appearance/neck_overlay = worn_item.build_worn_icon(
+			default_layer = NECK_LAYER,
+			default_icon_file = DEFAULT_NECK_FILE,
+			isinhands = FALSE,
+			female_uniform = should_use_female_icons(worn_item, ITEM_SLOT_NECK),
+			override_file = get_worn_icon(worn_item, ITEM_SLOT_NECK),
+		)
 
-		var/mutable_appearance/neck_overlay = worn_item.build_worn_icon(default_layer = NECK_LAYER, default_icon_file = icon_file)
 		var/obj/item/bodypart/chest/my_chest = get_bodypart(BODY_ZONE_CHEST)
 		my_chest?.worn_belt_offset?.apply_offset(neck_overlay)
 		overlays_standing[NECK_LAYER] = neck_overlay
-
 	apply_overlay(NECK_LAYER)
 
 /mob/living/carbon/human/update_worn_shoes()
@@ -292,11 +288,13 @@ There are several things that need to be remembered:
 		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_FEET)
 			return
 
-		var/icon_file = DEFAULT_SHOES_FILE
-
-		var/mutable_appearance/shoes_overlay = shoes.build_worn_icon(default_layer = SHOES_LAYER, default_icon_file = icon_file)
-		if(!shoes_overlay)
-			return
+		var/mutable_appearance/shoes_overlay = worn_item.build_worn_icon(
+			default_layer = SHOES_LAYER,
+			default_icon_file = DEFAULT_SHOES_FILE,
+			isinhands = FALSE,
+			female_uniform = should_use_female_icons(worn_item, ITEM_SLOT_FEET),
+			override_file = get_worn_icon(worn_item, ITEM_SLOT_FEET),
+		)
 
 		var/feature_y_offset = 0
 		for (var/body_zone in list(BODY_ZONE_L_LEG, BODY_ZONE_R_LEG))
@@ -329,7 +327,14 @@ There are several things that need to be remembered:
 		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_SUITSTORE)
 			return
 
-		var/mutable_appearance/s_store_overlay = worn_item.build_worn_icon(default_layer = SUIT_STORE_LAYER, default_icon_file = 'icons/mob/clothing/belt_mirror.dmi')
+		var/mutable_appearance/s_store_overlay = worn_item.build_worn_icon(
+			default_layer = SUIT_STORE_LAYER,
+			default_icon_file = DEFAULT_SUIT_STORAGE_FILE,
+			isinhands = FALSE,
+			female_uniform = should_use_female_icons(worn_item, ITEM_SLOT_SUITSTORE),
+			override_file = get_worn_icon(worn_item, ITEM_SLOT_SUITSTORE),
+		)
+
 		var/obj/item/bodypart/chest/my_chest = get_bodypart(BODY_ZONE_CHEST)
 		my_chest?.worn_suit_storage_offset?.apply_offset(s_store_overlay)
 		overlays_standing[SUIT_STORE_LAYER] = s_store_overlay
@@ -348,14 +353,18 @@ There are several things that need to be remembered:
 		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_HEAD)
 			return
 
-		var/icon_file = 'icons/mob/clothing/head/default.dmi'
+		var/mutable_appearance/head_overlay = worn_item.build_worn_icon(
+			default_layer = HEAD_LAYER,
+			default_icon_file = DEFAULT_HEAD_FILE,
+			isinhands = FALSE,
+			female_uniform = should_use_female_icons(worn_item, ITEM_SLOT_HEAD),
+			override_file = get_worn_icon(worn_item, ITEM_SLOT_HEAD),
+		)
 
-		var/mutable_appearance/head_overlay = head.build_worn_icon(default_layer = HEAD_LAYER, default_icon_file = icon_file)
 		var/obj/item/bodypart/head/my_head = get_bodypart(BODY_ZONE_HEAD)
 		my_head?.worn_head_offset?.apply_offset(head_overlay)
 		overlays_standing[HEAD_LAYER] = head_overlay
 
-	update_mutant_bodyparts()
 	apply_overlay(HEAD_LAYER)
 
 /mob/living/carbon/human/update_worn_belt()
@@ -372,14 +381,20 @@ There are several things that need to be remembered:
 		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_BELT)
 			return
 
-		var/icon_file = 'icons/mob/clothing/belt.dmi'
+		var/mutable_appearance/belt_overlay = worn_item.build_worn_icon(
+			default_layer = BELT_LAYER,
+			default_icon_file = DEFAULT_BELT_FILE,
+			isinhands = FALSE,
+			female_uniform = should_use_female_icons(worn_item, ITEM_SLOT_BELT),
+			override_file = get_worn_icon(worn_item, ITEM_SLOT_BELT),
+		)
 
-		var/mutable_appearance/belt_overlay = belt.build_worn_icon(default_layer = BELT_LAYER, default_icon_file = icon_file)
 		var/obj/item/bodypart/chest/my_chest = get_bodypart(BODY_ZONE_CHEST)
 		my_chest?.worn_belt_offset?.apply_offset(belt_overlay)
 		overlays_standing[BELT_LAYER] = belt_overlay
 
 	apply_overlay(BELT_LAYER)
+
 
 /mob/living/carbon/human/update_worn_oversuit()
 	remove_overlay(SUIT_LAYER)
@@ -391,9 +406,18 @@ There are several things that need to be remembered:
 	if(wear_suit)
 		var/obj/item/worn_item = wear_suit
 		update_hud_wear_suit(worn_item)
-		var/icon_file = DEFAULT_SUIT_FILE
 
-		var/mutable_appearance/suit_overlay = wear_suit.build_worn_icon(default_layer = SUIT_LAYER, default_icon_file = icon_file)
+		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_OCLOTHING)
+			return
+
+		var/mutable_appearance/suit_overlay = worn_item.build_worn_icon(
+			default_layer = SUIT_LAYER,
+			default_icon_file = DEFAULT_SUIT_FILE,
+			isinhands = FALSE,
+			female_uniform = should_use_female_icons(worn_item, ITEM_SLOT_OCLOTHING),
+			override_file = get_worn_icon(worn_item, ITEM_SLOT_OCLOTHING),
+		)
+
 		var/obj/item/bodypart/chest/my_chest = get_bodypart(BODY_ZONE_CHEST)
 		my_chest?.worn_suit_offset?.apply_offset(suit_overlay)
 		overlays_standing[SUIT_LAYER] = suit_overlay
@@ -442,9 +466,14 @@ There are several things that need to be remembered:
 		if(check_obscured_slots(transparent_protection = TRUE) & ITEM_SLOT_MASK)
 			return
 
-		var/icon_file = 'icons/mob/clothing/mask.dmi'
+		var/mutable_appearance/mask_overlay = worn_item.build_worn_icon(
+			default_layer = FACEMASK_LAYER,
+			default_icon_file = DEFAULT_MASK_FILE,
+			isinhands = FALSE,
+			female_uniform = should_use_female_icons(worn_item, ITEM_SLOT_MASK),
+			override_file = get_worn_icon(worn_item, ITEM_SLOT_MASK),
+		)
 
-		var/mutable_appearance/mask_overlay = wear_mask.build_worn_icon(default_layer = FACEMASK_LAYER, default_icon_file = icon_file)
 		my_head.worn_mask_offset?.apply_offset(mask_overlay)
 		overlays_standing[FACEMASK_LAYER] = mask_overlay
 

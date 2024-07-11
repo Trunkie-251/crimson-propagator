@@ -241,8 +241,6 @@ SUBSYSTEM_DEF(points_of_interest)
 		return 7
 	if(isnewplayer(target))
 		return 8
-	if(isslime(target))
-		return 9
 	if(isanimal(target))
 		return 10
 	if(isbasicmob(target))

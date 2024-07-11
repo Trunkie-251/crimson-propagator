@@ -100,7 +100,6 @@
 	armour_penetration = 20
 	health = 120
 	maxHealth = 120
-	gold_core_spawnable = HOSTILE_SPAWN
 	armored = TRUE
 
 /mob/living/basic/bear/butter //The mighty companion to Cak. Several functions used from it.

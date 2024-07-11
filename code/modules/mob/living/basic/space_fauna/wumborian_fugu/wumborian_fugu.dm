@@ -17,7 +17,6 @@
 	pixel_x = -16
 	base_pixel_x = -16
 	status_flags = NONE
-	gold_core_spawnable = HOSTILE_SPAWN
 	mob_biotypes = MOB_ORGANIC | MOB_BEAST
 	mob_size = MOB_SIZE_SMALL
 	speed = 0

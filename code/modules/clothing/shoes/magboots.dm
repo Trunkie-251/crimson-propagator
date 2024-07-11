@@ -24,14 +24,6 @@
 /obj/item/clothing/shoes/magboots/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/update_icon_updates_onmob)
-	RegisterSignal(src, COMSIG_SPEED_POTION_APPLIED, PROC_REF(on_speed_potioned))
-
-/// Signal handler for [COMSIG_SPEED_POTION_APPLIED]. Speed potion removes the active slowdown
-/obj/item/clothing/shoes/magboots/proc/on_speed_potioned(datum/source)
-	SIGNAL_HANDLER
-
-	slowdown_active = 0
-	// Don't need to touch the actual slowdown here, since the speed potion does it for us
 
 /obj/item/clothing/shoes/magboots/verb/toggle()
 	set name = "Toggle Magboots"

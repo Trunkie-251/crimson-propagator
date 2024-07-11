@@ -224,8 +224,6 @@ GLOBAL_VAR_INIT(focused_tests, focused_tests())
 	returnable_list = list(
 		//Never meant to be created, errors out the ass for mobcode reasons
 		/mob/living/carbon,
-		//And another
-		/obj/item/slimecross/recurring,
 		//This should be obvious
 		/obj/machinery/doomsday_device,
 		//Yet more templates

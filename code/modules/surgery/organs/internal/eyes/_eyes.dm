@@ -130,14 +130,26 @@
 	if(isnull(eye_icon_state))
 		return list()
 
-	var/mutable_appearance/eye_left = mutable_appearance('icons/mob/human/human_face.dmi', "[eye_icon_state]_l", -BODY_LAYER)
-	var/mutable_appearance/eye_right = mutable_appearance('icons/mob/human/human_face.dmi', "[eye_icon_state]_r", -BODY_LAYER)
+	var/datum/species/humie_species = parent.dna.species
+	var/icon/used_icon = humie_species.eye_icon
+
+	var/eye_state_left = "[eye_icon_state]_l"
+	var/eye_state_right = "[eye_icon_state]_r"
+
+	var/obj/item/bodypart/head/my_head = parent.get_bodypart(BODY_ZONE_HEAD)
+
+	if(my_head.is_dimorphic)
+		var/suffix = parent.gender == MALE ? "_m" : "_f"
+		eye_state_left += suffix
+		eye_state_right += suffix
+
+	var/mutable_appearance/eye_left = mutable_appearance(used_icon, eye_state_left, -BODY_LAYER)
+	var/mutable_appearance/eye_right = mutable_appearance(used_icon, eye_state_right, -BODY_LAYER)
 
 	var/obscured = parent.check_obscured_slots(TRUE)
 	if(overlay_ignore_lighting && !(obscured & ITEM_SLOT_EYES))
 		eye_left.overlays += emissive_appearance(eye_left.icon, eye_left.icon_state, parent, alpha = eye_left.alpha)
 		eye_right.overlays += emissive_appearance(eye_right.icon, eye_right.icon_state, parent, alpha = eye_right.alpha)
-	var/obj/item/bodypart/head/my_head = parent.get_bodypart(BODY_ZONE_HEAD)
 	if(my_head)
 		if(my_head.head_flags & HEAD_EYECOLOR)
 			eye_right.color = eye_color_right
@@ -767,3 +779,12 @@
 	by default."
 	visual = null
 	organ_flags = ORGAN_ROBOTIC
+
+// Szzara eyeballs
+
+/obj/item/organ/internal/eyes/szzara
+	name = "\improper Szzara Eyeball"
+	icon_state = "szzara_eyeball"
+	eye_icon_state = "szzara_eyes"
+	desc = "Reptillian eyes that have a black sclera and a nicating membrane. Strange patterns swirl over the iris, an \
+	exotic mixture of reptillian, piscine, and almost... Antediluvian patterns flow together."

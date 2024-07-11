@@ -122,7 +122,6 @@
 	mob_types = list(
 		/mob/living/basic/blankbody,
 		/mob/living/basic/creature,
-		/mob/living/basic/migo,
 	)
 	faction = list(FACTION_NETHER)
 

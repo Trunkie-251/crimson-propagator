@@ -63,10 +63,7 @@
 			if(CIV_JOB_VIRO)
 				chosen_type = pick(subtypesof(/datum/bounty/virus))
 			if(CIV_JOB_SCI)
-				if(prob(50))
-					chosen_type = pick(subtypesof(/datum/bounty/item/science))
-				else
-					chosen_type = pick(subtypesof(/datum/bounty/item/slime))
+				chosen_type = pick(subtypesof(/datum/bounty/item/science))
 			if(CIV_JOB_ENG)
 				chosen_type = pick(subtypesof(/datum/bounty/item/engineering))
 			if(CIV_JOB_MINE)

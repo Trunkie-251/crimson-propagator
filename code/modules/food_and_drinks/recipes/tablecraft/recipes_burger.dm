@@ -235,24 +235,6 @@
 	result = /obj/item/food/burger/superbite
 	category = CAT_BURGER
 
-/datum/crafting_recipe/food/slimeburger
-	name = "Jelly burger"
-	reqs = list(
-		/datum/reagent/toxin/slimejelly = 5,
-		/obj/item/food/bun = 1
-	)
-	result = /obj/item/food/burger/jelly/slime
-	category = CAT_BURGER
-
-/datum/crafting_recipe/food/jellyburger
-	name = "Jelly burger"
-	reqs = list(
-			/datum/reagent/consumable/cherryjelly = 5,
-			/obj/item/food/bun = 1
-	)
-	result = /obj/item/food/burger/jelly/cherry
-	category = CAT_BURGER
-
 /datum/crafting_recipe/food/fivealarmburger
 	name = "Five alarm burger"
 	reqs = list(

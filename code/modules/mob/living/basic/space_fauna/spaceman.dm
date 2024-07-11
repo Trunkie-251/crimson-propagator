@@ -7,7 +7,6 @@
 	icon_dead = "old_dead"
 	icon_gib = "clown_gib"
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	sentience_type = SENTIENCE_HUMANOID
 	gender = MALE
 	response_disarm_continuous = "gently pushes aside"
 	response_disarm_simple = "gently push aside"

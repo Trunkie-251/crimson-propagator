@@ -134,34 +134,6 @@
 	biological_state = (BIO_FLESH|BIO_BLOODED|BIO_JOINTED)
 	limb_id = SPECIES_SLIMEPERSON
 
-///LUMINESCENT
-/obj/item/bodypart/head/luminescent
-	biological_state = (BIO_FLESH|BIO_BLOODED)
-	limb_id = SPECIES_LUMINESCENT
-	is_dimorphic = TRUE
-	head_flags = HEAD_ALL_FEATURES
-
-/obj/item/bodypart/chest/luminescent
-	biological_state = (BIO_FLESH|BIO_BLOODED)
-	limb_id = SPECIES_LUMINESCENT
-	is_dimorphic = TRUE
-
-/obj/item/bodypart/arm/left/luminescent
-	biological_state = (BIO_FLESH|BIO_BLOODED|BIO_JOINTED)
-	limb_id = SPECIES_LUMINESCENT
-
-/obj/item/bodypart/arm/right/luminescent
-	biological_state = (BIO_FLESH|BIO_BLOODED|BIO_JOINTED)
-	limb_id = SPECIES_LUMINESCENT
-
-/obj/item/bodypart/leg/left/luminescent
-	biological_state = (BIO_FLESH|BIO_BLOODED|BIO_JOINTED)
-	limb_id = SPECIES_LUMINESCENT
-
-/obj/item/bodypart/leg/right/luminescent
-	biological_state = (BIO_FLESH|BIO_BLOODED|BIO_JOINTED)
-	limb_id = SPECIES_LUMINESCENT
-
 ///ZOMBIE
 /obj/item/bodypart/head/zombie
 	limb_id = SPECIES_ZOMBIE

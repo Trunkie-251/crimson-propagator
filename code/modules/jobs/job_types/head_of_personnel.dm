@@ -18,7 +18,6 @@
 	required_character_age = 35
 
 	outfit = /datum/outfit/job/hop
-	plasmaman_outfit = /datum/outfit/plasmaman/head_of_personnel
 	synthetic_outfit = /datum/outfit/synthetic
 	departments_list = list(
 		/datum/job_department/service,

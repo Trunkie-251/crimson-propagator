@@ -37,7 +37,7 @@
 	icon_state = "schoolgirl"
 	inhand_icon_state = null
 	body_parts_covered = CHEST|GROIN|ARMS
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	can_adjust = FALSE
 
 /obj/item/clothing/under/costume/schoolgirl/red
@@ -82,7 +82,7 @@
 	icon_state = "kilt"
 	inhand_icon_state = "kilt"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	can_adjust = FALSE
 
 /obj/item/clothing/under/costume/kilt/highlander
@@ -113,7 +113,7 @@
 	icon_state = "maid"
 	inhand_icon_state = "maid"
 	body_parts_covered = CHEST|GROIN
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 	can_adjust = FALSE
 
@@ -158,7 +158,7 @@
 	name = "blue performer's outfit"
 	icon_state = "bsing"
 	inhand_icon_state = null
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 
 /obj/item/clothing/under/costume/mummy
 	name = "mummy wrapping"
@@ -186,7 +186,7 @@
 	icon_state = "draculass"
 	inhand_icon_state = null
 	body_parts_covered = CHEST|GROIN|ARMS
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	can_adjust = FALSE
 
 /obj/item/clothing/under/costume/drfreeze
@@ -298,7 +298,7 @@
 	greyscale_colors = "#EEEEEE#EE8E2E#222227#D8D39C"
 	body_parts_covered = CHEST|GROIN|ARMS
 	flags_1 = IS_PLAYER_COLORABLE_1
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/costume/buttondown/skirt/service //preset one to be a formal white shirt and black skirt

@@ -11,7 +11,6 @@
 	config_tag = "SHAFT_MINER"
 
 	outfit = /datum/outfit/job/miner
-	plasmaman_outfit = /datum/outfit/plasmaman/mining
 	synthetic_outfit = /datum/outfit/synthetic
 
 	paycheck = PAYCHECK_CREW

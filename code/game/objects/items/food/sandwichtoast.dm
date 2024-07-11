@@ -55,14 +55,6 @@
 	foodtypes = GRAIN
 	crafting_complexity = FOOD_COMPLEXITY_2
 
-/obj/item/food/sandwich/jelly/slime
-	food_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/toxin/slimejelly = 10, /datum/reagent/consumable/nutriment/vitamin = 4)
-	foodtypes = GRAIN | TOXIC
-
-/obj/item/food/sandwich/jelly/cherry
-	food_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/consumable/cherryjelly = 8, /datum/reagent/consumable/nutriment/vitamin = 4)
-	foodtypes = GRAIN | FRUIT | SUGAR
-
 /obj/item/food/sandwich/notasandwich
 	name = "not-a-sandwich"
 	desc = "Something seems to be wrong with this, you can't quite figure what. Maybe it's his moustache."

@@ -31,7 +31,6 @@
 		/obj/item/organ/internal/heart/gland/mindshock = 5,
 		/obj/item/organ/internal/heart/gland/transform = 5,
 		/obj/item/organ/internal/heart/gland/spiderman = 5,
-		/obj/item/organ/internal/heart/gland/slime = 4,
 		/obj/item/organ/internal/heart/gland/trauma = 4,
 		/obj/item/organ/internal/heart/gland/electric = 3,
 		/obj/item/organ/internal/monster_core/regenerative_core = 2,
@@ -60,7 +59,6 @@
 		/obj/item/organ/internal/tongue/zombie,
 		/obj/item/organ/internal/appendix,
 		/obj/item/organ/internal/liver/fly,
-		/obj/item/organ/internal/lungs/plasmaman,
 		/obj/item/organ/external/tail/cat,
 		/obj/item/organ/external/tail/lizard,
 	)

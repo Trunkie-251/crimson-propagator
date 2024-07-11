@@ -14,7 +14,6 @@
 	config_tag = "SECURITY_OFFICER"
 
 	outfit = /datum/outfit/job/soldier
-	plasmaman_outfit = /datum/outfit/plasmaman/security
 	synthetic_outfit = /datum/outfit/synthetic
 
 	paycheck = PAYCHECK_CREW
@@ -207,7 +206,7 @@ GLOBAL_LIST_EMPTY(security_officer_distribution)
 	belt = /obj/item/modular_computer/pda/security
 	ears = /obj/item/radio/headset/headset_sec
 	mask = /obj/item/clothing/mask/gas/sechailer/soldier
-	gloves = /obj/item/clothing/gloves/tackler/carapace
+	gloves = /obj/item/clothing/gloves/carapace
 	head = /obj/item/clothing/head/helmet/carapace
 	shoes = /obj/item/clothing/shoes/combat/carapace
 	l_pocket = /obj/item/restraints/handcuffs

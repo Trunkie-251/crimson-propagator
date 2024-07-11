@@ -4,7 +4,6 @@
 	icon = 'icons/turf/floors/glass.dmi'
 	icon_state = "glass-0"
 	base_icon_state = "glass"
-	baseturfs = /turf/baseturf_bottom
 	layer = GLASS_FLOOR_LAYER
 	underfloor_accessibility = UNDERFLOOR_VISIBLE
 	smoothing_flags = SMOOTH_BITMASK
@@ -24,13 +23,6 @@
 	/// Color of starlight to use. Defaults to STARLIGHT_COLOR if not set
 	var/starlight_color
 
-/turf/open/floor/glass/broken_states()
-	return list("glass-damaged1", "glass-damaged2", "glass-damaged3")
-
-/turf/open/floor/glass/Initialize(mapload)
-	icon_state = "" //Prevent the normal icon from appearing behind the smooth overlays
-	..()
-	return INITIALIZE_HINT_LATELOAD
 
 /turf/open/floor/glass/LateInitialize()
 	. = ..()
@@ -66,7 +58,6 @@
 	name = "reinforced glass floor"
 	desc = "Do jump on it, it can take it."
 	icon = 'icons/turf/floors/reinf_glass.dmi'
-	icon_state = "reinf_glass-0"
 	base_icon_state = "reinf_glass"
 	floor_tile = /obj/item/stack/tile/rglass
 	alpha_to_leave = 206

@@ -13,7 +13,6 @@
 	required_character_age = 25
 
 	outfit = /datum/outfit/job/roboticist
-	plasmaman_outfit = /datum/outfit/plasmaman/robotics
 	synthetic_outfit = /datum/outfit/synthetic
 	departments_list = list(
 		/datum/job_department/science,

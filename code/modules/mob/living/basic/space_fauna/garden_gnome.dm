@@ -26,7 +26,6 @@
 
 	faction = list(FACTION_GNOME)
 	mob_size = MOB_SIZE_SMALL
-	gold_core_spawnable = HOSTILE_SPAWN
 	greyscale_config = /datum/greyscale_config/garden_gnome
 	ai_controller = /datum/ai_controller/basic_controller/garden_gnome
 	/// The damage resistence when sinked into the ground

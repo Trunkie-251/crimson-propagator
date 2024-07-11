@@ -17,6 +17,7 @@
 		/obj/item/stack/sheet/plasteel = 2,
 		/obj/item/stack/sheet/bronze = 2,
 		/obj/item/stack/sheet/runed_metal = 1,
+		/obj/item/stack/sheet/mineral/zrbite = 3,
 		exotic_material = 2 // this needs to be refactored properly
 	)
 

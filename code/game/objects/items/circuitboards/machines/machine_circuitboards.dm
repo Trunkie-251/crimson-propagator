@@ -532,7 +532,6 @@
 	var/static/list/fridges_name_paths = list(/obj/machinery/smartfridge = "plant produce",
 		/obj/machinery/smartfridge/food = "food",
 		/obj/machinery/smartfridge/drinks = "drinks",
-		/obj/machinery/smartfridge/extract = "slimes",
 		/obj/machinery/smartfridge/petri = "petri",
 		/obj/machinery/smartfridge/organ = "organs",
 		/obj/machinery/smartfridge/chemistry = "chems",
@@ -991,11 +990,6 @@
 		/datum/stock_part/servo = 1)
 	needs_anchored = FALSE
 
-/obj/item/circuitboard/machine/processor/slime
-	name = "Slime Processor"
-	greyscale_colors = CIRCUIT_COLOR_SCIENCE
-	build_path = /obj/machinery/processor/slime
-
 /obj/item/circuitboard/machine/protolathe/department/science
 	name = "Departmental Protolathe - Science"
 	greyscale_colors = CIRCUIT_COLOR_SCIENCE
@@ -1245,17 +1239,6 @@
 		/datum/stock_part/matter_bin = 1,
 		/datum/stock_part/servo = 1)
 	needs_anchored = FALSE
-
-/obj/item/circuitboard/machine/processor/screwdriver_act(mob/living/user, obj/item/tool)
-	if(build_path == /obj/machinery/processor)
-		name = "Slime Processor"
-		build_path = /obj/machinery/processor/slime
-		to_chat(user, span_notice("Name protocols successfully updated."))
-	else
-		name = "Food Processor"
-		build_path = /obj/machinery/processor
-		to_chat(user, span_notice("Defaulting name protocols."))
-	return TRUE
 
 /obj/item/circuitboard/machine/protolathe/department/service
 	name = "Departmental Protolathe - Service"

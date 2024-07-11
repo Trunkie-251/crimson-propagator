@@ -509,7 +509,6 @@
 		/obj/item/reagent_containers/cup/bottle,
 		/obj/item/reagent_containers/cup/tube,
 		/obj/item/reagent_containers/syringe,
-		/obj/item/slime_extract,
 		/obj/item/swab,
 		))
 

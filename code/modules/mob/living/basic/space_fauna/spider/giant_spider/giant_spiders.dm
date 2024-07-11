@@ -17,7 +17,6 @@
 	obj_damage = 30
 	melee_damage_lower = 20
 	melee_damage_upper = 25
-	gold_core_spawnable = HOSTILE_SPAWN
 	ai_controller = /datum/ai_controller/basic_controller/giant_spider
 
 
@@ -268,7 +267,6 @@
 	speed = 6
 	player_speed_modifier = -5.5 // Doesn't seem that slow but it gets a debuff off web
 	mob_size = MOB_SIZE_LARGE
-	gold_core_spawnable = NO_SPAWN
 	web_speed = 0.7
 	web_type = /datum/action/cooldown/mob_cooldown/lay_web/sealer
 	menu_description = "Tank spider variant with an enormous amount of health and damage, but is very slow when not on webbing. It also has a charge ability to close distance with a target after a small windup."
@@ -318,7 +316,6 @@
 	poison_type = /datum/reagent/toxin/viperspider
 	speed = 2
 	player_speed_modifier = -2.5
-	gold_core_spawnable = NO_SPAWN
 	menu_description = "Assassin spider variant with an unmatched speed and very deadly poison, but has very low amount of health and damage."
 
 /mob/living/basic/spider/giant/viper/Initialize(mapload)
@@ -351,7 +348,6 @@
 	melee_damage_upper = 15
 	speed = 4
 	player_speed_modifier = -3.1
-	gold_core_spawnable = NO_SPAWN
 	web_speed = 0.5
 	web_type = /datum/action/cooldown/mob_cooldown/lay_web/sealer
 	menu_description = "Royal spider variant specializing in reproduction and leadership, deals low damage."
@@ -399,7 +395,6 @@
 	minimum_survivable_temperature = 0
 	maximum_survivable_temperature = 1500
 	color = rgb(114,228,250)
-	gold_core_spawnable = NO_SPAWN
 	menu_description = "Versatile ice spider variant for frontline combat with high health and damage. Immune to temperature damage."
 
 /**
@@ -428,7 +423,6 @@
 	maximum_survivable_temperature = 1500
 	poison_type = /datum/reagent/consumable/frostoil
 	color = rgb(114,228,250)
-	gold_core_spawnable = NO_SPAWN
 	menu_description = "Fast ice spider variant specializing in catching running prey and frost oil injection, but has less health and damage. Immune to temperature damage."
 
 /**
@@ -569,7 +563,6 @@
 	real_name = "Sergeant Araneus"
 	desc = "A fierce companion of the Head of Security, this spider has been carefully trained by Nanotrasen specialists. Its beady, staring eyes send shivers down your spine."
 	faction = list(FACTION_SPIDER)
-	gold_core_spawnable = NO_SPAWN
 	maxHealth = 250
 	health = 250
 	melee_damage_lower = 15

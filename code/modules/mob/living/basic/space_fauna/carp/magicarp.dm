@@ -49,7 +49,6 @@ GLOBAL_LIST_INIT(magicarp_spell_colours, list(
 	icon_gib = "magicarp_gib"
 	maxHealth = 50
 	health = 50
-	gold_core_spawnable = NO_SPAWN
 	greyscale_config = /datum/greyscale_config/carp_magic
 	ai_controller = /datum/ai_controller/basic_controller/carp/ranged
 	tamed_commands = list(
@@ -125,16 +124,3 @@ GLOBAL_LIST_INIT(magicarp_spell_colours, list(
 	spell = chaos_bolt
 	ai_controller.set_blackboard_key(BB_MAGICARP_SPELL, spell)
 	RegisterSignal(spell, COMSIG_ACTION_TRIGGER, PROC_REF(apply_colour))
-
-/// Has a more limited spell pool but can appear from gold slime cores
-/mob/living/basic/carp/magic/xenobiology
-	gold_core_spawnable = HOSTILE_SPAWN
-
-/mob/living/basic/carp/magic/xenobiology/spell_list()
-	return GLOB.xenobiology_magicarp_spell_types
-
-/mob/living/basic/carp/magic/chaos/xenobiology
-	gold_core_spawnable = HOSTILE_SPAWN
-
-/mob/living/basic/carp/magic/chaos/xenobiology/spell_list()
-	return GLOB.xenobiology_magicarp_spell_types

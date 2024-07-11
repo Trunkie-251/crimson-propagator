@@ -322,23 +322,6 @@
 	foodtypes = GRAIN | DAIRY | FRUIT | SUGAR
 	crafting_complexity = FOOD_COMPLEXITY_3
 
-/obj/item/food/cake/slimecake
-	name = "Slime cake"
-	desc = "A cake made of slimes. Probably not electrified."
-	icon_state = "slimecake"
-	tastes = list("cake" = 5, "sweetness" = 1, "slime" = 1)
-	foodtypes = GRAIN | DAIRY | SUGAR
-	slice_type = /obj/item/food/cakeslice/slimecake
-	crafting_complexity = FOOD_COMPLEXITY_3
-
-/obj/item/food/cakeslice/slimecake
-	name = "slime cake slice"
-	desc = "A slice of slime cake."
-	icon_state = "slimecake_slice"
-	tastes = list("cake" = 5, "sweetness" = 1, "slime" = 1)
-	foodtypes = GRAIN | DAIRY | SUGAR
-	crafting_complexity = FOOD_COMPLEXITY_3
-
 /obj/item/food/cake/pumpkinspice
 	name = "pumpkin spice cake"
 	desc = "A hollow cake with real pumpkin."

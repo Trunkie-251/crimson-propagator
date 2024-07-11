@@ -14,7 +14,6 @@
 	obj_damage = 35
 	attack_verb_continuous = "telekinetically rams its moonihorn into"
 	attack_verb_simple = "telekinetically ram your moonihorn into"
-	gold_core_spawnable = NO_SPAWN
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	attack_vis_effect = ATTACK_EFFECT_SLASH
 	ai_controller = /datum/ai_controller/basic_controller/cow/moonicorn

@@ -25,7 +25,3 @@
 	item_path = /obj/item/borg/upgrade/modkit/cooldown/minebot
 	cost_per_order = 600
 
-/datum/orderable_item/toys_drones/drone_sentience
-	item_path = /obj/item/slimepotion/slime/sentience/mining
-	cost_per_order = 1000
-

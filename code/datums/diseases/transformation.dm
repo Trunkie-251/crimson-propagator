@@ -229,48 +229,6 @@
 			if(SPT_PROB(10, seconds_per_tick))
 				affected_mob.say(pick("Going to... devour you...", "Hsssshhhhh!", "You look delicious."), forced = "xenomorph transformation")
 
-
-/datum/disease/transformation/slime
-	name = "Advanced Mutation Transformation"
-	cure_text = "frost oil"
-	cures = list(/datum/reagent/consumable/frostoil)
-	cure_chance = 55
-	agent = "Advanced Mutation Toxin"
-	desc = "This highly concentrated extract converts anything into more of itself."
-	severity = DISEASE_SEVERITY_BIOHAZARD
-	visibility_flags = NONE
-	stage1 = list("You don't feel very well.")
-	stage2 = list("Your skin feels a little slimy.")
-	stage3 = list(span_danger("Your appendages are melting away."), span_danger("Your limbs begin to lose their shape."))
-	stage4 = list(span_danger("You are turning into a slime."))
-	stage5 = list(span_danger("You have become a slime."))
-	new_form = /mob/living/simple_animal/slime
-
-
-/datum/disease/transformation/slime/stage_act(seconds_per_tick, times_fired)
-	. = ..()
-	if(!.)
-		return
-
-	switch(stage)
-		if(1)
-			if(ishuman(affected_mob))
-				var/mob/living/carbon/human/human = affected_mob
-				if(isjellyperson(human))
-					update_stage(5)
-		if(3)
-			if(ishuman(affected_mob))
-				var/mob/living/carbon/human/human = affected_mob
-				if(!ismonkey(human) && !isjellyperson(human))
-					human.set_species(/datum/species/jelly/slime)
-
-/datum/disease/transformation/slime/do_disease_transformation(mob/living/affected_mob)
-	if(affected_mob.client && ishuman(affected_mob)) // if they are a human who's not a monkey and are sentient, then let them have the old fun
-		var/mob/living/carbon/human/human = affected_mob
-		if(!ismonkey(human))
-			new_form = /mob/living/simple_animal/slime/random
-	return ..()
-
 /datum/disease/transformation/corgi
 	name = "The Barkening"
 	cure_text = "Death"

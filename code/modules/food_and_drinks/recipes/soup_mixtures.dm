@@ -683,49 +683,6 @@
 	)
 	percentage_of_nutriment_converted = 0.1
 
-// Slime soup
-// Made with a slime extract, toxic to non-slime-people.
-// Can also be created by mixing water and slime jelly.
-/datum/reagent/consumable/nutriment/soup/slime
-	name = "Slime Soup"
-	description = "If no water is available, you may substitute tears."
-	data = list("slime" = 1)
-	glass_price = FOOD_PRICE_NORMAL
-	color = "#41C0C0"
-
-/datum/glass_style/has_foodtype/soup/slime
-	required_drink_type = /datum/reagent/consumable/nutriment/soup/slime
-	icon_state = "slimesoup"
-	drink_type = GROSS
-
-/datum/chemical_reaction/food/soup/slimesoup
-	required_reagents = list(
-		/datum/reagent/water = 40,
-	)
-	required_ingredients = list(
-		/obj/item/slime_extract = 1,
-	)
-	results = list(
-		/datum/reagent/consumable/nutriment/soup/slime = 30,
-		/datum/reagent/toxin/slimejelly = 20,
-		// Comes out of thin air, as none of our ingredients contain nutrients naturally.
-		/datum/reagent/consumable/nutriment = 7,
-		/datum/reagent/consumable/nutriment/vitamin = 7,
-		/datum/reagent/water = 6,
-	)
-
-/datum/chemical_reaction/food/soup/slimesoup/alt
-	// Alt recipe that allows you to create a slime soup by just mixing slime jelly and water.
-	// Pretty much just a normal chemical reaction.
-	// This also creates nutrients out of thin air.
-
-	required_other = FALSE
-	required_reagents = list(
-		/datum/reagent/water = 40,
-		/datum/reagent/toxin/slimejelly = 20,
-	)
-	required_ingredients = null
-
 // Clown Tear soup
 /datum/reagent/consumable/nutriment/soup/clown_tears
 	name = "Clown's Tears"

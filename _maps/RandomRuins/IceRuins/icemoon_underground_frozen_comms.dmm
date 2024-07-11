@@ -419,7 +419,6 @@
 /area/ruin/powered/shuttle)
 "Ws" = (
 /obj/structure/closet/wardrobe/grey,
-/obj/item/clothing/under/plasmaman,
 /turf/open/floor/iron/showroomfloor{
 	initial_gas_mix = "ICEMOON_ATMOS"
 	},

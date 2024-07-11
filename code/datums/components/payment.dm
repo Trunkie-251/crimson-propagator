@@ -93,7 +93,7 @@
 
 	if(physical_cash_total < total_cost)
 		var/armless //Suggestions for those with no arms/simple animals.
-		if(!ishuman(user) && !isslime(user))
+		if(!ishuman(user))
 			armless = TRUE
 		else
 			var/mob/living/carbon/human/harmless_armless = user

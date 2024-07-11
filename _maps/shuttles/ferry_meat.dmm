@@ -56,9 +56,6 @@
 /obj/item/food/meat/slab/human/mutant/shadow{
 	name = "shadowling meat"
 	},
-/obj/item/food/meat/slab/human/mutant/slime{
-	name = "slimeperson meat"
-	},
 /obj/item/food/meat/slab/human/mutant/zombie{
 	name = "rotten meat"
 	},

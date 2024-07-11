@@ -4,7 +4,7 @@
 	id = SPECIES_SYNTHETIC
 	examine_limb_id = SPECIES_HUMAN
 	sexes = TRUE
-	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
+	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN
 	inherent_traits = list(
 		TRAIT_GENELESS,
 		TRAIT_NOFIRE,
@@ -49,8 +49,11 @@
 	wing_types = list(/obj/item/organ/external/wings/functional/robotic)
 
 /datum/species/synthetic/get_species_description()
-	return "Advanced artificial intelligence birthed by mankind pre-empire. \
-		They stand as mankind's best friends."
+	return "\"...At the dawn of the Crimson Era, when the steeled talons of the despoiler broke the back of \
+		both man and machine alike, the skies turned to blood-red and rained death upon the soil... When great \
+		evils were born intertwined with unknowable utopias, our ancestors laid prostrate before the New God and his creations... \
+		Men went to sleep with hands of bone and awoke with hands of steel... Granted a spark of enlightenment,\
+		The Machines and The Men, now merged into one went forth to follow the New God...\""
 
 /datum/species/synthetic/get_species_lore()
 	return list(

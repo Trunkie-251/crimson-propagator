@@ -25,7 +25,6 @@
 	unsuitable_heat_damage = 0
 
 	faction = list(FACTION_FAITHLESS)
-	gold_core_spawnable = HOSTILE_SPAWN
 
 	ai_controller = /datum/ai_controller/basic_controller/faithless
 

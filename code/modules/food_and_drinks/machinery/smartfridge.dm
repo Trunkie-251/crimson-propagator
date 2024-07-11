@@ -178,8 +178,6 @@
 	if(visible_contents && shown_contents.len > 0)
 		var/contents_icon_state = "[initial(icon_state)]"
 		switch(base_build_path)
-			if(/obj/machinery/smartfridge/extract)
-				contents_icon_state += "-slime"
 			if(/obj/machinery/smartfridge/food)
 				contents_icon_state += "-food"
 			if(/obj/machinery/smartfridge/drinks)
@@ -529,24 +527,6 @@
 	if(IS_EDIBLE(O) || (istype(O,/obj/item/reagent_containers/cup/bowl) && O.reagents && O.reagents.reagent_list.len))
 		return TRUE
 	return FALSE
-
-// -------------------------------------
-// Xenobiology Slime-Extract Smartfridge
-// -------------------------------------
-/obj/machinery/smartfridge/extract
-	name = "smart slime extract storage"
-	desc = "A refrigerated storage unit for slime extracts."
-	base_build_path = /obj/machinery/smartfridge/extract
-
-/obj/machinery/smartfridge/extract/accept_check(obj/item/O)
-	if(istype(O, /obj/item/slime_extract))
-		return TRUE
-	if(istype(O, /obj/item/slime_scanner))
-		return TRUE
-	return FALSE
-
-/obj/machinery/smartfridge/extract/preloaded
-	initial_contents = list(/obj/item/slime_scanner = 2)
 
 // -------------------------------------
 // Cytology Petri Dish Smartfridge

@@ -17,6 +17,25 @@
 	fire = 80
 	acid = 50
 
+/obj/item/clothing/gloves/carapace
+	name = "carapace gauntlets"
+	desc = "Hi-tech gauntlets filled with dozens of hyperpenetrative micro-needles that penetrate into the skin and infuse blood \
+	with small amounts of marrow-based stims. Allows for tactical tackles on demand. The plastisteel is stamped with the triple-headed hydra of the emperor."
+	inhand_icon_state = "carapace_gauntlets"
+	icon_state = "carapace_gauntlets"
+	cold_protection = HANDS
+	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
+	heat_protection = HANDS
+	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
+	resistance_flags = NONE
+	armor_type = /datum/armor/gloves_combat
+
+/datum/armor/gloves_combat
+	bio = 90
+	fire = 80
+	acid = 50
+
+
 /obj/item/clothing/gloves/combat/wizard
 	name = "enchanted gloves"
 	desc = "These gloves have been enchanted with a spell that makes them electrically insulated and fireproof."

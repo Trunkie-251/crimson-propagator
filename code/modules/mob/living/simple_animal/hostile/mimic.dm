@@ -287,7 +287,6 @@ GLOBAL_LIST_INIT(animatable_blacklist, list(/obj/structure/table, /obj/structure
 	attack_verb_continuous = "bites"
 	attack_verb_simple = "bite"
 	speak_emote = list("clatters")
-	gold_core_spawnable = HOSTILE_SPAWN
 	var/opened = FALSE
 	var/open_sound = 'sound/machines/crate_open.ogg'
 	var/close_sound = 'sound/machines/crate_close.ogg'

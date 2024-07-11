@@ -531,9 +531,6 @@ Behavior that's still missing from this component that original food items had t
 
 	var/food_taste_reaction
 
-	if(HAS_TRAIT(parent, TRAIT_FOOD_SILVER) && !isjellyperson(gourmand)) // it's not real food
-		food_taste_reaction = FOOD_TOXIC
-
 	if(check_liked) //Callback handling; use this as an override for special food like donuts
 		food_taste_reaction = check_liked.Invoke(fraction, gourmand)
 
@@ -576,9 +573,6 @@ Behavior that's still missing from this component that original food items had t
 /// Get food quality adjusted according to eater's preferences
 /datum/component/edible/proc/get_perceived_food_quality(mob/living/carbon/human/eater)
 	var/food_quality = get_recipe_complexity()
-
-	if(HAS_TRAIT(parent, TRAIT_FOOD_SILVER)) // it's not real food
-		food_quality += isjellyperson(eater) ? 2 : -4
 
 	food_quality += TOXIC_FOOD_QUALITY_CHANGE * count_matching_foodtypes(foodtypes, eater.get_toxic_foodtypes())
 	food_quality += DISLIKED_FOOD_QUALITY_CHANGE * count_matching_foodtypes(foodtypes, eater.get_disliked_foodtypes())

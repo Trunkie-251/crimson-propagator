@@ -842,17 +842,6 @@
 	)
 	departmental_flags = ALL
 
-/datum/design/plasmaman_gas_filter
-	name = "Plasmaman Gas Filter"
-	id = "plasmaman_gas_filter"
-	build_type = PROTOLATHE | AUTOLATHE
-	materials = list(/datum/material/iron =SMALL_MATERIAL_AMOUNT)
-	build_path = /obj/item/gas_filter/plasmaman
-	category = list(
-		RND_CATEGORY_EQUIPMENT + RND_SUBCATEGORY_EQUIPMENT_GAS_TANKS_EQUIPMENT
-	)
-	departmental_flags = ALL
-
 // Tape
 
 /datum/design/super_sticky_tape

@@ -25,24 +25,6 @@
 	result = /obj/item/food/sandwich/cheese
 	category = CAT_SANDWICH
 
-/datum/crafting_recipe/food/slimesandwich
-	name = "Jelly sandwich"
-	reqs = list(
-		/datum/reagent/toxin/slimejelly = 5,
-		/obj/item/food/breadslice/plain = 2,
-	)
-	result = /obj/item/food/sandwich/jelly/slime
-	category = CAT_SANDWICH
-
-/datum/crafting_recipe/food/cherrysandwich
-	name = "Jelly sandwich"
-	reqs = list(
-		/datum/reagent/consumable/cherryjelly = 5,
-		/obj/item/food/breadslice/plain = 2,
-	)
-	result = /obj/item/food/sandwich/jelly/cherry
-	category = CAT_SANDWICH
-
 /datum/crafting_recipe/food/notasandwich
 	name = "Not a sandwich"
 	reqs = list(

@@ -1251,14 +1251,6 @@
 
 			my_atom.audible_message(span_notice("[iconhtml] [selected_reaction.mix_message]"))
 
-		if(istype(cached_my_atom, /obj/item/slime_extract))
-			var/obj/item/slime_extract/extract = my_atom
-			extract.Uses--
-			if(extract.Uses <= 0) // give the notification that the slime core is dead
-				my_atom.visible_message(span_notice("[iconhtml] \The [my_atom]'s power is consumed in the reaction."))
-				extract.name = "used slime extract"
-				extract.desc = "This extract has been used up."
-
 	selected_reaction.on_reaction(src, null, multiplier)
 
 ///Possibly remove - see if multiple instant reactions is okay (Though, this "sorts" reactions by temp decending)
@@ -1934,7 +1926,6 @@
 	data["bitflags"]["ORGAN"] = REACTION_TAG_ORGAN
 	data["bitflags"]["DRINK"] = REACTION_TAG_DRINK
 	data["bitflags"]["FOOD"] = REACTION_TAG_FOOD
-	data["bitflags"]["SLIME"] = REACTION_TAG_SLIME
 	data["bitflags"]["DRUG"] = REACTION_TAG_DRUG
 	data["bitflags"]["UNIQUE"] = REACTION_TAG_UNIQUE
 	data["bitflags"]["CHEMICAL"] = REACTION_TAG_CHEMICAL
@@ -2053,9 +2044,6 @@
 			return TRUE
 		if("toggle_tag_dangerous")
 			ui_tags_selected = ui_tags_selected ^ REACTION_TAG_DANGEROUS
-			return TRUE
-		if("toggle_tag_slime")
-			ui_tags_selected = ui_tags_selected ^ REACTION_TAG_SLIME
 			return TRUE
 		if("toggle_tag_drug")
 			ui_tags_selected = ui_tags_selected ^ REACTION_TAG_DRUG

@@ -86,8 +86,10 @@
 #define BODYTYPE_ALIEN (1<<7)
 ///The limb is from a golem
 #define BODYTYPE_GOLEM (1<<8)
-//This limb is from a synthetic; An advanced nanotechnological robot.
+///This limb is from a synthetic; An advanced nanotechnological robot.
 #define BODYTYPE_SYNTHETIC (1<<9)
+///This limb is from a szzara lizard.
+#define BODYTYPE_SZZARA (1<<10)
 
 #define BODYTYPE_BIOSCRAMBLE_COMPATIBLE (BODYTYPE_HUMANOID | BODYTYPE_MONKEY | BODYTYPE_ALIEN)
 #define BODYTYPE_CAN_BE_BIOSCRAMBLED(bodytype) (!(bodytype & BODYTYPE_ROBOTIC) && (bodytype & BODYTYPE_BIOSCRAMBLE_COMPATIBLE))
@@ -103,7 +105,6 @@
 #define SPECIES_HUMAN "human"
 #define SPECIES_JELLYPERSON "jelly"
 #define SPECIES_SLIMEPERSON "slime"
-#define SPECIES_LUMINESCENT "luminescent"
 #define SPECIES_STARGAZER "stargazer"
 #define SPECIES_LIZARD "lizard"
 #define SPECIES_LIZARD_ASH "ashwalker"
@@ -113,7 +114,6 @@
 #define SPECIES_MONKEY_FREAK "monkey_freak"
 #define SPECIES_MONKEY_HUMAN_LEGGED "monkey_human_legged"
 #define SPECIES_MUSHROOM "mush"
-#define SPECIES_PLASMAMAN "plasmaman"
 #define SPECIES_PODPERSON "pod"
 #define SPECIES_SHADOW "shadow"
 #define SPECIES_SKELETON "skeleton"
@@ -125,6 +125,8 @@
 #define SPECIES_ZOMBIE_KROKODIL "krokodil_zombie"
 #define SPECIES_SYNTHETIC "synthetic"
 #define SPECIES_ROOK "rook"
+#define SPECIES_SZZARA "szzara"
+#define SPECIES_DOG "dog"
 
 // Like species IDs, but not specifically attached a species.
 #define BODYPART_ID_ALIEN "alien"
@@ -313,28 +315,6 @@
 #define CRYSTALIZE_STAGE_ENCROACHING 300 //In switches
 #define CRYSTALIZE_STAGE_SMALL 600 //Because they're not static
 
-//Slime evolution threshold. Controls how fast slimes can split/grow
-#define SLIME_EVOLUTION_THRESHOLD 10
-
-//Slime extract crossing. Controls how many extracts is required to feed to a slime to core-cross.
-#define SLIME_EXTRACT_CROSSING_REQUIRED 10
-
-//Slime commands defines
-#define SLIME_FRIENDSHIP_FOLLOW 3 //Min friendship to order it to follow
-#define SLIME_FRIENDSHIP_STOPEAT 5 //Min friendship to order it to stop eating someone
-#define SLIME_FRIENDSHIP_STOPEAT_NOANGRY 7 //Min friendship to order it to stop eating someone without it losing friendship
-#define SLIME_FRIENDSHIP_STOPCHASE 4 //Min friendship to order it to stop chasing someone (their target)
-#define SLIME_FRIENDSHIP_STOPCHASE_NOANGRY 6 //Min friendship to order it to stop chasing someone (their target) without it losing friendship
-#define SLIME_FRIENDSHIP_STAY 3 //Min friendship to order it to stay
-#define SLIME_FRIENDSHIP_ATTACK 8 //Min friendship to order it to attack
-
-//Sentience types, to prevent things like sentience potions from giving bosses sentience
-#define SENTIENCE_ORGANIC 1
-#define SENTIENCE_ARTIFICIAL 2
-#define SENTIENCE_HUMANOID 3
-#define SENTIENCE_MINEBOT 4
-#define SENTIENCE_BOSS 5
-
 //Mob AI Status
 #define POWER_RESTORATION_OFF 0
 #define POWER_RESTORATION_START 1
@@ -503,15 +483,12 @@
 #define MIRROR_BADMIN (1<<5)
 //ERT spawn template (avoid races that don't function without correct gear)
 #define ERT_SPAWN (1<<6)
-//xenobio black crossbreed
-#define SLIME_EXTRACT (1<<7)
 
 // Randomization keys for calling wabbajack with.
 // Note the contents of these keys are important, as they're displayed to the player
 // Ex: (You turn into a "monkey", You turn into a "xenomorph")
 #define WABBAJACK_MONKEY "monkey"
 #define WABBAJACK_ROBOT "robot"
-#define WABBAJACK_SLIME "slime"
 #define WABBAJACK_XENO "xenomorph"
 #define WABBAJACK_HUMAN "humanoid"
 #define WABBAJACK_ANIMAL "animal"

@@ -337,4 +337,14 @@
 	. = ..()
 	AddElement(/datum/element/dangerous_surgical_removal)
 
+//Reptillian stomachs
+
+/obj/item/organ/internal/stomach/szzara
+	name = "Predator Stomach"
+	desc = "A strange stomach consisting of several multi-fold chambers, consisting \
+	nutrient-absorbing ventricles, and half-a-dozen barely identifiable tissues."
+	icon_state = "szzara_stomach"
+	disgust_metabolism = 3
+	metabolism_efficiency = 0.1
+
 #undef STOMACH_METABOLISM_CONSTANT

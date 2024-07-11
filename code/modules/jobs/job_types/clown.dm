@@ -10,7 +10,6 @@
 	config_tag = "CLOWN"
 
 	outfit = /datum/outfit/job/clown
-	plasmaman_outfit = /datum/outfit/plasmaman/clown
 	synthetic_outfit = /datum/outfit/synthetic
 
 	paycheck = PAYCHECK_CREW

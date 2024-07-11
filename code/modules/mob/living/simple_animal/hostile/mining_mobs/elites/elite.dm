@@ -19,7 +19,6 @@
 	stat_attack = HARD_CRIT
 	layer = LARGE_MOB_LAYER
 	plane = GAME_PLANE_UPPER_FOV_HIDDEN
-	sentience_type = SENTIENCE_BOSS
 	var/chosen_attack = 1
 	var/list/attack_action_types = list()
 	var/can_talk = FALSE
@@ -368,9 +367,6 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	. = ..()
 	if(istype(target, /mob/living/simple_animal/hostile/asteroid/elite) && proximity_flag)
 		var/mob/living/simple_animal/hostile/asteroid/elite/E = target
-		if(E.stat != DEAD || E.sentience_type != SENTIENCE_BOSS || !E.key)
-			user.visible_message(span_notice("It appears [E] is unable to be revived right now.  Perhaps try again later."))
-			return
 		E.faction = list("[REF(user)]")
 		E.revive(HEAL_ALL)
 		user.visible_message(span_notice("[user] stabs [E] with [src], reviving it."))
@@ -380,7 +376,6 @@ While using this makes the system rely on OnFire, it still gives options for tim
 		E.maxHealth = E.maxHealth * 0.4
 		E.health = E.maxHealth
 		E.desc = "[E.desc]  However, this one appears appears less wild in nature, and calmer around people."
-		E.sentience_type = SENTIENCE_ORGANIC
 		qdel(src)
 	else
 		to_chat(user, span_info("[src] only works on the corpse of a sentient lavaland elite."))

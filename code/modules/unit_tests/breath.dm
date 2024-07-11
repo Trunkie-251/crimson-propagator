@@ -54,34 +54,6 @@
 	to_fill.initial_gas_mix = OPENTURF_DEFAULT_ATMOS
 	return ..()
 
-/// Tests to make sure plasmaman can breath from their internal tanks
-/datum/unit_test/breath/breath_sanity_plasmamen
-
-/datum/unit_test/breath/breath_sanity_plasmamen/Run()
-	// Breathing from pure Plasma internals.
-	var/mob/living/carbon/human/species/plasma/lab_rat = allocate(/mob/living/carbon/human/species/plasma)
-	var/obj/item/tank/internals/plasmaman/source = equip_labrat_internals(lab_rat, /obj/item/tank/internals/plasmaman)
-	TEST_ASSERT(source.toggle_internals(lab_rat) && !isnull(lab_rat.internal), "Plasmaman toggle_internals() failed to toggle internals")
-	lab_rat.breathe()
-	TEST_ASSERT(!lab_rat.failed_last_breath && !lab_rat.has_alert(ALERT_NOT_ENOUGH_PLASMA), "Plasmamen can't get a full breath from a standard plasma tank")
-	TEST_ASSERT(source.toggle_internals(lab_rat) && !lab_rat.internal, "Plasmaman toggle_internals() failed to toggle internals")
-
-	// Empty internals suffocation.
-	lab_rat = allocate(/mob/living/carbon/human/species/plasma)
-	source = equip_labrat_internals(lab_rat, /obj/item/tank/internals/emergency_oxygen/empty)
-	TEST_ASSERT(source.toggle_internals(lab_rat) && !isnull(lab_rat.internal), "Plasmaman toggle_internals() failed to toggle internals")
-	lab_rat.breathe()
-	TEST_ASSERT(lab_rat.failed_last_breath && lab_rat.has_alert(ALERT_NOT_ENOUGH_PLASMA), "Plasmamen should suffocate from empty o2 tanks")
-
-	// Nitrogen internals suffocation.
-	lab_rat = allocate(/mob/living/carbon/human/species/plasma)
-	source = equip_labrat_internals(lab_rat, /obj/item/tank/internals/emergency_oxygen/empty)
-	source.air_contents.assert_gas(/datum/gas/nitrogen)
-	source.air_contents.gases[/datum/gas/nitrogen][MOLES] = (10 * ONE_ATMOSPHERE) *  source.volume / (R_IDEAL_GAS_EQUATION * T20C)
-	TEST_ASSERT(source.toggle_internals(lab_rat) && !isnull(lab_rat.internal), "Plasmaman toggle_internals() failed to toggle internals")
-	lab_rat.breathe()
-	TEST_ASSERT(lab_rat.failed_last_breath && lab_rat.has_alert(ALERT_NOT_ENOUGH_PLASMA), "Humans should suffocate from pure n2 tanks")
-
 /// Tests to make sure ashwalkers can breathe from the lavaland air.
 /datum/unit_test/breath/breath_sanity_ashwalker
 

@@ -35,9 +35,9 @@
 //4mm (LMG11)
 
 /obj/item/ammo_casing/m4mm
-	name = "4.73x33mm propellant block"
-	desc = "A block of propellant entrapping a poor 4.73x33mm round."
-	icon_state = "762-casing"
+	name = "4.73x33mm enamel block"
+	desc = "A block of synthetic propellent entrapping a poor 4.73x33mm round."
+	icon_state = "enamels-casing"
 	caliber = CALIBER_M4MM
 	projectile_type = /obj/projectile/bullet/m4mm
 	is_cased_ammo = FALSE

@@ -94,12 +94,3 @@
 	. = ..()
 	var/datum/action/cooldown/spell/conjure_item/clown_pockets/enchantment/big_pocket = new(src)
 	add_item_action(big_pocket)
-
-/// Enchanted plasmaman clown suit
-/obj/item/clothing/under/plasmaman/clown/magic
-	name = "enchanted clown envirosuit"
-
-/obj/item/clothing/under/plasmaman/clown/magic/Initialize(mapload)
-	. = ..()
-	var/datum/action/cooldown/spell/conjure_item/clown_pockets/enchantment/big_pocket = new(src)
-	add_item_action(big_pocket)

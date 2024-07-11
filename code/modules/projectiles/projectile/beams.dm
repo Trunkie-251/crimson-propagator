@@ -37,24 +37,22 @@
 
 //volkite beamer
 /obj/projectile/beam/volkite/light
-	damage = 35
+	damage = 40
 	fire_stacks = 6
 	leaves_fire_trail = FALSE
-	wound_bonus = 0.2
+	wound_bonus = 40
 	speed = 0
-	tracer_type = /obj/effect/projectile/tracer/heavy_laser
-	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
-	impact_type = /obj/effect/projectile/impact/heavy_laser
+	tracer_type = /obj/effect/projectile/tracer/heatray
+	light_color = COLOR_WHITE
 
 /obj/projectile/beam/volkite/heavy
-	damage = 60
-	fire_stacks = 8
+	damage = 100
+	fire_stacks = 10
 	leaves_fire_trail = FALSE
-	wound_bonus = 0.4
+	wound_bonus = 40
 	speed = 0
-	tracer_type = /obj/effect/projectile/tracer/heavy_laser
-	muzzle_type = /obj/effect/projectile/muzzle/heavy_laser
-	impact_type = /obj/effect/projectile/impact/heavy_laser
+	tracer_type = /obj/effect/projectile/tracer/heatray
+	light_color = COLOR_WHITE
 
 /obj/projectile/beam/laser/heavylaser
 	name = "heavy laser"

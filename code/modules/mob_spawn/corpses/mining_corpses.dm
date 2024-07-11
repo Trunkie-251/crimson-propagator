@@ -104,15 +104,8 @@
 			/datum/species/human = 70,
 			/datum/species/lizard = 26,
 			/datum/species/fly = 2,
-			/datum/species/plasmaman = 2,
 		))
 		miner.set_species(new_species_type)
-		if(new_species_type != /datum/species/plasmaman)
-			regular_uniform = TRUE
-		else
-			uniform = /obj/item/clothing/under/plasmaman
-			belt = /obj/item/tank/internals/plasmaman/belt
-			head = /obj/item/clothing/head/helmet/space/plasmaman
 		if(new_species_type == /datum/species/lizard)
 			shoes = null //digitigrade says no
 	if(regular_uniform)

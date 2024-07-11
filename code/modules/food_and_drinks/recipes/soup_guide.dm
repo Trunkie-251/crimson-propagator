@@ -77,12 +77,6 @@
 /datum/crafting_recipe/food/reaction/soup/misosoup
 	reaction = /datum/chemical_reaction/food/soup/misosoup
 
-/datum/crafting_recipe/food/reaction/soup/slimesoup
-	reaction = /datum/chemical_reaction/food/soup/slimesoup
-
-/datum/crafting_recipe/food/reaction/soup/slimesoup_alt
-	reaction = /datum/chemical_reaction/food/soup/slimesoup/alt
-
 /datum/crafting_recipe/food/reaction/soup/clownstears
 	reaction = /datum/chemical_reaction/food/soup/clownstears
 

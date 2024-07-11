@@ -140,7 +140,6 @@
 	maxHealth = 200
 	health = 200
 	faction = list(FACTION_NEUTRAL, FACTION_MONKEY, FACTION_JUNGLE)
-	gold_core_spawnable = NO_SPAWN
 	unique_name = FALSE
 
 /mob/living/simple_animal/hostile/gorilla/cargo_domestic/Initialize(mapload)
