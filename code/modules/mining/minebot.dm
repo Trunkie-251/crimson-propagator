@@ -27,7 +27,6 @@
 	attack_verb_continuous = "drills"
 	attack_verb_simple = "drill"
 	attack_sound = 'sound/weapons/circsawhit.ogg'
-	sentience_type = SENTIENCE_MINEBOT
 	speak_emote = list("states")
 	wanted_objects = list(/obj/item/stack/ore/diamond, /obj/item/stack/ore/gold, /obj/item/stack/ore/silver,
 						  /obj/item/stack/ore/plasma, /obj/item/stack/ore/uranium, /obj/item/stack/ore/iron,
@@ -303,29 +302,6 @@
 	minebot.updatehealth()
 	to_chat(user, "<span class='notice'>You reinforce the armor of [minebot].")
 	qdel(src)
-
-//AI
-
-/obj/item/slimepotion/slime/sentience/mining
-	name = "minebot AI upgrade"
-	desc = "Can be used to grant sentience to minebots. It's incompatible with minebot armor and melee upgrades, and will override them."
-	icon_state = "door_electronics"
-	icon = 'icons/obj/assemblies/module.dmi'
-	sentience_type = SENTIENCE_MINEBOT
-	var/base_health_add = 5 //sentient minebots are penalized for beign sentient; they have their stats reset to normal plus these values
-	var/base_damage_add = 1 //this thus disables other minebot upgrades
-	var/base_speed_add = 1
-	var/base_cooldown_add = 10 //base cooldown isn't reset to normal, it's just added on, since it's not practical to disable the cooldown module
-
-/obj/item/slimepotion/slime/sentience/mining/after_success(mob/living/user, mob/living/simple_animal/simple_mob)
-	if(!istype(simple_mob, /mob/living/simple_animal/hostile/mining_drone))
-		return
-	var/mob/living/simple_animal/hostile/mining_drone/minebot = simple_mob
-	minebot.maxHealth = initial(minebot.maxHealth) + base_health_add
-	minebot.melee_damage_lower = initial(minebot.melee_damage_lower) + base_damage_add
-	minebot.melee_damage_upper = initial(minebot.melee_damage_upper) + base_damage_add
-	minebot.move_to_delay = initial(minebot.move_to_delay) + base_speed_add
-	minebot.stored_gun?.recharge_time += base_cooldown_add
 
 #undef MINEDRONE_COLLECT
 #undef MINEDRONE_ATTACK

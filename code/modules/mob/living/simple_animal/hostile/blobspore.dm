@@ -19,7 +19,6 @@
 	attack_sound = 'sound/weapons/genhit1.ogg'
 	del_on_death = TRUE
 	death_message = "explodes into a cloud of gas!"
-	gold_core_spawnable = NO_SPAWN //gold slime cores should only spawn the independent subtype
 	/// Size of cloud produced from a dying spore
 	var/death_cloud_size = 1
 	/// The attached person
@@ -113,7 +112,6 @@
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_BLOBSPORE, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
 
 /mob/living/simple_animal/hostile/blob/blobspore/independent
-	gold_core_spawnable = HOSTILE_SPAWN
 	independent = TRUE
 
 /mob/living/simple_animal/hostile/blob/blobspore/weak

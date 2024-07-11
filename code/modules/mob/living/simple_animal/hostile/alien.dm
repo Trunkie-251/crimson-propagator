@@ -33,7 +33,6 @@
 	lighting_cutoff_green = 15
 	lighting_cutoff_blue = 50
 	unique_name = 1
-	gold_core_spawnable = NO_SPAWN
 	death_sound = 'sound/voice/hiss6.ogg'
 	death_message = "lets out a waning guttural screech, green blood bubbling from its maw..."
 	footstep_type = FOOTSTEP_MOB_CLAW
@@ -140,7 +139,6 @@
 	butcher_results = list(/obj/item/food/meat/slab/xeno = 10,
 							/obj/item/stack/sheet/animalhide/xeno = 2)
 	mob_size = MOB_SIZE_LARGE
-	gold_core_spawnable = NO_SPAWN
 
 /mob/living/simple_animal/hostile/alien/maid
 	name = "lusty xenomorph maid"
@@ -151,7 +149,6 @@
 	friendly_verb_simple = "caress"
 	obj_damage = 0
 	environment_smash = ENVIRONMENT_SMASH_NONE
-	gold_core_spawnable = HOSTILE_SPAWN
 	icon_state = "maid"
 	icon_living = "maid"
 	icon_dead = "maid_dead"

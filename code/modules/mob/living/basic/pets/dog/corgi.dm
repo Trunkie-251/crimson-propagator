@@ -9,7 +9,6 @@
 	icon_dead = "corgi_dead"
 	held_state = "corgi"
 	butcher_results = list(/obj/item/food/meat/slab/corgi = 3, /obj/item/stack/sheet/animalhide/corgi = 1)
-	gold_core_spawnable = FRIENDLY_SPAWN
 	collar_icon_state = "corgi"
 	ai_controller = /datum/ai_controller/basic_controller/dog/corgi
 	///Access card for the corgi.
@@ -329,7 +328,6 @@
 	response_disarm_simple = "bop"
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
-	gold_core_spawnable = NO_SPAWN
 	unique_pet = TRUE
 	///Tracks how many rounds did Ian survive from start to finish
 	var/age = 0
@@ -449,7 +447,6 @@
 	icon_dead = "narsian_dead"
 	faction = list(FACTION_NEUTRAL, FACTION_CULT)
 	speak_emote = list("growls", "barks ominously")
-	gold_core_spawnable = NO_SPAWN
 	can_be_shaved = FALSE
 	unique_pet = TRUE
 	held_state = "narsian"
@@ -500,7 +497,6 @@
 	real_name = "Lisa"
 	gender = FEMALE
 	desc = "She's tearing you apart."
-	gold_core_spawnable = NO_SPAWN
 	unique_pet = TRUE
 	icon_state = "lisa"
 	icon_living = "lisa"

@@ -115,3 +115,16 @@
 	ricochet_incidence_leeway = 90
 	ricochet_decay_damage = 1
 	ricochet_shoots_firer = FALSE
+
+//20mm rounds, the projectiles are here because it's easier to just not rewrite the code right now
+//NOTE TO SELF: Rewrite extra damage and penetration code to be applicable to all projectiles
+
+/obj/projectile/bullet/p50/huge
+	name ="20mm enamel shell"
+	speed = 0.2
+	range = 400 // Enough to travel from one corner of the Z to the opposite corner and then some.
+	damage = 70
+	paralyze = 100
+	dismemberment = 50
+	catastropic_dismemberment = TRUE
+	armour_penetration = 70

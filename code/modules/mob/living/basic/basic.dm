@@ -79,11 +79,6 @@
 	///We only try to show a gibbing animation if this exists.
 	var/icon_gib = null
 
-	///If the mob can be spawned with a gold slime core. HOSTILE_SPAWN are spawned with plasma, FRIENDLY_SPAWN are spawned with blood.
-	var/gold_core_spawnable = NO_SPAWN
-	///Sentience type, for slime potions. SHOULD BE AN ELEMENT BUT I DONT CARE ABOUT IT FOR NOW
-	var/sentience_type = SENTIENCE_ORGANIC
-
 	///Leaving something at 0 means it's off - has no maximum.
 	var/list/habitable_atmos = list("min_oxy" = 5, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	///This damage is taken when atmos doesn't fit all the requirements above. Set to 0 to avoid adding the atmos_requirements element.
@@ -221,9 +216,6 @@
 	. = ..()
 	. += "Health: [round((health / maxHealth) * 100)]%"
 	. += "Combat Mode: [combat_mode ? "On" : "Off"]"
-
-/mob/living/basic/compare_sentience_type(compare_type)
-	return sentience_type == compare_type
 
 /// Updates movement speed based on stamina loss
 /mob/living/basic/update_stamina()

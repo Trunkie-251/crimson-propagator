@@ -710,12 +710,13 @@
 /obj/structure/table/optable
 	name = "operating table"
 	desc = "Used for advanced medical procedures."
-	icon = 'icons/obj/medical/surgery_table.dmi'
-	icon_state = "surgery_table"
+	icon = 'icons/obj/medical/augment_table.dmi'
+	icon_state = "augment_table"
 	buildstack = /obj/item/stack/sheet/mineral/silver
 	smoothing_flags = NONE
 	smoothing_groups = null
 	canSmoothWith = null
+
 	can_buckle = 1
 	buckle_lying = 90
 	climbable = FALSE

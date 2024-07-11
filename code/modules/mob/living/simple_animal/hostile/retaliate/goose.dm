@@ -30,7 +30,6 @@
 	speak_emote = list("honks")
 	faction = list(FACTION_NEUTRAL)
 	attack_same = TRUE
-	gold_core_spawnable = HOSTILE_SPAWN
 	var/random_retaliate = TRUE
 	var/icon_vomit_start = "vomit_start"
 	var/icon_vomit = "vomit"
@@ -89,7 +88,6 @@
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
 	faction = list(FACTION_NEUTRAL, FACTION_MAINT_CREATURES)
-	gold_core_spawnable = NO_SPAWN
 	random_retaliate = FALSE
 	var/vomiting = FALSE
 	var/vomitCoefficient = 1

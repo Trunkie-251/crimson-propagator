@@ -13109,7 +13109,6 @@
 /turf/open/floor/iron/white,
 /area/station/science/lobby)
 "drB" = (
-/obj/machinery/processor/slime,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/pod/light,
 /area/station/maintenance/floor3/starboard)
@@ -32427,7 +32426,6 @@
 /turf/open/floor/plating,
 /area/station/engineering/atmos/office)
 "iAZ" = (
-/obj/machinery/smartfridge/extract/preloaded,
 /turf/open/floor/circuit,
 /area/station/science/xenobiology)
 "iBb" = (
@@ -35327,9 +35325,6 @@
 "jqP" = (
 /obj/machinery/camera/directional/west{
 	c_tag = "Xenobio - Computers Pens"
-	},
-/obj/machinery/computer/camera_advanced/xenobio{
-	dir = 4
 	},
 /obj/machinery/newscaster/directional/west,
 /turf/open/floor/circuit,
@@ -54552,7 +54547,6 @@
 /turf/open/floor/iron/dark,
 /area/station/hallway/floor1/fore)
 "oiH" = (
-/mob/living/simple_animal/slime,
 /turf/open/floor/grass,
 /area/station/maintenance/floor3/starboard)
 "oiJ" = (
@@ -68121,9 +68115,6 @@
 /turf/open/floor/engine,
 /area/station/maintenance/floor1/port/aft)
 "rQc" = (
-/obj/machinery/computer/camera_advanced/xenobio{
-	dir = 4
-	},
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/circuit,
 /area/station/science/xenobiology)
@@ -70122,7 +70113,6 @@
 /turf/open/floor/pod/light,
 /area/station/maintenance/floor2/port/aft)
 "suv" = (
-/obj/machinery/processor/slime,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -73350,7 +73340,6 @@
 /turf/open/floor/catwalk_floor,
 /area/station/maintenance/floor4/port/aft)
 "tlb" = (
-/mob/living/simple_animal/slime,
 /turf/open/floor/engine{
 	initial_gas_mix = "o2=22;bz=82;TEMP=293.15"
 	},

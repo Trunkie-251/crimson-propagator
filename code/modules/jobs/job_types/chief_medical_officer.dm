@@ -18,7 +18,6 @@
 	required_character_age = 35
 
 	outfit = /datum/outfit/job/cmo
-	plasmaman_outfit = /datum/outfit/plasmaman/chief_medical_officer
 	synthetic_outfit = /datum/outfit/synthetic
 	departments_list = list(
 		/datum/job_department/medical,

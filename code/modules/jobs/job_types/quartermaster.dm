@@ -16,7 +16,6 @@
 	required_character_age = 35
 
 	outfit = /datum/outfit/job/quartermaster
-	plasmaman_outfit = /datum/outfit/plasmaman/cargo
 	synthetic_outfit = /datum/outfit/synthetic
 
 	paycheck = PAYCHECK_COMMAND

@@ -556,3 +556,20 @@ Unless you know what you're doing, only use the first three numbers. They're in 
 	victim.apply_damage(30, BURN, BODY_ZONE_HEAD, wound_bonus = 5)
 	source_item?.reagents?.add_reagent(/datum/reagent/toxin/plasma, source_item.reagents.total_volume*5)
 	return TRUE
+
+/// Organic materials
+
+//Zrbite, a gene-engineered carapace with the properties of both metals and tissues.
+/datum/material/zrbite
+	name = "Zrbite"
+	desc = "A strange metamaterial consisting of one-part 'Alien' bio-material, and an adamantite metal. \
+	Both durable and extremely flexible, it is grown in vast carapace-sheets, serving as the basis for imperial technology."
+	color = rgb(99, 56, 56)
+	greyscale_colors = rgb(99, 56, 56)
+	categories = list(MAT_CATEGORY_RIGID=TRUE, MAT_CATEGORY_BASE_RECIPES=TRUE, MAT_CATEGORY_ITEM_MATERIAL=TRUE)
+	value_per_unit = 120 / SHEET_MATERIAL_AMOUNT
+	strength_modifier = 1.75
+	sheet_type = /obj/item/stack/sheet/mineral/zrbite
+	armor_modifiers = list(MELEE = 2.2, BULLET = 1.8, LASER = 1.75, ENERGY = 1.75, BOMB = 1.5, BIO = 2, FIRE = 3, ACID = 4)
+
+//Synthflesh, but in solid form!

@@ -219,38 +219,6 @@
 	. = new_xeno
 	qdel(src)
 
-/mob/living/carbon/human/proc/slimeize(reproduce as num)
-	if (notransform)
-		return
-	notransform = TRUE
-	add_traits(list(TRAIT_IMMOBILIZED, TRAIT_HANDS_BLOCKED), TRAIT_GENERIC)
-	for(var/obj/item/W in src)
-		dropItemToGround(W)
-	regenerate_icons()
-	icon = null
-	invisibility = INVISIBILITY_MAXIMUM
-	for(var/t in bodyparts)
-		qdel(t)
-
-	var/mob/living/simple_animal/slime/new_slime
-	if(reproduce)
-		var/number = pick(14;2,3,4) //reproduce (has a small chance of producing 3 or 4 offspring)
-		var/list/babies = list()
-		for(var/i in 1 to number)
-			var/mob/living/simple_animal/slime/M = new/mob/living/simple_animal/slime(loc)
-			M.set_nutrition(round(nutrition/number))
-			step_away(M,src)
-			babies += M
-		new_slime = pick(babies)
-	else
-		new_slime = new /mob/living/simple_animal/slime(loc)
-	new_slime.set_combat_mode(TRUE)
-	new_slime.key = key
-
-	to_chat(new_slime, "<B>You are now a slime. Skreee!</B>")
-	. = new_slime
-	qdel(src)
-
 /mob/proc/become_overmind(starting_points = OVERMIND_STARTING_POINTS)
 	var/mob/camera/blob/B = new /mob/camera/blob(get_turf(src), starting_points)
 	B.key = key

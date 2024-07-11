@@ -14,7 +14,14 @@
 	if(owner.client.interviewee)
 		return
 
-	var/list/buttons = subtypesof(/atom/movable/screen/lobby)
+	var/list/buttons = list(
+		/atom/movable/screen/lobby/background,
+		/atom/movable/screen/lobby/button/character_setup,
+		/atom/movable/screen/lobby/button/join,
+		/atom/movable/screen/lobby/button/ready,
+		/atom/movable/screen/lobby/button/bottom/settings,
+		/atom/movable/screen/lobby/button/observe,
+		)
 	for(var/button_type in buttons)
 		var/atom/movable/screen/lobby/lobbyscreen = new button_type(our_hud = src)
 		lobbyscreen.SlowInit()
@@ -60,7 +67,7 @@
 /atom/movable/screen/lobby/background
 	icon = 'icons/hud/lobby/background.dmi'
 	icon_state = "background"
-	screen_loc = "TOP,CENTER:-61"
+	screen_loc = "WEST,CENTER-4"
 
 /atom/movable/screen/lobby/button
 	///Is the button currently enabled?
@@ -127,8 +134,8 @@
 
 ///Prefs menu
 /atom/movable/screen/lobby/button/character_setup
-	name = "View Character Setup"
-	screen_loc = "TOP:-70,CENTER:-54"
+	name = "View Subjects"
+	screen_loc = "WEST:+8,CENTER:-86"
 	icon = 'icons/hud/lobby/character_setup.dmi'
 	icon_state = "character_setup"
 	base_icon_state = "character_setup"
@@ -146,7 +153,7 @@
 ///Button that appears before the game has started
 /atom/movable/screen/lobby/button/ready
 	name = "Toggle Readiness"
-	screen_loc = "TOP:-8,CENTER:-65"
+	screen_loc = "WEST:+8,CENTER:-44"
 	icon = 'icons/hud/lobby/ready.dmi'
 	icon_state = "not_ready"
 	base_icon_state = "not_ready"
@@ -193,8 +200,8 @@
 
 ///Shown when the game has started
 /atom/movable/screen/lobby/button/join
-	name = "Join Game"
-	screen_loc = "TOP:-13,CENTER:-58"
+	name = "Enter"
+	screen_loc = "WEST:+8,CENTER:-44"
 	icon = 'icons/hud/lobby/join.dmi'
 	icon_state = "" //Default to not visible
 	base_icon_state = "join_game"
@@ -264,8 +271,8 @@
 	RegisterSignal(SSticker, COMSIG_TICKER_ENTER_SETTING_UP, PROC_REF(show_join_button))
 
 /atom/movable/screen/lobby/button/observe
-	name = "Observe"
-	screen_loc = "TOP:-40,CENTER:-54"
+	name = "Martyr"
+	screen_loc = "WEST:+31,CENTER:+75"
 	icon = 'icons/hud/lobby/observe.dmi'
 	icon_state = "observe_disabled"
 	base_icon_state = "observe"
@@ -281,6 +288,8 @@
 /atom/movable/screen/lobby/button/observe/Click(location, control, params)
 	. = ..()
 	if(!.)
+		return
+	if(!check_rights(R_ADMIN, FALSE))
 		return
 	var/mob/dead/new_player/new_player = hud.mymob
 	new_player.make_me_an_observer()
@@ -300,7 +309,7 @@
 	name = "View Game Preferences"
 	icon_state = "settings"
 	base_icon_state = "settings"
-	screen_loc = "TOP:-122,CENTER:+29"
+	screen_loc = "WEST:+13,CENTER:-134"
 
 /atom/movable/screen/lobby/button/bottom/settings/Click(location, control, params)
 	. = ..()

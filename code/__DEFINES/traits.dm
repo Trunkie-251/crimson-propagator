@@ -721,8 +721,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_FOOD_GRILLED "food_grilled"
 /// If this item's been fried
 #define TRAIT_FOOD_FRIED "food_fried"
-/// This is a silver slime created item
-#define TRAIT_FOOD_SILVER "food_silver"
 /// If this item's been made by a chef instead of being map-spawned or admin-spawned or such
 #define TRAIT_FOOD_CHEF_MADE "food_made_by_chef"
 /// The items needs two hands to be carried
@@ -1093,8 +1091,6 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TURF_Z_TRANSPARENT_TRAIT "turf_z_transparent"
 /// Trait applied by [/datum/component/soulstoned]
 #define SOULSTONE_TRAIT "soulstone"
-/// Trait applied to slimes by low temperature
-#define SLIME_COLD "slime-cold"
 /// Trait applied to mobs by being tipped over
 #define TIPPED_OVER "tipped-over"
 /// Trait applied to PAIs by being folded

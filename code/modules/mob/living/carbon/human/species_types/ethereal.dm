@@ -17,7 +17,7 @@
 		TRAIT_FIXED_HAIRCOLOR,
 		TRAIT_AGENDER,
 	)
-	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
+	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN
 	species_cookie = /obj/item/food/energybar
 	species_language_holder = /datum/language_holder/ethereal
 	sexes = TRUE

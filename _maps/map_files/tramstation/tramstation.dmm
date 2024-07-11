@@ -5181,7 +5181,6 @@
 /turf/open/floor/engine/cult,
 /area/station/service/library)
 "aJT" = (
-/mob/living/simple_animal/slime,
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
 "aKe" = (
@@ -21918,7 +21917,6 @@
 /turf/open/floor/catwalk_floor,
 /area/station/maintenance/central/lesser)
 "gNr" = (
-/obj/machinery/processor/slime,
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 4
 	},
@@ -36330,7 +36328,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
-/obj/machinery/computer/camera_advanced/xenobio,
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
 	},
@@ -66484,7 +66481,6 @@
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
-/obj/machinery/computer/camera_advanced/xenobio,
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
 	},
@@ -68789,7 +68785,6 @@
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 9
 	},
-/obj/machinery/smartfridge/extract/preloaded,
 /obj/machinery/light/directional/north,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)

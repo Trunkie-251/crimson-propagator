@@ -12,7 +12,6 @@
 	speed = 2
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
-	gold_core_spawnable = HOSTILE_SPAWN
 	attack_sound = 'sound/weapons/bite.ogg'
 	attack_vis_effect = ATTACK_EFFECT_BITE
 	faction = list(FACTION_NETHER)

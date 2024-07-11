@@ -16,18 +16,6 @@
 	dead_ai.name = src.name
 	dead_ai.real_name = src.name
 
-///dead slimes, with a var for whatever color you want.
-/obj/effect/mob_spawn/corpse/slime
-	mob_type = /mob/living/simple_animal/slime
-	icon = 'icons/mob/simple/slimes.dmi'
-	icon_state = "grey baby slime" //sets the icon in the map editor
-	///the color of the slime you're spawning.
-	var/slime_species = "grey"
-
-/obj/effect/mob_spawn/corpse/slime/special(mob/living/simple_animal/slime/spawned_slime)
-	. = ..()
-	spawned_slime.set_colour(slime_species)
-
 ///dead facehuggers, great for xeno ruins so you can have a cool ruin without spiraling the entire round into xenomorph hell. also, this is a terrible terrible artifact of time
 /obj/effect/mob_spawn/corpse/facehugger
 	//mostly for unit tests to not get alarmed (which by all means it should because this is a mess)

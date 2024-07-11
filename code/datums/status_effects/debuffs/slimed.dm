@@ -21,7 +21,7 @@
 	/// Changes particle colors to rainbow, this overrides `slime_color`.
 	var/rainbow
 
-/datum/status_effect/slimed/on_creation(mob/living/new_owner, slime_color = COLOR_SLIME_GREY, rainbow = FALSE)
+/datum/status_effect/slimed/on_creation(mob/living/new_owner, slime_color = COLOR_ADMIN_PINK, rainbow = FALSE)
 	src.slime_color = slime_color
 	src.rainbow = rainbow
 	return ..()

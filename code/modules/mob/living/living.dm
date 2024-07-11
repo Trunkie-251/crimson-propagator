@@ -340,10 +340,6 @@
 								span_warning("[src] grabs you passively!"), null, null, src)
 				to_chat(src, span_notice("You grab [M] passively!"))
 
-		if(!iscarbon(src))
-			M.LAssailant = null
-		else
-			M.LAssailant = WEAKREF(usr)
 		if(isliving(M))
 			var/mob/living/L = M
 
@@ -1348,7 +1344,6 @@
 	var/static/list/possible_results = list(
 		WABBAJACK_MONKEY,
 		WABBAJACK_ROBOT,
-		WABBAJACK_SLIME,
 		WABBAJACK_XENO,
 		WABBAJACK_HUMAN,
 		WABBAJACK_ANIMAL,
@@ -1382,9 +1377,6 @@
 				created_robot.mmi.transfer_identity(src) //Does not transfer key/client.
 				created_robot.clear_inherent_laws(announce = FALSE)
 				created_robot.clear_zeroth_law(announce = FALSE)
-
-		if(WABBAJACK_SLIME)
-			new_mob = new /mob/living/simple_animal/slime/random(loc)
 
 		if(WABBAJACK_XENO)
 			var/picked_xeno_type
@@ -2468,13 +2460,6 @@ GLOBAL_LIST_EMPTY(fire_appearances)
 /mob/living/played_game()
 	. = ..()
 	add_mood_event("gaming", /datum/mood_event/gaming)
-
-/**
- * Helper proc for basic and simple animals to return true if the passed sentience type matches theirs
- * Living doesn't have a sentience type though so it always returns false if not a basic or simple mob
- */
-/mob/living/proc/compare_sentience_type(compare_type)
-	return FALSE
 
 /// Proc called when targetted by a lazarus injector
 /mob/living/proc/lazarus_revive(mob/living/reviver, malfunctioning)

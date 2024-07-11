@@ -29,14 +29,12 @@
 	potion_boosted = potion_boost
 
 	RegisterSignal(target, COMSIG_MOVABLE_PREBUCKLE, PROC_REF(check_mounting))
-	if(isvehicle(target))
-		RegisterSignal(target, COMSIG_SPEED_POTION_APPLIED, PROC_REF(check_potion))
 	if(ismob(target))
 		RegisterSignal(target, COMSIG_MOB_STATCHANGE, PROC_REF(on_stat_change))
 
 /datum/element/ridable/Detach(atom/movable/target)
 	target.can_buckle = initial(target.can_buckle)
-	UnregisterSignal(target, list(COMSIG_MOVABLE_PREBUCKLE, COMSIG_SPEED_POTION_APPLIED, COMSIG_MOB_STATCHANGE))
+	UnregisterSignal(target, list(COMSIG_MOVABLE_PREBUCKLE, COMSIG_MOB_STATCHANGE))
 	return ..()
 
 /// Someone is buckling to this movable, which is literally the only thing we care about (other than speed potions)
@@ -112,30 +110,6 @@
 	else
 		unequip_buckle_inhands(user, target_movable)
 		return FALSE
-
-/// Checks to see if we've been hit with a red xenobio potion to make us faster. This is only registered if we're a vehicle
-/datum/element/ridable/proc/check_potion(atom/movable/ridable_atom, obj/item/slimepotion/speed/speed_potion, mob/living/user)
-	SIGNAL_HANDLER
-
-	if(potion_boosted)
-		to_chat(user, span_warning("[ridable_atom] has already been coated with red, that's as fast as it'll go!"))
-		return
-	if(ridable_atom.has_buckled_mobs()) // effect won't take place til the next time someone mounts it, so just prevent that situation
-		to_chat(user, span_warning("It's too dangerous to smear [speed_potion] on [ridable_atom] while it's being ridden!"))
-		return
-	var/speed_limit = round(CONFIG_GET(number/movedelay/run_delay) * 0.85, 0.01)
-	var/datum/component/riding/theoretical_riding_component = riding_component_type
-	var/theoretical_speed = initial(theoretical_riding_component.vehicle_move_delay)
-	if(theoretical_speed <= speed_limit) // i say speed but this is actually move delay, so you have to be ABOVE the speed limit to pass
-		to_chat(user, span_warning("[ridable_atom] can't be made any faster!"))
-		return
-	Detach(ridable_atom)
-	ridable_atom.AddElement(/datum/element/ridable, component_type = riding_component_type, potion_boost = TRUE)
-	to_chat(user, span_notice("You slather the red gunk over [ridable_atom], making it faster."))
-	ridable_atom.remove_atom_colour(WASHABLE_COLOUR_PRIORITY)
-	ridable_atom.add_atom_colour("#FF0000", FIXED_COLOUR_PRIORITY)
-	qdel(speed_potion)
-	return SPEED_POTION_STOP
 
 /// Remove all of the relevant [riding offhand items][/obj/item/riding_offhand] from the target
 /datum/element/ridable/proc/unequip_buckle_inhands(mob/living/carbon/user, atom/movable/target_movable)

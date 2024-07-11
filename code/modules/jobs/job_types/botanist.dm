@@ -12,7 +12,6 @@
 
 
 	outfit = /datum/outfit/job/botanist
-	plasmaman_outfit = /datum/outfit/plasmaman/botany
 	synthetic_outfit = /datum/outfit/synthetic
 
 	paycheck = PAYCHECK_CREW

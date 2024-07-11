@@ -12,7 +12,6 @@
 	required_character_age = 25
 
 	outfit = /datum/outfit/job/scientist
-	plasmaman_outfit = /datum/outfit/plasmaman/science
 	synthetic_outfit = /datum/outfit/synthetic
 
 	paycheck = PAYCHECK_CREW

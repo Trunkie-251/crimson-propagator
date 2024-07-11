@@ -1,4 +1,7 @@
 /obj/projectile/beam/volkite
+	muzzle_flash_intensity = 6
+	muzzle_flash_range = 2
+	muzzle_flash_color_override = COLOR_WHITE
 	damage = 30
 	/// How many firestacks to apply to the target
 	var/fire_stacks = 4

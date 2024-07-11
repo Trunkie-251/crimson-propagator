@@ -74,26 +74,6 @@
 	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
 	resistance_flags = NONE
 
-
-/obj/item/clothing/gloves/tackler/carapace
-	name = "carapace gauntlets"
-	desc = "Hi-tech gauntlets filled with dozens of hyperpenetrative micro-needles that penetrate into the skin and infuse blood \
-	with small amounts of marrow-based stims. Allows for tactical tackles on demand. The plastisteel is stamped with the triple-headed hydra of the emperor."
-	inhand_icon_state = "carapace_gauntlets"
-	icon_state = "carapace_gauntlets"
-
-	tackle_stam_cost = 30
-	base_knockdown = 1.25 SECONDS
-	tackle_range = 5
-	skill_mod = 2
-
-	cold_protection = HANDS
-	min_cold_protection_temperature = GLOVES_MIN_TEMP_PROTECT
-	heat_protection = HANDS
-	max_heat_protection_temperature = GLOVES_MAX_TEMP_PROTECT
-	resistance_flags = NONE
-
-
 /obj/item/clothing/gloves/tackler/combat/insulated
 	name = "guerrilla gloves"
 	desc = "Superior quality combative gloves, good for performing tackle takedowns as well as absorbing electrical shocks."

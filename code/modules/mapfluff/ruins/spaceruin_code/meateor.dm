@@ -68,7 +68,6 @@
 		/obj/item/organ/internal/heart/gland/mindshock = 5,
 		/obj/item/organ/internal/heart/gland/spiderman = 5,
 		/obj/item/organ/internal/heart/gland/transform = 5,
-		/obj/item/organ/internal/heart/gland/slime = 4,
 		/obj/item/organ/internal/heart/gland/trauma = 4,
 		/obj/item/organ/internal/heart/carp = 3,
 		/obj/item/organ/internal/heart/rat = 3,

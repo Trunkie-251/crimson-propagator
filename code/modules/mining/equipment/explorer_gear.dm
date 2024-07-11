@@ -81,21 +81,6 @@
 	acid = 40
 	wound = 5
 
-/obj/item/clothing/mask/gas/explorer/plasmaman
-	starting_filter_type = /obj/item/gas_filter/plasmaman
-
-/obj/item/clothing/mask/gas/explorer/attack_self(mob/user)
-	adjustmask(user)
-
-/obj/item/clothing/mask/gas/explorer/adjustmask(mob/user)
-	. = ..()
-	// adjusted = out of the way = smaller = can fit in boxes
-	w_class = mask_adjusted ? WEIGHT_CLASS_SMALL : WEIGHT_CLASS_NORMAL
-	inhand_icon_state = mask_adjusted ? "[initial(inhand_icon_state)]_up" : initial(inhand_icon_state)
-	if(user)
-		user.update_held_items()
-
-
 /obj/item/clothing/mask/gas/explorer/examine(mob/user)
 	. = ..()
 	if(mask_adjusted || w_class == WEIGHT_CLASS_SMALL)

@@ -17,7 +17,7 @@
 		TRAIT_NOFAT,
 		TRAIT_PRIMITIVE
 	)
-	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
+	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN
 	species_language_holder = /datum/language_holder/felinid
 	payday_modifier = 1.0
 	ass_image = 'icons/ass/asscat.png'

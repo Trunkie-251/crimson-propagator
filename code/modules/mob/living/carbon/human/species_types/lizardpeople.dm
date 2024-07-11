@@ -1,7 +1,7 @@
 /datum/species/lizard
 	// Reptilian humanoids with scaled skin and tails.
-	name = "\improper Szar"
-	plural_form = "Szara"
+	name = "\improper Lizardperson"
+	plural_form = "Lizardpeople"
 	id = SPECIES_LIZARD
 	inherent_traits = list(
 		TRAIT_MUTANT_COLORS,
@@ -21,15 +21,13 @@
 	coldmod = 1.5
 	heatmod = 0.67
 	payday_modifier = 1.0
-	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
+	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN
 	species_cookie = /obj/item/food/meat/slab
 	meat = /obj/item/food/meat/slab/human/mutant/lizard
 	skinned_type = /obj/item/stack/sheet/animalhide/lizard
 	exotic_bloodtype = "L"
-	inert_mutation = /datum/mutation/human/firebreath
-	death_sound = 'sound/voice/lizard/tzynn_die2.mp3'
 	wing_types = list(/obj/item/organ/external/wings/functional/dragon)
-	species_language_holder = /datum/language_holder/lizard
+	species_language_holder = /datum/language_holder/deep
 
 	// Lizards are coldblooded and can stand a greater temperature range than humans
 	bodytemp_heat_damage_limit = BODYTEMP_HEAT_LAVALAND_SAFE
@@ -131,7 +129,6 @@ Lizard subspecies: ASHWALKERS
 	mutantbrain = /obj/item/organ/internal/brain/primitive
 	inherent_traits = list(
 		TRAIT_MUTANT_COLORS,
-		TRAIT_VIRUSIMMUNE,
 		TRAIT_FORBID_MINING_SHUTTLE_CONSOLE_OUTSIDE_STATION,
 	)
 	species_language_holder = /datum/language_holder/lizard/ash

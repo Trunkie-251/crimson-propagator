@@ -314,7 +314,7 @@
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg
 	name = "\improper Ultra AC 2"
-	desc = "A weapon for combat exosuits. Shoots a rapid, three shot burst."
+	desc = "A light mech-scale machine-gun."
 	icon_state = "mecha_uac2"
 	equip_cooldown = 10
 	projectile = /obj/projectile/bullet/lmg
@@ -323,10 +323,15 @@
 	projectiles_cache_max = 1200
 	projectiles_per_shot = 3
 	variance = 6
-	randomspread = 1
-	projectile_delay = 2
+	projectile_delay = 1
 	harmful = TRUE
 	ammo_type = MECHA_AMMO_LMG
+
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/update_icon_updates_onmob)
+	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
+
 
 /// Missiles
 /// SRM-8 Missile Rack - Used by Nuclear Operatives - Explodes when it hits anything

@@ -104,14 +104,6 @@
 	. = ..()
 	filter_status = rand(35, 65)
 
-/obj/item/gas_filter/plasmaman
-	name = "plasmaman atmospheric gas filter"
-	high_filtering_gases = list(
-		/datum/gas/oxygen,
-		/datum/gas/carbon_dioxide,
-		/datum/gas/nitrous_oxide
-		)
-
 #undef HIGH_FILTERING_MOLES
 #undef HIGH_FILTERING_RATIO
 #undef LOW_FILTERING_MOLES

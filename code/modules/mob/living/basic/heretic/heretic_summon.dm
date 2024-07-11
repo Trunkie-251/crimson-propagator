@@ -26,7 +26,6 @@
 	combat_mode = TRUE
 	ai_controller = null
 	speak_emote = list("screams")
-	gold_core_spawnable = NO_SPAWN
 
 /mob/living/basic/heretic_summon/Initialize(mapload)
 	. = ..()

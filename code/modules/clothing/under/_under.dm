@@ -22,8 +22,6 @@
 	var/adjusted = NORMAL_STYLE
 	/// For adjusted/rolled-down jumpsuits. FALSE = exposes chest and arms, TRUE = exposes arms only
 	var/alt_covers_chest = FALSE
-	/// The variable containing the flags for how the woman uniform cropping is supposed to interact with the sprite.
-	var/female_sprite_flags = FEMALE_UNIFORM_FULL
 
 	// Sensor handling
 	/// Does this undersuit have suit sensors in general
@@ -424,7 +422,7 @@
 /// Helper to adjust to alt jumpsuit state
 /obj/item/clothing/under/proc/adjust_to_alt()
 	adjusted = ALT_STYLE
-	if(!(female_sprite_flags & FEMALE_UNIFORM_TOP_ONLY))
+	if(!(female_sprite_flags & FEMALE_UNIFORM_BOTTOM))
 		female_sprite_flags = NO_FEMALE_UNIFORM
 	if(!alt_covers_chest) // for the special snowflake suits that expose the chest when adjusted (and also the arms, realistically)
 		body_parts_covered &= ~CHEST

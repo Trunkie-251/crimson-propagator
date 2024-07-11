@@ -5,7 +5,6 @@
 	desc = "Death to Nanotrasen."
 	icon = 'icons/mob/simple/simple_human.dmi'
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	sentience_type = SENTIENCE_HUMANOID
 	maxHealth = 100
 	health = 100
 	basic_mob_flags = DEL_ON_DEATH
@@ -257,7 +256,6 @@
 	limb_destroyer = 1
 	speak_emote = list("states")
 	bubble_icon = "syndibot"
-	gold_core_spawnable = HOSTILE_SPAWN
 	death_message = "is smashed into pieces!"
 	ai_controller = /datum/ai_controller/basic_controller/syndicate/viscerator
 

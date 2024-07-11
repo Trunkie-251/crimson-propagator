@@ -40,9 +40,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
 	dir = 4
 	},
-/mob/living/basic/migo{
-	obj_damage = 0
-	},
 /turf/open/floor/plating,
 /area/shuttle/abandoned/engine)
 "dP" = (
@@ -429,9 +426,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair{
 	dir = 4
-	},
-/mob/living/basic/migo{
-	obj_damage = 0
 	},
 /turf/open/floor/bamboo,
 /area/shuttle/abandoned/bar)

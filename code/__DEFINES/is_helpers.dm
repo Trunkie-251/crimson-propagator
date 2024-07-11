@@ -80,7 +80,6 @@ GLOBAL_LIST_INIT(turfs_openspace, typecacheof(list(
 #define isabductor(A) (is_species(A, /datum/species/abductor))
 #define isgolem(A) (is_species(A, /datum/species/golem))
 #define islizard(A) (is_species(A, /datum/species/lizard))
-#define isplasmaman(A) (is_species(A, /datum/species/plasmaman))
 #define ispodperson(A) (is_species(A, /datum/species/pod))
 #define isflyperson(A) (is_species(A, /datum/species/fly))
 #define isjellyperson(A) (is_species(A, /datum/species/jelly))
@@ -93,7 +92,9 @@ GLOBAL_LIST_INIT(turfs_openspace, typecacheof(list(
 #define isdullahan(A) (is_species(A, /datum/species/dullahan))
 #define ismonkey(A) (is_species(A, /datum/species/monkey))
 #define isandroid(A) (is_species(A, /datum/species/android))
+#define issynthetic(A) (is_species(A, /datum/species/synthetic))
 #define isnightmare(A) (is_species(A, /datum/species/shadow/nightmare))
+#define isszzara(A) (is_species(A, /datum/species/szzara))
 
 
 //More carbon mobs
@@ -145,8 +146,6 @@ GLOBAL_LIST_INIT(turfs_openspace, typecacheof(list(
 #define isshade(A) (istype(A, /mob/living/simple_animal/shade))
 
 #define ismouse(A) (istype(A, /mob/living/basic/mouse))
-
-#define isslime(A) (istype(A, /mob/living/simple_animal/slime))
 
 #define isdrone(A) (istype(A, /mob/living/simple_animal/drone))
 

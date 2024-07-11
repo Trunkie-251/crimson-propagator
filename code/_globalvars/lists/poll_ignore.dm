@@ -21,7 +21,6 @@
 #define POLL_IGNORE_PAI "pai"
 #define POLL_IGNORE_POSIBRAIN "posibrain"
 #define POLL_IGNORE_POSSESSED_BLADE "possessed_blade"
-#define POLL_IGNORE_PYROSLIME "slime"
 #define POLL_IGNORE_RAW_PROPHET "raw_prophet"
 #define POLL_IGNORE_REGAL_RAT "regal_rat"
 #define POLL_IGNORE_RUST_SPIRIT "rust_spirit"
@@ -58,7 +57,6 @@ GLOBAL_LIST_INIT(poll_ignore_desc, list(
 	POLL_IGNORE_PAI = JOB_PERSONAL_AI,
 	POLL_IGNORE_POSIBRAIN = "Positronic brain",
 	POLL_IGNORE_POSSESSED_BLADE = "Possessed blade",
-	POLL_IGNORE_PYROSLIME = "Slime",
 	POLL_IGNORE_RAW_PROPHET = "Raw Prophet",
 	POLL_IGNORE_RUST_SPIRIT = "Rust Spirit",
 	POLL_IGNORE_REGAL_RAT = "Regal rat",

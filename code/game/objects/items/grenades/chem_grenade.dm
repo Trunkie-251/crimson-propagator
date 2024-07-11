@@ -284,7 +284,6 @@
 
 	var/extract_total_volume = 0
 	var/extract_maximum_volume = 0
-	var/list/extracts = list()
 
 	var/beaker_total_volume = 0
 	var/list/other_containers = list()
@@ -293,17 +292,8 @@
 		if(!thing.reagents)
 			continue
 
-		if(istype(thing, /obj/item/slime_extract))
-			var/obj/item/slime_extract/extract = thing
-			if(!extract.Uses)
-				continue
-
-			extract_total_volume += extract.reagents.total_volume
-			extract_maximum_volume += extract.reagents.maximum_volume
-			extracts += extract
-		else
-			beaker_total_volume += thing.reagents.total_volume
-			other_containers += thing
+		beaker_total_volume += thing.reagents.total_volume
+		other_containers += thing
 
 
 	var/available_extract_volume = extract_maximum_volume - extract_total_volume
@@ -315,28 +305,7 @@
 	for(var/obj/item/container as anything in other_containers)
 		container.reagents.trans_to(tmp_holder, container.reagents.total_volume * container_ratio, 1, preserve_data = TRUE, no_react = TRUE)
 
-	for(var/obj/item/slime_extract/extract as anything in extracts)
-		var/available_volume = extract.reagents.maximum_volume - extract.reagents.total_volume
-		tmp_holder.trans_to(extract, beaker_total_volume * (available_volume / available_extract_volume), 1, preserve_data = TRUE, no_react = TRUE)
-
-		extract.reagents.handle_reactions() // Reaction handling in the transfer proc is reciprocal and we don't want to blow up the tmp holder early.
-		if(QDELETED(extract))
-			beakers -= extract
-			extracts -= extract
-
 	return ..()
-
-	//I tried to just put it in the allowed_containers list but
-	//if you do that it must have reagents.  If you're going to
-	//make a special case you might as well do it explicitly. -Sayu
-/obj/item/grenade/chem_grenade/large/attackby(obj/item/item, mob/user, params)
-	if(!istype(item, /obj/item/slime_extract) || stage != GRENADE_WIRED)
-		return ..()
-
-	if(!user.transferItemToLoc(item, src))
-		return
-	to_chat(user, span_notice("You add [item] to the [initial(name)] assembly."))
-	beakers += item
 
 /obj/item/grenade/chem_grenade/cryo // Intended for rare cryogenic mixes. Cools the area moderately upon detonation.
 	name = "cryo grenade"

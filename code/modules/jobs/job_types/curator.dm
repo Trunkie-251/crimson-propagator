@@ -12,7 +12,6 @@
 	required_character_age = 25
 
 	outfit = /datum/outfit/job/curator
-	plasmaman_outfit = /datum/outfit/plasmaman/curator
 
 	paycheck = PAYCHECK_CREW
 	paycheck_department = ACCOUNT_SRV

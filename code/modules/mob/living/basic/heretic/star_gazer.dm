@@ -17,7 +17,6 @@
 	armour_penetration = 20
 	melee_damage_lower = 40
 	melee_damage_upper = 40
-	sentience_type = SENTIENCE_BOSS
 	attack_verb_continuous = "ravages"
 	attack_verb_simple = "ravage"
 	attack_vis_effect = ATTACK_EFFECT_SLASH

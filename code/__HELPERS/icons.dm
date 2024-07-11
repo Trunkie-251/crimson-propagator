@@ -998,31 +998,6 @@ world
 	qdel(atom_icon)
 	return text_image
 
-GLOBAL_LIST_EMPTY(friendly_animal_types)
-
-// Pick a random animal instead of the icon, and use that instead
-/proc/getRandomAnimalImage(atom/A)
-	if(!GLOB.friendly_animal_types.len)
-		for(var/T in typesof(/mob/living/simple_animal))
-			var/mob/living/simple_animal/SA = T
-			if(initial(SA.gold_core_spawnable) == FRIENDLY_SPAWN)
-				GLOB.friendly_animal_types += SA
-
-
-	var/mob/living/simple_animal/SA = pick(GLOB.friendly_animal_types)
-
-	var/icon = initial(SA.icon)
-	var/icon_state = initial(SA.icon_state)
-
-	var/image/final_image = image(icon, icon_state=icon_state, loc = A)
-
-	if(ispath(SA, /mob/living/basic/butterfly))
-		final_image.color = rgb(rand(0,255), rand(0,255), rand(0,255))
-
-	// For debugging
-	final_image.text = initial(SA.name)
-	return final_image
-
 //Interface for using DrawBox() to draw 1 pixel on a coordinate.
 //Returns the same icon specifed in the argument, but with the pixel drawn
 /proc/DrawPixel(icon/I,colour,drawX,drawY)

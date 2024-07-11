@@ -45,7 +45,6 @@
 #define CELL_LINE_TABLE_MOUSE "cell_line_mouse_table"
 #define CELL_LINE_TABLE_PINE "cell_line_pine_table"
 #define CELL_LINE_TABLE_PUG "cell_line_pug_table"
-#define CELL_LINE_TABLE_SLIME "cell_line_slime_table"
 #define CELL_LINE_TABLE_SNAKE "cell_line_snake_table"
 #define CELL_LINE_TABLE_VATBEAST "cell_line_vatbeast_table"
 #define CELL_LINE_TABLE_NETHER "cell_line_nether_table"

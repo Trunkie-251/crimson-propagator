@@ -51,13 +51,17 @@
 	acid = 30
 	wound = 10
 
-/obj/item/clothing/under/syntech/nanogel
-	name = "\improper Nanogel suit"
-	desc = "A  comfortable skintight suit comprised of a elastic nanogel material. It self-repairs damage to itself quite quickly, \
-	but happens to have poor resilience to blunt damage due to the lack of thickness."
+/obj/item/clothing/under/syntech/nanolatex
+	name = "\improper Nanolatex suit"
+	desc = "A suit of skntight material. Ebony in colour and smooth to the touch. \
+	It acts more akin to a living fluid, than a solid."
 	icon = 'icons/mob/clothing/bdsm.dmi'
 	worn_icon = 'icons/mob/clothing/bdsm.dmi'
-	icon_state = "nanolatex_red"
+	supports_variations_flags = CLOTHING_SZZARA_VARIATION
+	female_sprite_flags = FEMALE_UNIFORM_CUSTOM
+	worn_icon_szzara = 'icons/mob/clothing/bdsm_szzara.dmi'
+	worn_icon_szzara_female = 'icons/mob/clothing/bdsm_szzara_female.dmi'
+	icon_state = "nanolatex"
 	armor_type = /datum/armor/clothing_under/nanogel
 
 /datum/armor/clothing_under/nanogel
@@ -68,6 +72,3 @@
 	fire = 25
 	acid = 30
 	wound = 10
-
-/obj/item/clothing/under/syntech/nanogel/green
-	icon_state = "nanolatex_green"

@@ -67,8 +67,6 @@
 #define FACTION_SILICON "silicon"
 /// Spooky scary skeletons
 #define FACTION_SKELETON "skeleton"
-/// Slimey creatures
-#define FACTION_SLIME "slime"
 /// Spiders and their webs
 #define FACTION_SPIDER "spiders"
 /// Currently used only by floating eyeballs

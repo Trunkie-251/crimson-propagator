@@ -230,24 +230,6 @@
 /// SLIMES, OOZES & BLOBS ///
 //////////////////////////////////////////
 
-/datum/micro_organism/cell_line/slime
-	desc = "Slime particles"
-	required_reagents = list(/datum/reagent/consumable/nutriment/protein)
-
-	supplementary_reagents = list(
-		/datum/reagent/toxin/slimejelly = 2,
-		/datum/reagent/consumable/liquidgibs = 2,
-		/datum/reagent/consumable/enzyme = 1)
-
-	suppressive_reagents = list(
-		/datum/reagent/consumable/frostoil = -4,
-		/datum/reagent/cryostylane = -4,
-		/datum/reagent/medicine/morphine = -2,
-		/datum/reagent/consumable/ice = -2) //Brrr!
-
-	virus_suspectibility = 0
-	resulting_atoms = list(/mob/living/simple_animal/slime = 1)
-
 /datum/micro_organism/cell_line/blob_spore //nuisance cell line
 	desc = "Immature blob spores"
 	required_reagents = list(/datum/reagent/consumable/nutriment/protein)
@@ -473,7 +455,7 @@
 	resulting_atoms = list()
 
 /datum/micro_organism/cell_line/netherworld/succeed_growing(obj/machinery/plumbing/growing_vat/vat)
-	var/random_result = pick(/mob/living/basic/creature, /mob/living/basic/migo, /mob/living/basic/blankbody) //i looked myself, pretty much all of them are reasonably strong and somewhat on the same level. except migo is the jackpot and the blank body is whiff.
+	var/random_result = pick(/mob/living/basic/creature, /mob/living/basic/blankbody) //i looked myself, pretty much all of them are reasonably strong and somewhat on the same level. except migo is the jackpot and the blank body is whiff.
 	resulting_atoms = list()
 	resulting_atoms[random_result] = 1
 	return ..()

@@ -254,12 +254,6 @@
 		/obj/item/mod/module/jetpack/advanced,
 	)
 
-/obj/item/mod/control/pre_equipped/nuclear/plasmaman
-
-/obj/item/mod/control/pre_equipped/nuclear/plasmaman/Initialize(mapload, new_theme, new_skin, new_core)
-	applied_modules += /obj/item/mod/module/plasma_stabilizer
-	return ..()
-
 /obj/item/mod/control/pre_equipped/nuclear/unrestricted
 	req_access = null
 
@@ -496,14 +490,12 @@
 		/obj/item/mod/module/emp_shield,
 		/obj/item/mod/module/timeline_jumper,
 		/obj/item/mod/module/timestopper,
-		/obj/item/mod/module/rewinder,
 		/obj/item/mod/module/tem,
 		/obj/item/mod/module/anomaly_locked/kinesis/plus,
 	)
 	default_pins = list(
 		/obj/item/mod/module/timestopper,
 		/obj/item/mod/module/timeline_jumper,
-		/obj/item/mod/module/rewinder,
 		/obj/item/mod/module/tem,
 		/obj/item/mod/module/anomaly_locked/kinesis/plus,
 	)

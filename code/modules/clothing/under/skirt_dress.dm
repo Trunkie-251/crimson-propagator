@@ -1,5 +1,5 @@
 /obj/item/clothing/under/dress
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	can_adjust = FALSE
 	body_parts_covered = CHEST|GROIN
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON

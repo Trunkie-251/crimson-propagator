@@ -114,9 +114,15 @@
 
 /obj/item/clothing/mask/muzzle/ballgag
 	name = "ballgag"
-	desc = "A bright red ballgag to stuff your mouth with. Some find it quite sexually appealing \
-	when controlled is ripped away from them."
+	desc = "A bright red ballgag to stuff your mouth. Some find it quite sexually appealing \
+	when control is ripped away from them."
 	icon = 'icons/obj/clothing/bdsm.dmi'
 	icon_state = "ballgag"
 	worn_icon = 'icons/mob/clothing/bdsm.dmi'
 	worn_icon_state = "ballgag"
+	supports_variations_flags = CLOTHING_SZZARA_VARIATION
+	female_sprite_flags = FEMALE_UNIFORM_CUSTOM
+	worn_icon_szzara = 'icons/mob/clothing/bdsm_szzara.dmi'
+	worn_icon_szzara_female = 'icons/mob/clothing/bdsm_szzara_female.dmi'
+	equip_delay_self = 30
+	strip_delay = 60

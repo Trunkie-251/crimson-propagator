@@ -20,7 +20,7 @@
 	desc = "A non-descript and slightly suspicious looking skirtleneck."
 	icon_state = "syndicate_skirt"
 	inhand_icon_state = "bl_suit"
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
@@ -89,7 +89,7 @@
 	desc = "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-."
 	icon_state = "tactifool_skirt"
 	inhand_icon_state = "bl_suit"
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
@@ -149,11 +149,3 @@
 	bio = 50
 	fire = 50
 	acid = 40
-
-/obj/item/clothing/under/plasmaman/syndicate
-	name = "tacticool envirosuit"
-	desc = "A sinister looking envirosuit, for the boniest of operatives."
-	icon_state = "syndie_envirosuit"
-	has_sensor = NO_SENSORS
-	resistance_flags = FIRE_PROOF
-	inhand_icon_state = null

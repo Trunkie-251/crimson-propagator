@@ -381,13 +381,13 @@
 		return
 	var/mob/living/carbon/human/burn_human = burn_living
 	var/datum/species/burn_species = burn_human.dna.species
-	if(istype(burn_species, /datum/species/plasmaman) || istype(burn_species, /datum/species/android) || istype(burn_species, /datum/species/synthetic) ) //ignore plasmamen/robotic species
+	if(istype(burn_species, /datum/species/skeleton) || istype(burn_species, /datum/species/android) || istype(burn_species, /datum/species/synthetic) ) //ignore robotic species
 		return
 
 	var/list/plasma_parts = list()//a list of the organic parts to be turned into plasma limbs
-	var/list/robo_parts = list()//keep a reference of robotic parts so we know if we can turn them into a plasmaman
+	var/list/robo_parts = list()//keep a reference of robotic parts so we know if we can turn them into a skeleton
 	for(var/obj/item/bodypart/burn_limb as anything in burn_human.bodyparts)
-		if(IS_ORGANIC_LIMB(burn_limb) && burn_limb.limb_id != SPECIES_PLASMAMAN) //getting every organic, non-plasmaman limb (augments/androids are immune to this)
+		if(IS_ORGANIC_LIMB(burn_limb) && burn_limb.limb_id != SPECIES_SKELETON) //getting every organic, non-skeleton limb (augments/androids are immune to this)
 			plasma_parts += burn_limb
 		if(IS_ROBOTIC_LIMB(burn_limb))
 			robo_parts += burn_limb
@@ -398,27 +398,27 @@
 		var/obj/item/bodypart/burn_limb = pick(plasma_parts) //using the above-mentioned list to get a choice of limbs
 		burn_human.emote("scream")
 		var/obj/item/bodypart/plasmalimb
-		switch(burn_limb.body_zone) //get plasmaman limb to swap in
+		switch(burn_limb.body_zone) //get skeleton limb to swap in
 			if(BODY_ZONE_L_ARM)
-				plasmalimb = new /obj/item/bodypart/arm/left/plasmaman
+				plasmalimb = new /obj/item/bodypart/arm/left/skeleton
 			if(BODY_ZONE_R_ARM)
-				plasmalimb = new /obj/item/bodypart/arm/right/plasmaman
+				plasmalimb = new /obj/item/bodypart/arm/right/skeleton
 			if(BODY_ZONE_L_LEG)
-				plasmalimb = new /obj/item/bodypart/leg/left/plasmaman
+				plasmalimb = new /obj/item/bodypart/leg/left/skeleton
 			if(BODY_ZONE_R_LEG)
-				plasmalimb = new /obj/item/bodypart/leg/right/plasmaman
+				plasmalimb = new /obj/item/bodypart/leg/right/skeleton
 			if(BODY_ZONE_CHEST)
-				plasmalimb = new /obj/item/bodypart/chest/plasmaman
+				plasmalimb = new /obj/item/bodypart/chest/skeleton
 			if(BODY_ZONE_HEAD)
-				plasmalimb = new /obj/item/bodypart/head/plasmaman
+				plasmalimb = new /obj/item/bodypart/head/skeleton
 		burn_human.del_and_replace_bodypart(plasmalimb)
 		burn_human.update_body_parts()
 		burn_human.emote("scream")
 		burn_human.visible_message(span_warning("[burn_human]'s [burn_limb.plaintext_zone] melts down to the bone!"), \
 			span_userdanger("You scream out in pain as your [burn_limb.plaintext_zone] melts down to the bone, leaving an eerie plasma-like glow where flesh used to be!"))
-	if(!plasma_parts.len && !robo_parts.len) //a person with no potential organic limbs left AND no robotic limbs, time to turn them into a plasmaman
+	if(!plasma_parts.len && !robo_parts.len) //a person with no potential organic limbs left AND no robotic limbs, time to turn them into a skeleton
 		burn_human.ignite_mob()
-		burn_human.set_species(/datum/species/plasmaman)
+		burn_human.set_species(/datum/species/skeleton)
 		burn_human.visible_message(span_warning("[burn_human] bursts into a brilliant purple flame as [burn_human.p_their()] entire body is that of a skeleton!"), \
 			span_userdanger("Your senses numb as all of your remaining flesh is turned into a purple slurry, sloshing off your body and leaving only your bones to show in a vibrant purple!"))
 

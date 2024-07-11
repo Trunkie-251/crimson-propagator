@@ -28,8 +28,6 @@
 		return FALSE
 	if(animal.stat == DEAD)
 		return FALSE
-	if(!animal.compare_sentience_type(SENTIENCE_ORGANIC)) // Will also return false if not a basic or simple mob, which are the only two we want anyway
-		return FALSE
 	if(FACTION_CULT in animal.faction)
 		return FALSE
 	if(HAS_TRAIT(animal, TRAIT_HOLY))

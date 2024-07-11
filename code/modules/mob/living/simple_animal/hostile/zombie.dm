@@ -3,7 +3,6 @@
 	desc = "When there is no more room in hell, the dead will walk in outer space."
 	icon = 'icons/mob/simple/simple_human.dmi'
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	sentience_type = SENTIENCE_HUMANOID
 	speak_chance = 0
 	stat_attack = HARD_CRIT //braains
 	maxHealth = 100

@@ -15,7 +15,6 @@
 	health = 25
 	maxHealth = 25
 	speed = 1.25
-	gold_core_spawnable = FRIENDLY_SPAWN
 	can_be_held = TRUE
 	worn_slot_flags = ITEM_SLOT_HEAD
 

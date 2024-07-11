@@ -139,4 +139,4 @@
 	random_sensor = FALSE
 	sensor_mode = NO_SENSORS
 	can_adjust = FALSE
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM

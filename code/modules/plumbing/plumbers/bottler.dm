@@ -90,10 +90,4 @@
 				return
 			///glass was full so we move it away
 			AM.forceMove(badspot)
-		if(istype(AM, /obj/item/slime_extract)) ///slime extracts need inject
-			AM.forceMove(goodspot)
-			reagents.trans_to(AM, wanted_amount, transferred_by = src, methods = INJECT)
-			return
-		if(istype(AM, /obj/item/slimecross/industrial)) ///no need to move slimecross industrial things
-			reagents.trans_to(AM, wanted_amount, transferred_by = src, methods = INJECT)
-			return
+

@@ -376,14 +376,10 @@
 	name = "capgun ammo"
 	desc = "Make sure to recyle the box in an autolathe when it gets empty."
 	icon = 'icons/obj/weapons/guns/ammo.dmi'
-	icon_state = "357OLD-7"
+	icon_state = "9mmbox"
 	w_class = WEIGHT_CLASS_TINY
 	custom_materials = list(/datum/material/iron= SMALL_MATERIAL_AMOUNT * 0.1, /datum/material/glass= SMALL_MATERIAL_AMOUNT * 0.1)
 	var/amount_left = 7
-
-/obj/item/toy/ammo/gun/update_icon_state()
-	icon_state = "357OLD-[amount_left]"
-	return ..()
 
 /obj/item/toy/ammo/gun/examine(mob/user)
 	. = ..()

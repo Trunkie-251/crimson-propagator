@@ -938,7 +938,10 @@
 		icon_exists(limb.icon, limb.icon_state, scream = TRUE) //Prints a stack trace on the first failure of a given iconstate.
 		. += limb
 		if(aux_zone) //Hand shit
-			aux = image(limb.icon, "[husk_type]_husk_[aux_zone]", -aux_layer, image_dir)
+			var/aux_state = "[husk_type]_husk_[aux_zone]"
+			if(is_dimorphic)
+				aux_state += "_[limb_gender]"
+			aux = image(limb.icon, aux_state, -aux_layer, image_dir)
 			. += aux
 
 	// Handles invisibility (not alpha or actual invisibility but invisibility)
@@ -965,7 +968,10 @@
 		. += limb
 
 		if(aux_zone) //Hand shit
-			aux = image(limb.icon, "[limb_id]_[aux_zone]", -aux_layer, image_dir)
+			var/aux_state = "[limb_id]_[aux_zone]"
+			if(is_dimorphic)
+				aux_state += "_[limb_gender]"
+			aux = image(limb.icon, aux_state, -aux_layer, image_dir)
 			. += aux
 
 		draw_color = variable_color

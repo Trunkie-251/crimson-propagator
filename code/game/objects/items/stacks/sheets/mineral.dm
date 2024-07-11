@@ -501,3 +501,24 @@ GLOBAL_LIST_INIT(metalhydrogen_recipes, list(
 	mats_per_unit = list(/datum/material/zaukerite = SHEET_MATERIAL_AMOUNT)
 	merge_type = /obj/item/stack/sheet/mineral/zaukerite
 	material_type = /datum/material/zaukerite
+
+//Zrbite clusters! Pretty cool, huh?
+/obj/item/stack/sheet/mineral/zrbite
+	name = "Zrbite clusters"
+	desc = "A strange metamaterial consisting of one-part 'Alien' genestuff, and an adamantite metal. \
+	Both durable and extremely flexible, it is typically grown as a part of the natural biochemistry of many gene-engineered \
+	livestock.."
+	icon_state = "sheet-zrbite"
+	inhand_icon_state = "sheet-zaukerite"
+	singular_name = "zrbite cluster"
+	w_class = WEIGHT_CLASS_NORMAL
+	point_value = 120
+	mats_per_unit = list(/datum/material/zrbite = SHEET_MATERIAL_AMOUNT)
+	merge_type = /obj/item/stack/sheet/mineral/zrbite
+	material_type = /datum/material/zrbite
+
+/obj/item/stack/sheet/mineral/zrbite/five
+	amount = 5
+
+/obj/item/stack/sheet/mineral/zrbite/thirty
+	amount = 30

@@ -6036,7 +6036,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/department/engine)
 "ctJ" = (
-/mob/living/simple_animal/slime,
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
 "ctV" = (
@@ -12194,7 +12193,6 @@
 /turf/open/floor/iron/smooth,
 /area/station/ai_monitored/turret_protected/aisat/equipment)
 "eFt" = (
-/obj/machinery/processor/slime,
 /obj/effect/turf_decal/siding/white{
 	dir = 6
 	},
@@ -18402,7 +18400,6 @@
 /turf/open/floor/plating,
 /area/station/maintenance/port/fore)
 "gOQ" = (
-/obj/machinery/smartfridge/extract/preloaded,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/poddoor/preopen{
 	id = "xeno_blastdoor";
@@ -29652,9 +29649,6 @@
 /turf/open/misc/asteroid,
 /area/station/maintenance/fore/greater)
 "kKT" = (
-/obj/machinery/computer/camera_advanced/xenobio{
-	dir = 4
-	},
 /obj/effect/turf_decal/siding/white{
 	dir = 10
 	},
@@ -55237,7 +55231,6 @@
 /area/station/hallway/primary/central/fore)
 "tsL" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/simple_animal/slime,
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
 "tts" = (
@@ -69857,9 +69850,6 @@
 /turf/closed/wall,
 /area/station/medical/treatment_center)
 "xQh" = (
-/obj/machinery/computer/camera_advanced/xenobio{
-	dir = 4
-	},
 /obj/effect/turf_decal/siding/white{
 	dir = 9
 	},

@@ -334,20 +334,12 @@
 			heating = 5
 			if(holder.has_reagent(/datum/reagent/cryostylane))
 				holder.remove_reagent(/datum/reagent/cryostylane, 5 * REM * seconds_per_tick)
-			if(isslime(M))
-				heating = rand(5, 20)
 		if(15 to 25)
 			heating = 10
-			if(isslime(M))
-				heating = rand(10, 20)
 		if(25 to 35)
 			heating = 15
-			if(isslime(M))
-				heating = rand(15, 20)
 		if(35 to INFINITY)
 			heating = 20
-			if(isslime(M))
-				heating = rand(20, 25)
 	M.adjust_bodytemperature(heating * TEMPERATURE_DAMAGE_COEFFICIENT * REM * seconds_per_tick)
 	..()
 
@@ -369,24 +361,16 @@
 			cooling = -10
 			if(holder.has_reagent(/datum/reagent/consumable/capsaicin))
 				holder.remove_reagent(/datum/reagent/consumable/capsaicin, 5 * REM * seconds_per_tick)
-			if(isslime(M))
-				cooling = -rand(5, 20)
 		if(15 to 25)
 			cooling = -20
-			if(isslime(M))
-				cooling = -rand(10, 20)
 		if(25 to 35)
 			cooling = -30
 			if(prob(1))
 				M.emote("shiver")
-			if(isslime(M))
-				cooling = -rand(15, 20)
 		if(35 to INFINITY)
 			cooling = -40
 			if(prob(5))
 				M.emote("shiver")
-			if(isslime(M))
-				cooling = -rand(20, 25)
 	M.adjust_bodytemperature(cooling * TEMPERATURE_DAMAGE_COEFFICIENT * REM * seconds_per_tick, 50)
 	..()
 
@@ -400,10 +384,6 @@
 		var/temperature = exposed_open_turf.air.temperature
 		var/heat_capacity = exposed_open_turf.air.heat_capacity()
 		exposed_open_turf.air.temperature = max(exposed_open_turf.air.temperature - ((temperature - TCMB) * (heat_capacity * reac_volume * specific_heat) / (heat_capacity + reac_volume * specific_heat)) / heat_capacity, TCMB) // Exchanges environment temperature with reagent. Reagent is at 2.7K with a heat capacity of 40J per unit.
-	if(reac_volume < 5)
-		return
-	for(var/mob/living/simple_animal/slime/exposed_slime in exposed_turf)
-		exposed_slime.adjustToxLoss(rand(15,30))
 
 /datum/reagent/consumable/condensedcapsaicin
 	name = "Condensed Capsaicin"

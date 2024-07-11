@@ -845,7 +845,6 @@ GLOBAL_LIST_INIT(total_uf_len_by_block, populate_total_uf_len_by_block())
 				physiology.damage_resistance -= 20000 //you thought
 			if(5)
 				to_chat(src, span_notice("Oh, I actually feel quite alright!"))
-				reagents.add_reagent(/datum/reagent/aslimetoxin, 10)
 			if(6)
 				apply_status_effect(/datum/status_effect/go_away)
 			if(7)

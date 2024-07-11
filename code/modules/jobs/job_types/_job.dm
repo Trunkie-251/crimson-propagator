@@ -46,9 +46,6 @@
 
 	var/outfit = null
 
-	/// The job's outfit that will be assigned for plasmamen.
-	var/plasmaman_outfit = null
-
 	///The job's outfit assigned for robots!
 
 	var/synthetic_outfit = null

@@ -94,7 +94,7 @@
 /area/station/maintenance/department/science/xenobiology
 	name = "Xenobiology Maintenance"
 	icon_state = "xenomaint"
-	area_flags = VALID_TERRITORY | BLOBS_ALLOWED | UNIQUE_AREA | XENOBIOLOGY_COMPATIBLE | CULT_PERMITTED
+	area_flags = VALID_TERRITORY | BLOBS_ALLOWED | UNIQUE_AREA | CULT_PERMITTED
 
 /*
 * Generic Maintenance Tunnels
@@ -246,9 +246,6 @@
 
 /area/station/maintenance/space_hut/cabin
 	name = "Abandoned Cabin"
-
-/area/station/maintenance/space_hut/plasmaman
-	name = "\improper Abandoned Plasmaman Friendly Startup"
 
 /area/station/maintenance/space_hut/observatory
 	name = "\improper Space Observatory"

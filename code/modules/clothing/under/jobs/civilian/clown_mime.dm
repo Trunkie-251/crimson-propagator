@@ -12,7 +12,7 @@
 	inhand_icon_state = null
 	body_parts_covered = CHEST|GROIN|ARMS
 	dying_key = DYE_REGISTRY_JUMPSKIRT
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
 
 /obj/item/clothing/under/rank/civilian/mime/sexy
@@ -21,7 +21,7 @@
 	icon_state = "sexymime"
 	inhand_icon_state = null
 	body_parts_covered = CHEST|GROIN|LEGS
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/civilian/clown
@@ -29,7 +29,7 @@
 	desc = "<i>'HONK!'</i>"
 	icon_state = "clown"
 	inhand_icon_state = "clown"
-	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
+	female_sprite_flags = FEMALE_UNIFORM_BOTTOM
 	can_adjust = FALSE
 
 /obj/item/clothing/under/rank/civilian/clown/Initialize(mapload)

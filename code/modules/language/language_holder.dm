@@ -309,6 +309,14 @@ GLOBAL_LIST_INIT(prototype_language_holders, init_language_holder_prototypes())
 /datum/language_holder/lizard/ash
 	selected_language = /datum/language/draconic
 
+/datum/language_holder/deep
+	understood_languages = list(
+		/datum/language/deep = list(LANGUAGE_ATOM)
+	)
+	spoken_languages = list(
+		/datum/language/deep = list(LANGUAGE_ATOM)
+	)
+
 /datum/language_holder/lizard/silver
 	understood_languages = list(
 		/datum/language/common = list(LANGUAGE_ATOM), // yes we hear you, but we refuse to speak your peasant language

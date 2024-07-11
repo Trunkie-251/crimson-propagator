@@ -1,6 +1,6 @@
 /obj/item/organ/internal/heart
 	name = "heart"
-	desc = "I feel bad for the heartless bastard who lost this."
+	desc = "A disgustingly persistent little biological pump."
 	icon_state = "heart-on"
 	base_icon_state = "heart"
 	visual = FALSE
@@ -292,3 +292,14 @@
 		if(owner.reagents.get_reagent_amount(/datum/reagent/medicine/ephedrine) < 20)
 			owner.reagents.add_reagent(/datum/reagent/medicine/ephedrine, 10)
 
+//Reptillian hearts
+
+/obj/item/organ/internal/heart/szzara
+	name = "\improper Reptillian heart"
+	desc = "A beating biological pump consisting of hyperdense muscles. The twisting curves, the looping ribbing, \
+	the tube-clusters, all seem to denote this organ of being the product of some unnatural evolution."
+	icon_state = "heart_s-on"
+	base_icon_state = "heart_s"
+	decay_factor = 3 * STANDARD_ORGAN_DECAY
+
+// TODO: Make lizard hearts require a secondary heart for full body functionality.

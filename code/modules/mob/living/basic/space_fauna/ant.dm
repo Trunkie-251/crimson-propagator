@@ -24,7 +24,6 @@
 	response_disarm_simple = "gently push aside"
 	response_harm_continuous = "kicks"
 	response_harm_simple = "kick"
-	gold_core_spawnable = FRIENDLY_SPAWN
 	faction = list(FACTION_NEUTRAL)
 	can_be_held = FALSE
 	health = 100

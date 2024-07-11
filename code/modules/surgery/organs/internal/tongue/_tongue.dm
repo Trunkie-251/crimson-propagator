@@ -89,6 +89,7 @@
 		/datum/language/shadowtongue,
 		/datum/language/terrum,
 		/datum/language/nekomimetic,
+		/datum/language/deep
 	)
 
 /obj/item/organ/internal/tongue/proc/handle_speech(datum/source, list/speech_args)
@@ -178,7 +179,7 @@
 	say_mod = "hisses"
 	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
 	modifies_speech = TRUE
-	languages_native = list(/datum/language/draconic)
+	languages_native = list(/datum/language/deep)
 	liked_foodtypes = GORE | MEAT | SEAFOOD | NUTS | BUGS
 	disliked_foodtypes = GRAIN | DAIRY | CLOTH | GROSS
 
@@ -525,14 +526,6 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 		if("papyrus")
 			speech_args[SPEECH_SPANS] |= SPAN_PAPYRUS
 
-/obj/item/organ/internal/tongue/bone/plasmaman
-	name = "plasma bone \"tongue\""
-	desc = "Like animated skeletons, Plasmamen vibrate their teeth in order to produce speech."
-	icon_state = "tongueplasma"
-	modifies_speech = FALSE
-	liked_foodtypes = VEGETABLES
-	disliked_foodtypes = FRUIT | CLOTH
-
 /obj/item/organ/internal/tongue/robot
 	name = "robotic voicebox"
 	desc = "A voice synthesizer that can interface with organic lifeforms."
@@ -598,12 +591,6 @@ GLOBAL_LIST_INIT(english_to_zombie, list())
 	liked_foodtypes = MEAT | BUGS
 	disliked_foodtypes = GROSS
 	toxic_foodtypes = NONE
-
-/obj/item/organ/internal/tongue/jelly/get_food_taste_reaction(obj/item/food, foodtypes = NONE)
-	// a silver slime created this? what a delicacy!
-	if(HAS_TRAIT(food, TRAIT_FOOD_SILVER))
-		return FOOD_LIKED
-	return ..()
 
 /obj/item/organ/internal/tongue/monkey
 	name = "primitive tongue"

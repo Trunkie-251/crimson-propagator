@@ -11,7 +11,6 @@
 	config_tag = "PARAMEDIC"
 
 	outfit = /datum/outfit/job/paramedic
-	plasmaman_outfit = /datum/outfit/plasmaman/paramedic
 	synthetic_outfit = /datum/outfit/synthetic
 
 	paycheck = PAYCHECK_CREW

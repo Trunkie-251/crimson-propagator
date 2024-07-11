@@ -12,7 +12,6 @@
 	required_character_age = 25
 
 	outfit = /datum/outfit/job/coroner
-	plasmaman_outfit = /datum/outfit/plasmaman/coroner
 	synthetic_outfit = /datum/outfit/synthetic
 
 	mind_traits = list(TRAIT_MORBID)

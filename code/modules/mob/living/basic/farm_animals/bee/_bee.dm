@@ -39,7 +39,6 @@
 	mob_size = MOB_SIZE_TINY
 	mob_biotypes = MOB_ORGANIC|MOB_BUG
 	density = FALSE
-	gold_core_spawnable = FRIENDLY_SPAWN
 	can_be_held = TRUE
 	held_w_class = WEIGHT_CLASS_TINY
 	environment_smash  = ENVIRONMENT_SMASH_NONE
@@ -299,7 +298,6 @@
 	. = ..()
 	AddComponent(/datum/component/edible, list(/datum/reagent/consumable/nutriment/vitamin = 5), null, BEE_FOODGROUPS, 10, 0, list("bee"), null, 10)
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_QUEEN_BEE, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 5)
-	RegisterSignal(src, COMSIG_ATOM_ON_LAZARUS_INJECTOR, PROC_REF(use_lazarus))
 	if(isnull(dead_bee))
 		return
 	pixel_x = dead_bee.pixel_x
@@ -320,20 +318,6 @@
 	var/mutable_appearance/body_overlay = mutable_appearance(icon = icon, icon_state = "bee_item_overlay")
 	body_overlay.color = beegent ? beegent.color : BEE_DEFAULT_COLOUR
 	. += body_overlay
-
-///Spawn a new bee from this trash item when hit by a lazarus injector and conditions are met.
-/obj/item/trash/bee/proc/use_lazarus(datum/source, obj/item/lazarus_injector/injector, mob/user)
-	SIGNAL_HANDLER
-	if(injector.revive_type != SENTIENCE_ORGANIC)
-		balloon_alert(user, "invalid creature!")
-		return
-	var/mob/living/basic/bee/revived_bee = new bee_type (drop_location())
-	if(beegent)
-		revived_bee.assign_reagent(beegent)
-	revived_bee.lazarus_revive(user, injector.malfunctioning)
-	injector.expend(revived_bee, user)
-	qdel(src)
-	return LAZARUS_INJECTOR_USED
 
 #undef BEE_DEFAULT_COLOUR
 #undef BEE_FOODGROUPS

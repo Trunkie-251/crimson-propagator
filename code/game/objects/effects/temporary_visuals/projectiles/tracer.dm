@@ -65,6 +65,10 @@
 /obj/effect/projectile/tracer/solar/thinnest
 	icon_state = "solar_thinnest"
 
+/obj/effect/projectile/tracer/heatray
+	name = "Heat-ray"
+	icon_state = "beam_heatray"
+
 //BEAM RIFLE
 /obj/effect/projectile/tracer/tracer/beam_rifle
 	icon_state = "tracer_beam"

@@ -14,7 +14,6 @@
 	can_be_held = TRUE
 	held_w_class = WEIGHT_CLASS_TINY
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
-	gold_core_spawnable = FRIENDLY_SPAWN
 	faction = list(FACTION_RAT, FACTION_MAINT_CREATURES)
 	butcher_results = list(/obj/item/food/meat/slab/mouse = 1)
 
@@ -249,7 +248,6 @@
 	response_disarm_simple = "gently push aside"
 	response_harm_continuous = "splats"
 	response_harm_simple = "splat"
-	gold_core_spawnable = NO_SPAWN
 	contributes_to_ratcap = FALSE
 
 /mob/living/basic/mouse/brown/tom/make_tameable()
@@ -269,7 +267,6 @@
 	name = "rat"
 	desc = "They're a nasty, ugly, evil, disease-ridden rodent with anger issues."
 
-	gold_core_spawnable = NO_SPAWN
 	melee_damage_lower = 3
 	melee_damage_upper = 5
 	obj_damage = 5
@@ -309,25 +306,11 @@
 		name = dead_critter.name
 		icon_state = dead_critter.icon_dead
 	AddElement(/datum/element/swabable, CELL_LINE_TABLE_MOUSE, CELL_VIRUS_TABLE_GENERIC_MOB, 1, 10)
-	RegisterSignal(src, COMSIG_ATOM_ON_LAZARUS_INJECTOR, PROC_REF(use_lazarus))
 
 /obj/item/food/deadmouse/examine(mob/user)
 	. = ..()
 	if (reagents?.has_reagent(/datum/reagent/yuck) || reagents?.has_reagent(/datum/reagent/fuel))
 		. += span_warning("[p_Theyre()] dripping with fuel and smells terrible.")
-
-///Spawn a new mouse from this dead mouse item when hit by a lazarus injector and conditions are met.
-/obj/item/food/deadmouse/proc/use_lazarus(datum/source, obj/item/lazarus_injector/injector, mob/user)
-	SIGNAL_HANDLER
-	if(injector.revive_type != SENTIENCE_ORGANIC)
-		balloon_alert(user, "invalid creature!")
-		return
-	var/mob/living/basic/mouse/revived_critter = new critter_type (drop_location(), FALSE, body_color)
-	revived_critter.name = name
-	revived_critter.lazarus_revive(user, injector.malfunctioning)
-	injector.expend(revived_critter, user)
-	qdel(src)
-	return LAZARUS_INJECTOR_USED
 
 /obj/item/food/deadmouse/attackby(obj/item/attacking_item, mob/user, params)
 	var/mob/living/living_user = user

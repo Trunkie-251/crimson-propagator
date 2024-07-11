@@ -437,7 +437,6 @@
 /obj/structure/cable,
 /obj/structure/cable/layer1,
 /obj/effect/decal/cleanable/dirt,
-/mob/living/basic/migo,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /turf/open/floor/wood,
 /area/shuttle/abandoned/crew)
@@ -457,7 +456,6 @@
 /area/shuttle/abandoned/bar)
 "rZ" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/basic/migo,
 /turf/open/floor/pod/dark,
 /area/shuttle/abandoned/cargo)
 "su" = (
@@ -789,7 +787,6 @@
 /area/shuttle/abandoned/bridge)
 "Me" = (
 /obj/effect/decal/cleanable/dirt,
-/mob/living/basic/migo,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden,
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/iron/dark,

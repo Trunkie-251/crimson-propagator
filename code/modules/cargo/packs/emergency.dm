@@ -84,30 +84,6 @@
 	contains = list(/obj/item/storage/box/metalfoam)
 	crate_name = "metal foam grenade crate"
 
-/datum/supply_pack/emergency/plasma_spacesuit
-	name = "Plasmaman Space Envirosuits"
-	desc = "Contains two space-worthy envirosuits for Plasmamen. \
-		Order now and we'll throw in two free helmets!"
-	cost = CARGO_CRATE_VALUE * 3.5
-	access = ACCESS_EVA
-	contains = list(/obj/item/clothing/suit/space/eva/plasmaman = 2,
-					/obj/item/clothing/head/helmet/space/plasmaman = 2,
-				)
-	crate_name = "plasmaman EVA crate"
-	crate_type = /obj/structure/closet/crate/secure
-
-/datum/supply_pack/emergency/plasmaman
-	name = "Plasmaman Supply Kit"
-	desc = "Keep those Plasmamen alive with two sets of Plasmaman outfits. \
-		Each set contains a plasmaman jumpsuit, gloves, internals tank, and helmet."
-	cost = CARGO_CRATE_VALUE * 3
-	contains = list(/obj/item/clothing/under/plasmaman = 2,
-					/obj/item/tank/internals/plasmaman/belt/full = 2,
-					/obj/item/clothing/head/helmet/space/plasmaman = 2,
-					/obj/item/clothing/gloves/color/plasmaman = 2,
-				)
-	crate_name = "plasmaman supply kit"
-
 /datum/supply_pack/emergency/radiation
 	name = "Radiation Protection Crate"
 	desc = "Survive the Nuclear Apocalypse and Supermatter Engine alike with two sets of radiation suits. \

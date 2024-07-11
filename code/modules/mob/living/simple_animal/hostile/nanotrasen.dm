@@ -3,7 +3,6 @@
 	desc = "An officer part of Nanotrasen's private security force, he seems rather unpleased to meet you."
 	icon = 'icons/mob/simple/simple_human.dmi'
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	sentience_type = SENTIENCE_HUMANOID
 	speak_chance = 0
 	turns_per_move = 5
 	speed = 0
@@ -79,7 +78,6 @@
 	attack_sound = 'sound/weapons/punch1.ogg'
 	faction = list(FACTION_NANOTRASEN_PRIVATE)
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	sentience_type = SENTIENCE_HUMANOID
 	combat_mode = TRUE
 	loot = list(/obj/effect/mob_spawn/corpse/human/nanotrasensoldier)
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)

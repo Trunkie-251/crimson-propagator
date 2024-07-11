@@ -13,7 +13,6 @@
 	AIStatus = AI_OFF
 	del_on_death = TRUE
 	mob_biotypes = MOB_ROBOTIC|MOB_HUMANOID
-	sentience_type = SENTIENCE_ARTIFICIAL
 	ai_controller = /datum/ai_controller/robot_customer
 	unsuitable_atmos_damage = 0
 	minbodytemp = 0

@@ -19,32 +19,6 @@
 		tile.atmos_spawn_air("[GAS_O2]=5;[GAS_PLASMA]=5;[TURF_TEMPERATURE(1000)]")
 	return TRUE
 
-/obj/effect/anomaly/pyro/detonate()
-	INVOKE_ASYNC(src, PROC_REF(makepyroslime))
-
-/obj/effect/anomaly/pyro/proc/makepyroslime()
-	var/turf/open/tile = get_turf(src)
-	if(istype(tile))
-		tile.atmos_spawn_air("[GAS_O2]=500;[GAS_PLASMA]=500;[TURF_TEMPERATURE(1000)]") //Make it hot and burny for the new slime
-
-	var/new_colour = pick("red", "orange")
-	var/mob/living/simple_animal/slime/pyro = new(tile, new_colour)
-	pyro.rabid = TRUE
-	pyro.amount_grown = SLIME_EVOLUTION_THRESHOLD
-	pyro.Evolve()
-	var/datum/action/innate/slime/reproduce/repro_action = new
-	repro_action.Grant(pyro)
-
-	var/list/mob/dead/observer/candidates = poll_candidates_for_mob("Do you want to play as a pyroclastic anomaly slime?", ROLE_SENTIENCE, null, 10 SECONDS, pyro, POLL_IGNORE_PYROSLIME)
-	if(!LAZYLEN(candidates))
-		return
-
-	var/mob/dead/observer/chosen = pick(candidates)
-	pyro.key = chosen.key
-	pyro.mind.special_role = ROLE_PYROCLASTIC_SLIME
-	pyro.mind.add_antag_datum(/datum/antagonist/pyro_slime)
-	pyro.log_message("was made into a slime by pyroclastic anomaly", LOG_GAME)
-
 ///Bigger, meaner, immortal pyro anomaly
 /obj/effect/anomaly/pyro/big
 	immortal = TRUE

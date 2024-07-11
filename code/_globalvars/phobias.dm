@@ -55,7 +55,6 @@ GLOBAL_LIST_INIT(phobia_regexes, list(
 GLOBAL_LIST_INIT(phobia_mobs, list(
 	"aliens" = typecacheof(list(
 		/mob/living/carbon/alien,
-		/mob/living/simple_animal/slime,
 	)),
 	"anime" = typecacheof(list(/mob/living/simple_animal/hostile/guardian)),
 	"birds" = typecacheof(list(
@@ -242,9 +241,6 @@ GLOBAL_LIST_INIT(phobia_objs, list(
 		/obj/item/clothing/mask/gas/clown_hat,
 		/obj/item/clothing/shoes/clown_shoes,
 		/obj/item/clothing/suit/chaplainsuit/clownpriest,
-		/obj/item/clothing/head/helmet/space/plasmaman/clown,
-		/obj/item/clothing/under/plasmaman/clown,
-		/obj/item/clothing/gloves/color/plasmaman/clown,
 		/obj/item/clothing/under/rank/civilian/clown,
 		/obj/item/food/cheesiehonkers,
 		/obj/item/food/pie/cream,
@@ -529,7 +525,6 @@ GLOBAL_LIST_INIT(phobia_species, list(
 	"lizards" = typecacheof(list(/datum/species/lizard)),
 	"robots" = typecacheof(list(/datum/species/android)),
 	"skeletons" = typecacheof(list(
-		/datum/species/plasmaman,
 		/datum/species/skeleton,
 	)),
 ))

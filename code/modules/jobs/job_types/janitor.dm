@@ -10,7 +10,6 @@
 	config_tag = "JANITOR"
 
 	outfit = /datum/outfit/job/janitor
-	plasmaman_outfit = /datum/outfit/plasmaman/janitor
 	synthetic_outfit = /datum/outfit/synthetic
 
 	paycheck = PAYCHECK_CREW

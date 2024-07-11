@@ -21,10 +21,6 @@
 	item_path = /obj/item/bedsheet/rd/royal_cape
 	cost_per_order = 500
 
-/datum/orderable_item/golem/grey_extract
-	item_path = /obj/item/slime_extract/grey
-	cost_per_order = 1000
-
 /datum/orderable_item/golem/trigger_guard
 	item_path = /obj/item/borg/upgrade/modkit/trigger_guard
 	cost_per_order = 1700

@@ -27,7 +27,6 @@
 	maxHealth = 3
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	mob_size = MOB_SIZE_TINY
-	gold_core_spawnable = FRIENDLY_SPAWN
 	ai_controller = /datum/ai_controller/basic_controller/chick
 
 	/// What we grow into.

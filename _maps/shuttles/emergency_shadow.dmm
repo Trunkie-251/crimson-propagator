@@ -492,7 +492,6 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/shuttle/escape)
 "zj" = (
-/obj/item/toy/plush/plasmamanplushie,
 /turf/open/floor/engine/plasma,
 /area/shuttle/escape/engine)
 "zs" = (

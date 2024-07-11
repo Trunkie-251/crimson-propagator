@@ -3,7 +3,6 @@
 	desc = "Does what he wants cause a pirate is free."
 	icon = 'icons/mob/simple/simple_human.dmi'
 	mob_biotypes = MOB_ORGANIC|MOB_HUMANOID
-	sentience_type = SENTIENCE_HUMANOID
 	speak_chance = 0
 	turns_per_move = 5
 	response_help_continuous = "pushes"

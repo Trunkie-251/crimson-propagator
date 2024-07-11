@@ -60,7 +60,7 @@
 	build_type = PROTOLATHE | AWAY_LATHE
 	id = "carapace_gauntlets"
 	materials = list(/datum/material/iron =SHEET_MATERIAL_AMOUNT * 3, /datum/material/plasma =SHEET_MATERIAL_AMOUNT * 0.5, /datum/material/silver =SHEET_MATERIAL_AMOUNT * 1.8)
-	build_path = /obj/item/clothing/gloves/tackler/carapace
+	build_path = /obj/item/clothing/gloves/carapace
 	category = list(
 		RND_CATEGORY_ARMOUR + RND_CATEGORY_ARMOUR_CARAPACE
 	)

@@ -988,9 +988,6 @@
 /mob/living/carbon/human/species/jelly/stargazer
 	race = /datum/species/jelly/stargazer
 
-/mob/living/carbon/human/species/jelly/luminescent
-	race = /datum/species/jelly/luminescent
-
 /mob/living/carbon/human/species/lizard
 	race = /datum/species/lizard
 
@@ -1005,9 +1002,6 @@
 
 /mob/living/carbon/human/species/mush
 	race = /datum/species/mush
-
-/mob/living/carbon/human/species/plasma
-	race = /datum/species/plasmaman
 
 /mob/living/carbon/human/species/pod
 	race = /datum/species/pod
@@ -1026,6 +1020,9 @@
 
 /mob/living/carbon/human/species/synthetic
 	race = /datum/species/synthetic
+
+/mob/living/carbon/human/species/szzara
+	race = /datum/species/szzara
 
 /mob/living/carbon/human/species/vampire
 	race = /datum/species/vampire

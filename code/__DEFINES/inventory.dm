@@ -116,12 +116,14 @@
 //flags for female outfits: How much the game can safely "take off" the uniform without it looking weird
 /// For when there's simply no need for a female version of this uniform.
 #define NO_FEMALE_UNIFORM 0
-/// For the game to take off everything, disregards other flags.
-#define FEMALE_UNIFORM_FULL (1<<0)
 /// For when you really need to avoid the game cutting off that one pixel between the legs, to avoid the comeback of the infamous "dixel".
-#define FEMALE_UNIFORM_TOP_ONLY (1<<1)
+#define FEMALE_UNIFORM_BOTTOM (1<<0)
 /// For when you don't want the "breast" effect to be applied (the one that cuts two pixels in the middle of the front of the uniform when facing east or west).
-#define FEMALE_UNIFORM_NO_BREASTS (1<<2)
+#define FEMALE_UNIFORM_TOP (1<<1)
+/// For the game to take off everything, bottom and top
+#define FEMALE_UNIFORM_FULL (FEMALE_UNIFORM_BOTTOM | FEMALE_UNIFORM_TOP)
+/// The game will attempt to use a custom female sprite if the species allows for it
+#define FEMALE_UNIFORM_CUSTOM (1<<2)
 
 //flags for alternate styles: These are hard sprited so don't set this if you didn't put the effort in
 #define NORMAL_STYLE 0
@@ -137,6 +139,8 @@
 #define CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON (1<<2)
 ///has a sprite for monkeys
 #define CLOTHING_MONKEY_VARIATION (1<<3)
+/// Clothing sprites for szzara lizards
+#define CLOTHING_SZZARA_VARIATION (1<<4)
 
 //flags for covering body parts
 #define GLASSESCOVERSEYES (1<<0)
@@ -177,7 +181,6 @@ GLOBAL_LIST_INIT(detective_vest_allowed, list(
 	/obj/item/storage/fancy/cigarettes,
 	/obj/item/taperecorder,
 	/obj/item/tank/internals/emergency_oxygen,
-	/obj/item/tank/internals/plasmaman,
 	/obj/item/storage/belt/holster/detective,
 	/obj/item/storage/belt/holster/nukie,
 	/obj/item/storage/belt/holster/energy,
@@ -195,7 +198,6 @@ GLOBAL_LIST_INIT(security_vest_allowed, list(
 	/obj/item/reagent_containers/spray/pepper,
 	/obj/item/restraints/handcuffs,
 	/obj/item/tank/internals/emergency_oxygen,
-	/obj/item/tank/internals/plasmaman,
 	/obj/item/storage/belt/holster/detective,
 	/obj/item/storage/belt/holster/nukie,
 	/obj/item/storage/belt/holster/energy,
@@ -225,7 +227,6 @@ GLOBAL_LIST_INIT(chaplain_suit_allowed, list(
 	/obj/item/storage/fancy/candle_box,
 	/obj/item/flashlight/flare/candle,
 	/obj/item/tank/internals/emergency_oxygen,
-	/obj/item/tank/internals/plasmaman,
 	/obj/item/gun/ballistic/bow/divine,
 	/obj/item/gun/ballistic/revolver/chaplain,
 ))

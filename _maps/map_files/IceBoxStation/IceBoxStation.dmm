@@ -2568,7 +2568,6 @@
 /area/station/engineering/atmos)
 "aRl" = (
 /obj/structure/window/reinforced/spawner/directional/west,
-/obj/machinery/smartfridge/extract/preloaded,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "aRm" = (
@@ -16614,7 +16613,7 @@
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "ffz" = (
-/obj/machinery/processor/slime,
+
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "ffQ" = (
@@ -20532,7 +20531,6 @@
 /area/station/service/chapel)
 "gvM" = (
 /obj/structure/window/reinforced/spawner/directional/east,
-/obj/machinery/smartfridge/extract/preloaded,
 /obj/structure/window/reinforced/spawner/directional/south,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
@@ -28240,7 +28238,6 @@
 /turf/open/floor/iron/dark/textured,
 /area/station/security/prison)
 "iVT" = (
-/obj/machinery/computer/camera_advanced/xenobio,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "iVU" = (
@@ -31073,7 +31070,6 @@
 /turf/open/floor/iron,
 /area/station/maintenance/central/greater)
 "jSW" = (
-/mob/living/simple_animal/slime,
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
 "jTf" = (
@@ -45004,7 +45000,6 @@
 /area/station/command/heads_quarters/hop)
 "ooo" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/processor/slime,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "oop" = (
@@ -52422,9 +52417,6 @@
 "qEv" = (
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/machinery/computer/camera_advanced/xenobio{
-	dir = 1
-	},
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "qEz" = (

@@ -257,13 +257,6 @@
 			humi.adjust_coretemperature(-15 * REM * seconds_per_tick)
 	..()
 
-/datum/reagent/cryostylane/expose_turf(turf/exposed_turf, reac_volume)
-	. = ..()
-	if(reac_volume < 5)
-		return
-	for(var/mob/living/simple_animal/slime/exposed_slime in exposed_turf)
-		exposed_slime.adjustToxLoss(rand(15,30))
-
 #undef CRYO_SPEED_PREFACTOR
 #undef CRYO_SPEED_CONSTANT
 
@@ -331,17 +324,6 @@
 	color = "#CAFF43"
 	taste_description = "jelly"
 	chemical_flags = REAGENT_CAN_BE_SYNTHESIZED
-
-/datum/reagent/teslium/energized_jelly/on_mob_life(mob/living/carbon/affected_mob, seconds_per_tick, times_fired)
-	if(isjellyperson(affected_mob))
-		shock_timer = 0 //immune to shocks
-		affected_mob.AdjustAllImmobility(-40  *REM * seconds_per_tick)
-		affected_mob.adjustStaminaLoss(-2 * REM * seconds_per_tick, 0)
-		if(is_species(affected_mob, /datum/species/jelly/luminescent))
-			var/mob/living/carbon/human/affected_human = affected_mob
-			var/datum/species/jelly/luminescent/slime_species = affected_human.dna.species
-			slime_species.extract_cooldown = max(slime_species.extract_cooldown - (2 SECONDS * REM * seconds_per_tick), 0)
-	..()
 
 /datum/reagent/firefighting_foam
 	name = "Firefighting Foam"

@@ -22,8 +22,6 @@
 	var/loaded = TRUE
 	///Injector malf?
 	var/malfunctioning = FALSE
-	///So you can't revive boss monsters or robots with it
-	var/revive_type = SENTIENCE_ORGANIC
 
 /obj/item/lazarus_injector/afterattack(atom/target, mob/user, proximity_flag)
 	. = ..()
@@ -37,9 +35,6 @@
 		return
 
 	var/mob/living/target_animal = target
-	if(!target_animal.compare_sentience_type(revive_type)) // Will also return false if not a basic or simple mob, which are the only two we want anyway
-		balloon_alert(user, "invalid creature!")
-		return
 	if(target_animal.stat != DEAD)
 		balloon_alert(user, "it's not dead!")
 		return

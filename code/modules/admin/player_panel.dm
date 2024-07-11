@@ -256,8 +256,6 @@
 				else if(isanimal_or_basicmob(M)) //simple animals
 					if(iscorgi(M))
 						M_job = "Corgi"
-					else if(isslime(M))
-						M_job = "slime"
 					else
 						M_job = "Animal"
 

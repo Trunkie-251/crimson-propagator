@@ -137,8 +137,13 @@
 /obj/item/ammo_box/magazine/law5mm
 	name = "5mm Flechette magazine"
 	desc = "A terrifying case full of flechettes. They look sharp."
-	icon_state = "50ae"
+	icon_state = "flechette-21"
+	base_icon_state = "flechette"
 	ammo_type = /obj/item/ammo_casing/flechette
 	caliber = CALIBER_5FLE
 	max_ammo = 21
 	multiple_sprites = AMMO_BOX_PER_BULLET
+
+/obj/item/ammo_box/magazine/law5mm/update_icon_state()
+	. = ..()
+	icon_state = "[base_icon_state]-[round(ammo_count(), 7)]"

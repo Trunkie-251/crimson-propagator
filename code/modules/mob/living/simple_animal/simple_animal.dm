@@ -117,11 +117,6 @@
 	///Simple_animal access.
 	///Innate access uses an internal ID card.
 	var/obj/item/card/id/access_card = null
-	///If the mob can be spawned with a gold slime core. HOSTILE_SPAWN are spawned with plasma, FRIENDLY_SPAWN are spawned with blood.
-	var/gold_core_spawnable = NO_SPAWN
-
-	///Sentience type, for slime potions.
-	var/sentience_type = SENTIENCE_ORGANIC
 
 	///List of things spawned at mob's loc when it dies.
 	var/list/loot = list()
@@ -712,6 +707,3 @@
 		hunted = null
 		COOLDOWN_START(src, emote_cooldown, 1 MINUTES)
 		return
-
-/mob/living/simple_animal/compare_sentience_type(compare_type)
-	return sentience_type == compare_type
